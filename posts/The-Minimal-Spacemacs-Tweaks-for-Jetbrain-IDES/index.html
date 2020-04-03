@@ -1,0 +1,843 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spacemacs/Space-Vim Config for Jetbrain IDEs - Lady luck is smilin&#39;.</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content=" &amp;gt; Another Spacemacs configuration for Jetbrain IDEs
+Recently, I’m working on a React Native pro,"> 
+    <meta name="author" content="Ting Zhou"> 
+    <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Lady luck is smilin&#39;.</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://ztlevi.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Spacemacs/Space-Vim Config for Jetbrain IDEs</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/post"><b>「
+                    </b>POST<b> 」</b></a>
+                
+                June 11, 2018
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/The-Minimal-Spacemacs-Tweaks-for-Jetbrain-IDES/" title="Spacemacs/Space-Vim Config for Jetbrain IDEs">Spacemacs/Space-Vim Config for Jetbrain IDEs</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    21k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    19 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/intellij-idea/">intellij idea</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/jetbrain/">jetbrain</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/pycharm/">pycharm</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/space-vim/">space-vim</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/spacemacs/">spacemacs</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/webstorm/">webstorm</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="another-spacemacs-configuration-for-jetbrain-ides"><a class="header-anchor" href="#another-spacemacs-configuration-for-jetbrain-ides"> &gt; </a>Another Spacemacs configuration for Jetbrain IDEs</h1>
+<p>Recently, I’m working on a React Native project. I have tried using Emacs to do the coding, but I cannot really pick up the whole new stuff without a fancy auto-completion or finding definitions since the syntax of React is so different and special. That’s why I pick up Webstorm as a workaround. And there, I find a way to build my Jetbrain IDEs just like Spacemacs.</p>
+<p>Like I said in my previous post, space way is good for Vim users and only Vim can do this because it has other modes other than just insert mode. In this case, key bindings will never be a problem. We are using the sticky key sequences and prefix key for memorization.</p>
+<p>Welcome to the heaven!!!</p>
+<img src="https://tctechcrunch2011.files.wordpress.com/2015/08/safe_image.gif" alt style="width:500px;margin:auto;display:block;">
+<a id="more"></a>
+<blockquote>
+<p>If you’re too lazy to read the whole stuff, grab my <a href="https://github.com/ztlevi/Dotfiles/blob/master/ideavimrc" target="_blank" rel="noopener">.ideavimrc</a> on Github</p>
+</blockquote>
+<h1 id="the-space-way"><a class="header-anchor" href="#the-space-way"> &gt; </a>The space way</h1>
+<h2 id="leader-key"><a class="header-anchor" href="#leader-key"> &gt; </a>Leader key</h2>
+<p>Using <kbd>space</kbd> key as the leader is a very popular way of editing, navigation, and commanding. There is never an easy way to get used to new shortcuts, but trust me, you would definitely like it once you use it.</p>
+<h2 id="sticky-key"><a class="header-anchor" href="#sticky-key"> &gt; </a>Sticky key</h2>
+<p>Think about how you invoke commands in VSCode before. When you want to call the <code>command-palette</code>, you need to put your left hand’s two fingers on <kbd>Ctrl + Shift</kbd> key or <kbd>Command + Shift</kbd> key and press <kbd>p</kbd>. And note that it’s a key chord combination when you actually press these keys.</p>
+<p>This looks so stupid when you compare it with just <kbd>Space Space</kbd> in Vim’s normal or visual mode. And by saying <kbd>Space Space</kbd>, it’s a sticky key binding which means you just type <kbd>space</kbd> key twice in sequence. And you can just set your hands as the default typing position shown in this picture.</p>
+<img src="https://ws2.sinaimg.cn/large/006tNc79gy1fm3jb9l72jj30r80i6ae1.jpg" alt style="width:500px;margin:auto;display:block;">
+<h2 id="prefix-key"><a class="header-anchor" href="#prefix-key"> &gt; </a>Prefix key</h2>
+<p>Well, now you probably get the point of using <kbd>space</kbd> key. But there is more of it.</p>
+<p>Since sticky keys are just key sequences, you can cluster a lot of similar commands to a prefix like <kbd>space f</kbd> (file related commands). For example, <kbd>space&gt; f f</kbd> go to the explorer, <kbd>space&gt; f s</kbd> save file and <kbd>space&gt; f S</kbd> save all. In this case, you won’t mess up with these keys because they have the same prefix <kbd>space&gt; f</kbd>.</p>
+<h1 id="keybindings"><a class="header-anchor" href="#keybindings"> &gt; </a>Keybindings</h1>
+<p>For the normal and visual mode, They are pretty much the same. But they can do much more now in space way.</p>
+<p>The <kbd>space w m</kbd> and other window pop up combination is just beautiful.</p>
+<p>The most used ones are in bold text.</p>
+<p><kbd><space> f t</space></kbd> is very helpful when you want to navigate to the file you’re currently viewing in the project view.</p>
+<blockquote>
+<p>Note: The leader key is <kbd>space</kbd></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>C-i</kbd></td>
+<td>Forward</td>
+</tr>
+<tr>
+<td><kbd>C-o</kbd></td>
+<td>Go back</td>
+</tr>
+<tr>
+<td><kbd>g d</kbd></td>
+<td><strong>Go to declaration</strong></td>
+</tr>
+<tr>
+<td><kbd>g h</kbd></td>
+<td>Go to Documentation</td>
+</tr>
+<tr>
+<td><kbd>g r</kbd></td>
+<td><strong>Find Usages</strong></td>
+</tr>
+<tr>
+<td><kbd>g s</kbd></td>
+<td>Go to Symbol</td>
+</tr>
+<tr>
+<td><kbd>leader ’</kbd></td>
+<td>Active terminal window</td>
+</tr>
+<tr>
+<td><kbd>leader R</kbd></td>
+<td>reload <code>~/.ideavimrc</code></td>
+</tr>
+<tr>
+<td><kbd>leader a a</kbd></td>
+<td>Select All</td>
+</tr>
+<tr>
+<td><kbd>leader a l</kbd></td>
+<td>Prompt action list</td>
+</tr>
+<tr>
+<td><kbd>leader b b</kbd> (<kbd>&lt;CR&gt;</kbd>)</td>
+<td><strong>Recent files</strong> (You can still use <kbd>command+e</kbd> or <kbd>ctrl+e</kbd>)</td>
+</tr>
+<tr>
+<td><kbd>leader b i</kbd></td>
+<td><strong>Active structure tool window</strong></td>
+</tr>
+<tr>
+<td><kbd>leader b u</kbd></td>
+<td>Reopen Closed Tab</td>
+</tr>
+<tr>
+<td><kbd>leader c c</kbd></td>
+<td>Go to Class</td>
+</tr>
+<tr>
+<td><kbd>leader d D</kbd></td>
+<td>Debug Class</td>
+</tr>
+<tr>
+<td><kbd>leader d d</kbd></td>
+<td><strong>Debug</strong></td>
+</tr>
+<tr>
+<td><kbd>leader e e</kbd></td>
+<td>show error description</td>
+</tr>
+<tr>
+<td><kbd>leader f T</kbd></td>
+<td><strong>Select current file in project view</strong></td>
+</tr>
+<tr>
+<td><kbd>leader f b</kbd></td>
+<td><strong>Show Bookmarks</strong></td>
+</tr>
+<tr>
+<td><kbd>leader f d</kbd></td>
+<td>Smart search launcher (You have to install Dash or Zeal first)</td>
+</tr>
+<tr>
+<td><kbd>leader f f</kbd></td>
+<td><strong>Search Everywhere</strong></td>
+</tr>
+<tr>
+<td><kbd>leader f s</kbd></td>
+<td>save all files (I still use <kbd>command+s</kbd> or <kbd>ctrl+s</kbd>)</td>
+</tr>
+<tr>
+<td><kbd>leader f t</kbd></td>
+<td><strong>Active file tree window</strong></td>
+</tr>
+<tr>
+<td><kbd>leader i m</kbd></td>
+<td>Implement Methods</td>
+</tr>
+<tr>
+<td><kbd>leader g S<kbd>/</kbd></kbd></td>
+<td>Active version control window</td>
+</tr>
+<tr>
+<td><kbd>leader g s</kbd></td>
+<td><strong>Vsc quick list pop up</strong></td>
+</tr>
+<tr>
+<td><kbd>leader j i</kbd></td>
+<td>Fire structure pop up (similar to structure tool)</td>
+</tr>
+<tr>
+<td><kbd>leader j j</kbd></td>
+<td>Ace Action</td>
+</tr>
+<tr>
+<td><kbd>leader j l</kbd></td>
+<td>Ace Line Action</td>
+</tr>
+<tr>
+<td><kbd>leader m =</kbd></td>
+<td><strong>beautify file</strong></td>
+</tr>
+<tr>
+<td><kbd>leader r R</kbd></td>
+<td>Run Class</td>
+</tr>
+<tr>
+<td><kbd>leader r p</kbd></td>
+<td><strong>Replace in project</strong></td>
+</tr>
+<tr>
+<td><kbd>leader r r</kbd></td>
+<td><strong>Run</strong></td>
+</tr>
+<tr>
+<td><kbd>leader s s</kbd></td>
+<td><strong>Stop</strong></td>
+</tr>
+<tr>
+<td><kbd>leader s p</kbd></td>
+<td><strong>Search in project</strong></td>
+</tr>
+<tr>
+<td><kbd>leader space</kbd></td>
+<td><strong>Go to Action</strong></td>
+</tr>
+<tr>
+<td><kbd>leader t b</kbd></td>
+<td>Toggle Bookmark</td>
+</tr>
+<tr>
+<td><kbd>leader t t</kbd></td>
+<td><strong>Toggle Line Breakpoint</strong></td>
+</tr>
+<tr>
+<td><kbd>leader w [lhjk]</kbd></td>
+<td><strong>navigate window</strong></td>
+</tr>
+<tr>
+<td><kbd>leader w c</kbd></td>
+<td>close window</td>
+</tr>
+<tr>
+<td><kbd>leader w m</kbd></td>
+<td><strong>hide all windows except the editor tabs</strong> (You can invoke again to revert)</td>
+</tr>
+<tr>
+<td><kbd>leader w s</kbd></td>
+<td>split window horizontally</td>
+</tr>
+<tr>
+<td><kbd>leader w v</kbd></td>
+<td><strong>split window vertically</strong></td>
+</tr>
+<tr>
+<td><kbd>leader w z</kbd></td>
+<td>Toggle Zen mode</td>
+</tr>
+<tr>
+<td><kbd>z C</kbd></td>
+<td>collapse all region</td>
+</tr>
+<tr>
+<td><kbd>z O</kbd></td>
+<td>expand all region</td>
+</tr>
+<tr>
+<td><kbd>z c</kbd></td>
+<td><strong>collapse region</strong></td>
+</tr>
+<tr>
+<td><kbd>z o</kbd></td>
+<td><strong>expand region</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="install"><a class="header-anchor" href="#install"> &gt; </a>Install</h1>
+<ol>
+<li>Install ideaVim and create a <code>.ideavimrc</code> file in home directory, just like <code>~/.ideavimrc</code>.</li>
+</ol>
+<blockquote>
+<p>In case you want to sync your settings across multiple machines, you should checkout the <strong>Setting Repository</strong> <a href="https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html#settings-repository" target="_blank" rel="noopener">here</a>.</p>
+</blockquote>
+<ol start="2">
+<li>If you want to use the Emacs key in Vim’s insert mode, which is the hybrid mode in Spacemacs, copy the following script to <code>~/.ideavimrc</code>.</li>
+</ol>
+<pre><code>&quot; ============================================================================
+&quot; emacs keymaping for cursor movement{{{
+" You have to unbind C-g before it works
+" ============================================================================
+nmap <c-g> <esc>
+vmap <c-g> <esc>
+imap <c-g> <esc>a
+nmap <c-a> ^
+nmap <c-e> $
+vmap <c-a> ^
+vmap <c-e> $
+imap <c-e> <esc>A
+imap <c-a> <esc>I
+imap <c-d> <del>
+inoremap <c-p> <up>
+inoremap <c-n> <down>
+" command line
+cnoremap <c-a> <home>
+cnoremap <c-e> <end>
+"}}}
+</end></c-e></home></c-a></down></c-n></up></c-p></del></c-d></esc></c-a></esc></c-e></c-e></c-a></c-e></c-a></esc></c-g></esc></c-g></esc></c-g></code></pre>
+<p>Note: You have to disable the <kbd>C-a</kbd>, <kbd>C-e</kbd> in Jetbrain IDE to have the visual mode working correctly.</p>
+<p>You can click the from here to find the action by key.</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fm6eh3f8mgj31hg0fk42l.jpg" alt></p>
+<ol start="3">
+<li>To bind the actions under <kbd>space</kbd>, put the following script in the <code>~/.ideavimrc</code>.</li>
+</ol>
+<p>The ugly <code>&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;</code> is because when we enter the command mode from visual mode, we have <code>:'&lt;,'&gt;</code>. The extra chars need to be deleted before we invoke the actions.</p>
+<pre><code>let mapleader = &quot; &quot;
+
+&quot; ============================================================================
+&quot; key bindings for quickly moving between windows
+&quot; h left, l right, k up, j down
+&quot; ============================================================================
+nmap &lt;leader&gt;wh &lt;c-w&gt;h
+nmap &lt;leader&gt;wl &lt;c-w&gt;l
+nmap &lt;leader&gt;wk &lt;c-w&gt;k
+nmap &lt;leader&gt;wj &lt;c-w&gt;j
+nmap &lt;leader&gt;wv &lt;c-w&gt;v
+nmap &lt;leader&gt;ws &lt;c-w&gt;s
+nmap &lt;leader&gt;wc &lt;c-w&gt;c
+nmap &lt;leader&gt;wm :action HideAllWindows&lt;CR&gt;
+nmap &lt;leader&gt;wz :action ToggleDistractionFreeMode&lt;CR&gt;
+
+vmap &lt;leader&gt;wh &lt;c-w&gt;h
+vmap &lt;leader&gt;wl &lt;c-w&gt;l
+vmap &lt;leader&gt;wk &lt;c-w&gt;k
+vmap &lt;leader&gt;wj &lt;c-w&gt;j
+vmap &lt;leader&gt;wv &lt;c-w&gt;v
+vmap &lt;leader&gt;ws &lt;c-w&gt;s
+vmap &lt;leader&gt;wc &lt;c-w&gt;c
+vmap &lt;leader&gt;wm :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action HideAllWindows&lt;CR&gt;
+vmap &lt;leader&gt;wz :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ToggleDistractionFreeMode&lt;CR&gt;
+
+&quot; ============================================================================
+&quot; expand and collapse
+&quot; ============================================================================
+nmap zO :action ExpandAllRegions&lt;CR&gt;
+nmap zo :action ExpandRegion&lt;CR&gt;
+nmap zc :action CollapseRegion&lt;CR&gt;
+nmap zC :action CollapseAllRegions&lt;CR&gt;
+
+&quot; ============================================================================
+&quot; IDE actions
+&quot; ============================================================================
+
+nmap &lt;CR&gt;            :action RecentFiles&lt;CR&gt;
+nmap &lt;c-i&gt;           :action Forward&lt;CR&gt;
+nmap &lt;c-o&gt;           :action Back&lt;CR&gt;
+nmap &lt;leader&gt;'       :action ActivateTerminalToolWindow&lt;CR&gt;
+nmap &lt;leader&gt;&lt;Space&gt; :action GotoAction&lt;CR&gt;
+nmap &lt;leader&gt;&lt;tab&gt;   :action RecentFiles&lt;CR&gt;
+nmap &lt;leader&gt;aa      :action $SelectAll&lt;CR&gt;
+nmap &lt;leader&gt;al      :actionlist&lt;CR&gt;
+nmap &lt;leader&gt;bb      :action RecentFiles&lt;CR&gt;
+nmap &lt;leader&gt;bi      :action ActivateStructureToolWindow&lt;CR&gt;
+nmap &lt;leader&gt;bu      :action ReopenClosedTab&lt;CR&gt;
+nmap &lt;leader&gt;cc      :action GotoClass&lt;CR&gt;
+nmap &lt;leader&gt;dD      :action DebugClass&lt;CR&gt;
+nmap &lt;leader&gt;dd      :action Debug&lt;CR&gt;
+nmap &lt;leader&gt;ee      :action ShowErrorDescription&lt;CR&gt;
+nmap &lt;leader&gt;fT      :action SelectInProjectView&lt;CR&gt;
+nmap &lt;leader&gt;fb      :action ShowBookmarks&lt;CR&gt;
+nmap &lt;leader&gt;fd      :action SmartSearchAction&lt;CR&gt;
+nmap &lt;leader&gt;ff      :action SearchEverywhere&lt;CR&gt;
+nmap &lt;leader&gt;fs      :action SaveAll&lt;CR&gt;
+nmap &lt;leader&gt;ft      :action ActivateProjectToolWindow&lt;CR&gt;
+nmap &lt;leader&gt;im      :action ImplementMethods&lt;CR&gt;
+nmap &lt;leader&gt;ji      :action FileStructurePopup&lt;CR&gt;
+nmap &lt;leader&gt;jj      :action AceAction&lt;CR&gt;
+nmap &lt;leader&gt;jl      :action AceLineAction&lt;CR&gt;
+nmap &lt;leader&gt;m=      :action ReformatCode&lt;CR&gt;
+nmap &lt;leader&gt;rR      :action RunClass&lt;CR&gt;
+nmap &lt;leader&gt;rr      :action Run&lt;CR&gt;
+nmap &lt;leader&gt;ss      :action Stop&lt;CR&gt;
+nmap &lt;leader&gt;tb      :action ToggleBookmark&lt;CR&gt;
+nmap &lt;leader&gt;tt      :action ToggleLineBreakpoint&lt;CR&gt;
+nmap gd              :action GotoDeclaration&lt;CR&gt;
+nmap gh              :action QuickJavaDoc&lt;CR&gt;
+nmap gr              :action FindUsages&lt;CR&gt;
+nmap gs              :action GotoSymbol&lt;CR&gt;
+
+vmap &lt;CR&gt;            :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RecentFiles&lt;CR&gt;
+vmap &lt;c-i&gt;           :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Forward&lt;CR&gt;
+vmap &lt;c-o&gt;           :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Back&lt;CR&gt;
+vmap &lt;leader&gt;'       :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ActivateTerminalToolWindow&lt;CR&gt;
+vmap &lt;leader&gt;&lt;Space&gt; :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action GotoAction&lt;CR&gt;
+vmap &lt;leader&gt;&lt;tab&gt;   :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RecentFiles&lt;CR&gt;
+vmap &lt;leader&gt;aa      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action $SelectAll&lt;CR&gt;
+vmap &lt;leader&gt;al      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;actionlist&lt;CR&gt;
+vmap &lt;leader&gt;bb      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RecentFiles&lt;CR&gt;
+vmap &lt;leader&gt;bi      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ActivateStructureToolWindow&lt;CR&gt;
+vmap &lt;leader&gt;bu      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ReopenClosedTab&lt;CR&gt;
+vmap &lt;leader&gt;cc      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action GotoClass&lt;CR&gt;
+vmap &lt;leader&gt;dD      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action DebugClass&lt;CR&gt;
+vmap &lt;leader&gt;dd      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Debug&lt;CR&gt;
+vmap &lt;leader&gt;ee      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ShowErrorDescription&lt;CR&gt;
+vmap &lt;leader&gt;fT      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SelectInProjectView&lt;CR&gt;
+vmap &lt;leader&gt;fb      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ShowBookmarks&lt;CR&gt;
+vmap &lt;leader&gt;fd      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SmartSearchAction&lt;CR&gt;
+vmap &lt;leader&gt;ff      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SearchEverywhere&lt;CR&gt;
+vmap &lt;leader&gt;fs      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SaveAll&lt;CR&gt;
+vmap &lt;leader&gt;ft      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;:action ActivateProjectToolWindow&lt;CR&gt;
+vmap &lt;leader&gt;im      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ImplementMethods&lt;CR&gt;
+vmap &lt;leader&gt;ji      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FileStructurePopup&lt;CR&gt;
+vmap &lt;leader&gt;m=      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ReformatCode&lt;CR&gt;
+vmap &lt;leader&gt;rR      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RunClass&lt;CR&gt;
+vmap &lt;leader&gt;rr      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Run&lt;CR&gt;
+vmap &lt;leader&gt;ss      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Stop&lt;CR&gt;
+vmap &lt;leader&gt;tb      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ToggleBookmark&lt;CR&gt;
+vmap &lt;leader&gt;tt      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ToggleLineBreakpoint&lt;CR&gt;
+vmap gd              :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action GotoDeclaration&lt;CR&gt;
+vmap gr              :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FindUsages&lt;CR&gt;
+
+&quot; tab is used in karabiner as &lt;C-i&gt;, &lt;C-d&gt; as delete
+nmap &lt;tab&gt;           :action Forward&lt;CR&gt;
+nmap &lt;delete&gt;        &lt;C-d&gt;
+vmap &lt;tab&gt;           :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Forward&lt;CR&gt;
+vmap &lt;delete&gt;        &lt;C-d&gt;
+
+&quot; Reload .ideavimrc
+nmap &lt;leader&gt;R :source ~/.ideavimrc&lt;CR&gt;
+vmap &lt;leader&gt;R :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;source ~/.ideavimrc&lt;CR&gt;
+
+&quot; check the action list
+nmap &lt;leader&gt;al :actionlist&lt;CR&gt;
+vmap &lt;leader&gt;al :a&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;ctionlist&lt;CR&gt;
+
+&quot; git
+nmap &lt;leader&gt;gs :action Vcs.QuickListPopupAction&lt;CR&gt;
+vmap &lt;leader&gt;gs :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Vcs.QuickListPopupAction&lt;CR&gt;
+nmap &lt;leader&gt;gS :action ActivateVersionControlToolWindow&lt;CR&gt;
+vmap &lt;leader&gt;gS :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ActivateVersionControlToolWindow&lt;CR&gt;
+
+&quot; search in project
+nmap &lt;leader&gt;sp :action FindInPath&lt;CR&gt;
+vmap &lt;leader&gt;sp :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FindInPath&lt;CR&gt;
+
+&quot; replace in project
+nmap &lt;leader&gt;rp :action ReplaceInPath&lt;CR&gt;
+vmap &lt;leader&gt;rp :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FindInPath&lt;CR&gt;
+</code></pre>
+<ol start="4">
+<li>The multi-cursor action does not work correctly as well as the extend region and shrink region. They mess up some visual selection in Vim and the original selection. That’s the reason. But so far I cannot do anything. So I just put the script here in case they work later on.</li>
+</ol>
+<pre><code>&quot; select occurrence, they do not work when editing
+nmap mn :action SelectNextOccurrence&lt;CR&gt;
+nmap mp :action UnselectPreviousOccurrence&lt;CR&gt;
+nmap ma :action SelectAllOccurrences&lt;CR&gt;
+vmap mn :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SelectNextOccurrence&lt;CR&gt;
+vmap mp :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action UnselectPreviousOccurrence&lt;CR&gt;
+vmap ma :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SelectAllOccurrences&lt;CR&gt;
+</code></pre>
+<ol start="5">
+<li>There are other options you might want to add.</li>
+</ol>
+<pre><code>set gdefault
+set smartcase
+
+
+&quot; use system clipboard
+set clipboard=unnamedplus,unnamed
+
+set surround
+
+&quot; Allow backspace and cursor keys to cross line boundaries
+set whichwrap+=&lt;,&gt;,h,l
+
+&quot; black hole register
+vmap &lt;backspace&gt; &quot;_d
+vmap &lt;del&gt; &quot;_d
+</code></pre>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='TriDiamond'
+        data-a='TriDiamond'
+        data-d='undefined'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Ting Zhou</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">22 <p>Articles</p></a></li>
+                    <li><a href="/categories">7 <p>Categories</p></a></li>
+                    <li><a href="/tags">24 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#another-spacemacs-configuration-for-jetbrain-ides"><span class="toc-number">1.</span> <span class="toc-text"> &gt; Another Spacemacs configuration for Jetbrain IDEs</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#the-space-way"><span class="toc-number">2.</span> <span class="toc-text"> &gt; The space way</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#leader-key"><span class="toc-number">2.1.</span> <span class="toc-text"> &gt; Leader key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sticky-key"><span class="toc-number">2.2.</span> <span class="toc-text"> &gt; Sticky key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prefix-key"><span class="toc-number">2.3.</span> <span class="toc-text"> &gt; Prefix key</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#keybindings"><span class="toc-number">3.</span> <span class="toc-text"> &gt; Keybindings</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#install"><span class="toc-number">4.</span> <span class="toc-text"> &gt; Install</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Ting Zhou
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+    <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+
+    <script src="/js/busuanzi.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149874671-1');
+    </script>
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Think like an artist, develop like an artisan", "艺术家思维去思考问题，工匠创造精神去开发"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+
+
+</html>

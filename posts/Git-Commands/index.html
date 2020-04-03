@@ -1,0 +1,752 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Git Commands - Lady luck is smilin&#39;.</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content="
+Table of Contents
+
+Git Commands
+
+Create a new repository on the command line
+1. Creating repositor,"> 
+    <meta name="author" content="Ting Zhou"> 
+    <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Lady luck is smilin&#39;.</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://ztlevi.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Git Commands</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/coding"><b>「
+                    </b>CODING<b> 」</b></a>
+                
+                May 25, 2017
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/Git-Commands/" title="Git Commands">Git Commands</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    8.9k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    8 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/git/">git</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#git-commands">Git Commands</a>
+<ul>
+<li><a href="#create-a-new-repository-on-the-command-line">Create a new repository on the command line</a></li>
+<li><a href="#1-creating-repository">1. Creating repository</a></li>
+<li><a href="#2-version-rollback">2. Version rollback</a></li>
+<li><a href="#3-undo-changes-and-delete-files">3. Undo changes and delete files</a></li>
+<li><a href="#31-delete-commits">3.1 Delete commits</a></li>
+<li><a href="#4-remote-repository">4. Remote repository</a>
+<ul>
+<li><a href="#step-1-create-ssh-key">Step 1: Create SSH Key</a></li>
+<li><a href="#step-2-open-github---settings---ssh-and-new-gpg-keys---new-ssh-keys">Step 2: Open github -&gt; settings -&gt; SSH and New GPG keys -&gt; New SSH keys</a></li>
+<li><a href="#a-add-remote-repository">a. Add remote repository</a></li>
+<li><a href="#b-clone-the-remote-repository">b. Clone the remote repository</a></li>
+</ul>
+</li>
+<li><a href="#5-create-and-merge-branch">5. Create and merge branch</a></li>
+<li><a href="#6-bug-branch">6. Bug branch</a></li>
+<li><a href="#7-cooperation">7. Cooperation</a></li>
+</ul>
+</li>
+</ul>
+<!-- markdown-toc end -->
+<a id="more"></a>
+<h1 id="git-commands"><a class="header-anchor" href="#git-commands"> &gt; </a>Git Commands</h1>
+<h2 id="create-a-new-repository-on-the-command-line"><a class="header-anchor" href="#create-a-new-repository-on-the-command-line"> &gt; </a>Create a new repository on the command line</h2>
+<ul>
+<li>git init</li>
+<li>git add <a href="http://README.md" target="_blank" rel="noopener">README.md</a></li>
+<li>git commit -m “first commit”</li>
+<li>git remote add origin <a href="https://github.com/ztlevi/DeployWebsite.git" target="_blank" rel="noopener">https://github.com/ztlevi/DeployWebsite.git</a></li>
+<li>git push -u origin master</li>
+<li>Push an existing repository from the command line</li>
+<li>git remote add origin <a href="https://github.com/ztlevi/DeployWebsite.git" target="_blank" rel="noopener">https://github.com/ztlevi/DeployWebsite.git</a></li>
+<li>git push -u origin master</li>
+</ul>
+<ol>
+<li>Creating repository</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>Initialize a git project</td>
+</tr>
+<tr>
+<td>git add <filename></filename></td>
+<td>. or * means all new files</td>
+</tr>
+<tr>
+<td>git rm —cached -</td>
+<td>Remove all files from cache</td>
+</tr>
+<tr>
+<td>git commit</td>
+<td>Commit your changes to repository</td>
+</tr>
+<tr>
+<td>git commit -a</td>
+<td>Combined the add and commit step</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>Check what the file changed</td>
+</tr>
+<tr>
+<td>git diff <a href="http://readme.md" target="_blank" rel="noopener">readme.md</a></td>
+<td>See the changes of <a href="http://readme.md" target="_blank" rel="noopener">readme.md</a></td>
+</tr>
+<tr>
+<td>git diff v2.5 HEAD</td>
+<td>Compare the current HEAD to v2.5</td>
+</tr>
+</tbody>
+</table>
+<p>The commit you are currently on is known as the HEAD commit.</p>
+<ol start="2">
+<li>Version rollback</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git log</td>
+<td>Show the logs(SHA)</td>
+</tr>
+<tr>
+<td>git log --pretty=oneline</td>
+<td>Show the logs concisely</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>Get the version number(first 7 characters of the SHA)</td>
+</tr>
+<tr>
+<td>git reset --hard HEAD^</td>
+<td>Go back to the last version, --hard is used to reset the index and working directory</td>
+</tr>
+<tr>
+<td>git reset --hard HEAD@{n}</td>
+<td>Go back to the nth versions before</td>
+</tr>
+<tr>
+<td>git reset --hard version_number</td>
+<td>Reset to the specific version</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>Undo changes and delete files</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git checkout HEAD <filename></filename></td>
+<td>Undo the file changes and recover the file to the HEAD</td>
+</tr>
+</tbody>
+</table>
+<img src="https://ww1.sinaimg.cn/large/006tNc79gy1fd8dh32mgwj31960q041o.jpg" alt="img" title="image title">
+3.1 Delete commits
+------------------
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Git glog</td>
+<td>See commit ids</td>
+</tr>
+<tr>
+<td>Git rebase -i commit_id</td>
+<td>Edit the commits from HEAD to commit_id (delete line to remove commits)</td>
+</tr>
+<tr>
+<td>Git push -f origin branch</td>
+<td>Force push to origin branch</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>Remote repository</li>
+</ol>
+<hr>
+<h3 id="step-1-create-ssh-key"><a class="header-anchor" href="#step-1-create-ssh-key"> &gt; </a>Step 1: Create SSH Key</h3>
+<p>ssh-keygen -t rsa -C “your email” —&gt; generate puclic/private rsa key pair</p>
+<h3 id="step-2-open-github-settings-ssh-and-new-gpg-keys-new-ssh-keys"><a class="header-anchor" href="#step-2-open-github-settings-ssh-and-new-gpg-keys-new-ssh-keys"> &gt; </a>Step 2: Open github -&gt; settings -&gt; SSH and New GPG keys -&gt; New SSH keys</h3>
+<p>Fill anything in the title and copy the id_rsa.pub to the key text box. Then click Add Key.</p>
+<h3 id="a-add-remote-repository"><a class="header-anchor" href="#a-add-remote-repository"> &gt; </a>a. Add remote repository</h3>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git remote add origin <a href="https://github.com/ztlevi/MRS.git" target="_blank" rel="noopener">https://github.com/ztlevi/MRS.git</a></td>
+<td>Add remote repository</td>
+</tr>
+<tr>
+<td>git remote add origin <a href="mailto:git@github.com" target="_blank" rel="noopener">git@github.com</a>:ztlevi/MRS.git</td>
+<td>The same.</td>
+</tr>
+<tr>
+<td>git push -u origin/dev dev <br>= git push -u origin dev<br>= git push origin dev</td>
+<td>Set upstream for git pull/status. dev branch will be created if not existed.</td>
+</tr>
+<tr>
+<td>git checkout origin/dev –b dev</td>
+<td>Checkout to dev branch and set upstream to origin/dev. Contain the next command</td>
+</tr>
+<tr>
+<td>git branch -u origin/dev dev <br>= git branch -u origin dev</td>
+<td>dev set up to track remote branch dev from origin.</td>
+</tr>
+</tbody>
+</table>
+<p>After that, use git push/git push origin master</p>
+<h3 id="b-clone-the-remote-repository"><a class="header-anchor" href="#b-clone-the-remote-repository"> &gt; </a>b. Clone the remote repository</h3>
+<p><code>git clone remote_location //clone_directory</code></p>
+<p>Remote location can be local or online location, such as http/ssh. If there is no clone_directory,
+then the default directory is the root directory.</p>
+<ol start="5">
+<li>Create and merge branch</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git checkout -b <name></name></td>
+<td>Create and switch to the branch created. This command equals<br> the following two commonds git branch dev and git checkout dev</td>
+</tr>
+<tr>
+<td>git branch (-v)</td>
+<td>List all the branches</td>
+</tr>
+<tr>
+<td>git branch <name></name></td>
+<td>Create branch</td>
+</tr>
+<tr>
+<td>git checkout <name></name></td>
+<td>Switch branch and will automaticlly merge</td>
+</tr>
+<tr>
+<td>git branch -d <name></name></td>
+<td>Delete branch</td>
+</tr>
+<tr>
+<td>git push origin -d <branch name></branch></td>
+<td>DeleteDelet remote branch</td>
+</tr>
+</tbody>
+</table>
+<p>On master branch</p>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git merge dev</td>
+<td>Merge dev into the master</td>
+</tr>
+<tr>
+<td>git merge --no-ff -m “…” dev</td>
+<td>Merge without fast forward mode</td>
+</tr>
+<tr>
+<td>git merge origin/master</td>
+<td>Merge into the remote origin/master branch</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>Bug branch</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git stash</td>
+<td>record the current state of the working directory and the index, <br>and go back to the clean HEAD.</td>
+</tr>
+<tr>
+<td>git stash list</td>
+<td>show the working directory</td>
+</tr>
+<tr>
+<td>git stash apply</td>
+<td>recover the working directory</td>
+</tr>
+<tr>
+<td>git stash drop</td>
+<td>delete the WIP(working in process)</td>
+</tr>
+<tr>
+<td>git stash pop</td>
+<td>equals apply + drop</td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li>Cooperation</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git remote</td>
+<td>check the remote repository status</td>
+</tr>
+<tr>
+<td>git remote -v</td>
+<td>check the detailed information</td>
+</tr>
+<tr>
+<td>git remote remove <name></name></td>
+<td>Remove the remote</td>
+</tr>
+<tr>
+<td>git remote rename <old> <new></new></old></td>
+<td>Rename the remote</td>
+</tr>
+</tbody>
+</table>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='TriDiamond'
+        data-a='TriDiamond'
+        data-d='undefined'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Ting Zhou</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">22 <p>Articles</p></a></li>
+                    <li><a href="/categories">7 <p>Categories</p></a></li>
+                    <li><a href="/tags">24 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#git-commands"><span class="toc-number">1.</span> <span class="toc-text"> &gt; Git Commands</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#create-a-new-repository-on-the-command-line"><span class="toc-number">1.1.</span> <span class="toc-text"> &gt; Create a new repository on the command line</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#step-1-create-ssh-key"><span class="toc-number">1.1.1.</span> <span class="toc-text"> &gt; Step 1: Create SSH Key</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#step-2-open-github-settings-ssh-and-new-gpg-keys-new-ssh-keys"><span class="toc-number">1.1.2.</span> <span class="toc-text"> &gt; Step 2: Open github -&gt; settings -&gt; SSH and New GPG keys -&gt; New SSH keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#a-add-remote-repository"><span class="toc-number">1.1.3.</span> <span class="toc-text"> &gt; a. Add remote repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#b-clone-the-remote-repository"><span class="toc-number">1.1.4.</span> <span class="toc-text"> &gt; b. Clone the remote repository</span></a></li></ol></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Ting Zhou
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+    <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+
+    <script src="/js/busuanzi.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149874671-1');
+    </script>
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Think like an artist, develop like an artisan", "艺术家思维去思考问题，工匠创造精神去开发"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+
+
+</html>

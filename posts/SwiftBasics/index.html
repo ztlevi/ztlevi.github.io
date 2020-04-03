@@ -1,0 +1,541 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Swift Basics - Lady luck is smilin&#39;.</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="TriDiamond Obsidian,"> 
+    <meta name="description" content=" &amp;gt; Constants and Variables
+If a stored value in your code is not going to change, always declare,"> 
+    <meta name="author" content="Ting Zhou"> 
+    <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Lady luck is smilin&#39;.</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://ztlevi.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Swift Basics</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/coding"><b>「
+                    </b>CODING<b> 」</b></a>
+                
+                May 29, 2017
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/SwiftBasics/" title="Swift Basics">Swift Basics</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    12k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    11 mins.
+                </span>
+                
+                
+                
+                <span id="busuanzi_container_page_pv">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span id="busuanzi_value_page_pv">0</span>
+                </span>
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/coding/">coding</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/swift/">swift</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="constants-and-variables"><a class="header-anchor" href="#constants-and-variables"> &gt; </a>Constants and Variables</h1>
+<p>If a stored value in your code is not going to change, always declare it as a constant with the let keyword. Use variables only for storing values that need to be able to change.</p>
+<pre><code class="language-swift">let maximumNumberOfLoginAttempts = 10
+var currentLoginAttempt = 0”
+</code></pre>
+<a id="more"></a>
+<h1 id="type-annotations"><a class="header-anchor" href="#type-annotations"> &gt; </a>Type Annotations</h1>
+<p>It is rare that you need to write type annotations in practice. If you provide an initial value for a constant or variable at the point that it is defined, Swift can almost always infer the type to be used for that constant or variable, as described in Type Safety and Type Inference.</p>
+<pre><code class="language-swift">var welcomeMessage: String
+welcomeMessage = &quot;Hello&quot;
+</code></pre>
+<p>In the welcomeMessage example above, no initial value is provided, and so the type of the welcomeMessage variable is specified with a type annotation rather than being inferred from an initial value.</p>
+<h1 id="naming-constants-and-variables"><a class="header-anchor" href="#naming-constants-and-variables"> &gt; </a>Naming Constants and Variables</h1>
+<p>Constant and variable names can contain almost any character, including Unicode characters:</p>
+<pre><code class="language-swift">let π = 3.14159
+let 你好 = &quot;你好世界&quot;
+let 🐶🐮 = &quot;dogcow&quot;
+</code></pre>
+<h1 id="printing"><a class="header-anchor" href="#printing"> &gt; </a>Printing</h1>
+<p>Swift uses string interpolation to include the name of a constant or variable as a placeholder in a longer string, and to prompt Swift to replace it with the current value of that constant or variable. Wrap the name in parentheses and escape it with a backslash before the opening parenthesis:</p>
+<pre><code class="language-swift">print(&quot;The current value of friendlyWelcome is \(friendlyWelcome)&quot;)”
+</code></pre>
+<h1 id="uint"><a class="header-anchor" href="#uint"> &gt; </a>UInt</h1>
+<p>Swift also provides an unsigned integer type, UInt, which has the same size as the current platform’s native word size:</p>
+<ul>
+<li>On a 32-bit platform, UInt is the same size as UInt32.</li>
+<li>On a 64-bit platform, UInt is the same size as UInt64.</li>
+</ul>
+<h1 id="floating-point-numbers"><a class="header-anchor" href="#floating-point-numbers"> &gt; </a>Floating-Point Numbers</h1>
+<p>Floating-point types can represent a much wider range of values than integer types, and can store numbers that are much larger or smaller than can be stored in an Int. Swift provides two signed floating-point number types:</p>
+<ul>
+<li>Double represents a 64-bit floating-point number.</li>
+<li>Float represents a 32-bit floating-point number.</li>
+</ul>
+<p>Double has a precision of at least 15 decimal digits, whereas the precision of Float can be as little as 6 decimal digits.</p>
+<h1 id="type-safety-and-type-inference"><a class="header-anchor" href="#type-safety-and-type-inference"> &gt; </a>Type Safety and Type Inference</h1>
+<p>Because of type inference, Swift requires far fewer type declarations than languages such as C or Objective-C. Constants and variables are still explicitly typed, but much of the work of specifying their type is done for you.</p>
+<p>Type inference is particularly useful when you declare a constant or variable with an initial value. This is often done by assigning a literal value (or literal) to the constant or variable at the point that you declare it.</p>
+<h1 id="numeric-literals"><a class="header-anchor" href="#numeric-literals"> &gt; </a>Numeric Literals</h1>
+<p>Integer literals can be written as:</p>
+<ul>
+<li>A decimal number, with no prefix</li>
+<li>A binary number, with a 0b prefix</li>
+<li>An octal number, with a 0o prefix</li>
+<li>A hexadecimal number, with a 0x prefix</li>
+</ul>
+<p>All of these integer literals have a decimal value of 17:</p>
+<pre><code class="language-swift">let decimalInteger = 17
+let binaryInteger = 0b10001       // 17 in binary notation
+let octalInteger = 0o21           // 17 in octal notation
+let hexadecimalInteger = 0x11     // 17 in hexadecimal notation”
+</code></pre>
+<p>Floating-point literals can be decimal (with no prefix), or hexadecimal (with a 0x prefix). They must always have a number (or hexadecimal number) on both sides of the decimal point. Decimal floats can also have an optional exponent, indicated by an uppercase or lowercase e; hexadecimal floats must have an exponent, indicated by an uppercase or lowercase p.</p>
+<p>For decimal numbers with an exponent of exp, the base number is multiplied by 10exp:</p>
+<p>1.25e2 means 1.25 x 10<sup>2</sup>, or 125.0. 1.25e-2 means 1.25 x 10<sup>-2</sup>, or 0.0125. For hexadecimal numbers with an exponent of exp, the base number is multiplied by 2exp:</p>
+<p>0xFp2 means 15 x 2<sup>2</sup>, or 60.0. 0xFp-2 means 15 x 2<sup>-2</sup>, or 3.75. All of these floating-point literals have a decimal value of 12.1875:</p>
+<pre><code class="language-swift">let decimalDouble = 12.1875
+let exponentDouble = 1.21875e1
+let hexadecimalDouble = 0xC.3p0
+</code></pre>
+<p>Numeric literals can contain extra formatting to make them easier to read. Both integers and floats can be padded with extra zeros and can contain underscores to help with readability. Neither type of formatting affects the underlying value of the literal:</p>
+<pre><code class="language-swift">let paddedDouble = 000123.456
+let oneMillion = 1_000_000
+let justOverOneMillion = 1_000_000.000_000_1
+</code></pre>
+<h1 id="type-aliases"><a class="header-anchor" href="#type-aliases"> &gt; </a>Type Aliases</h1>
+<p>Type aliases define an alternative name for an existing type. You define type aliases with the typealias keyword.</p>
+<p>Type aliases are useful when you want to refer to an existing type by a name that is contextually more appropriate, such as when working with data of a specific size from an external source:</p>
+<pre><code class="language-swift">typealias AudioSample = UInt16”
+</code></pre>
+<h1 id="tuples"><a class="header-anchor" href="#tuples"> &gt; </a>Tuples</h1>
+<p>Tuples group multiple values into a single compound value. The values within a tuple can be of any type and do not have to be of the same type as each other.</p>
+<p>In this example, (404, “Not Found”) is a tuple that describes an HTTP status code. An HTTP status code is a special value returned by a web server whenever you request a web page. A status code of 404 Not Found is returned if you request a webpage that doesn’t exist.</p>
+<pre><code class="language-swift">let http404Error = (404, &quot;Not Found&quot;)
+// http404Error is of type (Int, String), and equals (404, &quot;Not Found&quot;)
+</code></pre>
+<p>If you only need some of the tuple’s values, ignore parts of the tuple with an underscore (_) when you decompose the tuple:</p>
+<pre><code class="language-swift">let (justTheStatusCode, _) = http404Error
+print(&quot;The status code is \(justTheStatusCode)&quot;)
+// Prints &quot;The status code is 404&quot;
+</code></pre>
+<p>Alternatively, access the individual element values in a tuple using index numbers starting at zero:</p>
+<pre><code class="language-swift">print(&quot;The status code is \(http404Error.0)&quot;)
+// Prints &quot;The status code is 404&quot;
+print(&quot;The status message is \(http404Error.1)&quot;)
+// Prints &quot;The status message is Not Found&quot;
+</code></pre>
+<p>You can name the individual elements in a tuple when the tuple is defined:</p>
+<pre><code class="language-swift">let http200Status = (statusCode: 200, description: &quot;OK&quot;)
+</code></pre>
+<p>If you name the elements in a tuple, you can use the element names to access the values of those elements:</p>
+<pre><code class="language-swift">print(&quot;The status code is \(http200Status.statusCode)&quot;)
+// Prints &quot;The status code is 200&quot;
+print(&quot;The status message is \(http200Status.description)&quot;)
+// Prints &quot;The status message is OK
+</code></pre>
+<p><code>Note: Tuples are useful for temporary groups of related values. They are not suited to the creation of complex data structures. If your data structure is likely to persist beyond a temporary scope, model it as a class or structure, rather than as a tuple. For more information, see Classes and Structures.</code></p>
+<h1 id="optionals"><a class="header-anchor" href="#optionals"> &gt; </a>Optionals</h1>
+<p>You use optionals in situations where a value may be absent. An optional represents two possibilities: <strong>Either there is a value, and you can unwrap the optional to access that value, or there isn’t a value at all.</strong></p>
+<p>The example below uses the initializer to try to convert a String into an Int:</p>
+<pre><code class="language-swift">let possibleNumber = &quot;123&quot;
+let convertedNumber = Int(possibleNumber)
+// convertedNumber is inferred to be of type &quot;Int?&quot;, or &quot;optional Int&quot;
+</code></pre>
+<p>Because the initializer might fail, it returns an optional Int, rather than an Int. An optional Int is written as Int?, not Int. The question mark indicates that the value it contains is optional, meaning that it might contain some Int value, or it might contain no value at all. (It can’t contain anything else, such as a Bool value or a String value. It’s either an Int, or it’s nothing at all.)</p>
+<h2 id="if-statements-and-forced-unwrapping"><a class="header-anchor" href="#if-statements-and-forced-unwrapping"> &gt; </a>If Statements and Forced Unwrapping</h2>
+<p>Once you’re sure that the optional does contain a value, you can access its underlying value by adding an exclamation mark (!) to the end of the optional’s name. The exclamation mark effectively says, “I know that this optional definitely has a value; please use it.” This is known as forced unwrapping of the optional’s value:</p>
+<pre><code class="language-swift">if convertedNumber != nil {
+    print(&quot;convertedNumber has an integer value of \(convertedNumber!).&quot;)
+}
+// Prints &quot;convertedNumber has an integer value of 123.&quot;
+</code></pre>
+<p><code>NOTE: Trying to use ! to access a nonexistent optional value triggers a runtime error. Always make sure that an optional contains a non-nil value before using ! to force-unwrap its value.</code></p>
+<h2 id="optional-binding"><a class="header-anchor" href="#optional-binding"> &gt; </a>Optional Binding</h2>
+<p>You use optional binding to find out whether an optional contains a value, and if so, to make that value available as a temporary constant or variable. Optional binding can be used with if and while statements to check for a value inside an optional, and to extract that value into a constant or variable, as part of a single action.</p>
+<p>Write an optional binding for an if statement as follows:</p>
+<pre><code class="language-swift"> if let constantName = someOptional {
+    statements
+}
+</code></pre>
+<h2 id="implicitly-unwrapped-optional"><a class="header-anchor" href="#implicitly-unwrapped-optional"> &gt; </a>implicitly unwrapped optional</h2>
+<pre><code class="language-swift">let possibleString: String? = &quot;An optional string.&quot;
+let forcedString: String = possibleString! // requires an exclamation mark
+
+let assumedString: String! = &quot;An implicitly unwrapped optional string.&quot;
+let implicitString: String = assumedString // no need for an exclamation mark
+</code></pre>
+<p>You can think of an implicitly unwrapped optional as giving permission for the optional to be unwrapped automatically whenever it is used. <strong>Rather than placing an exclamation mark after the optional’s name each time you use it, you place an exclamation mark after the optional’s type when you declare it.</strong></p>
+<p><code>NOTE: If an implicitly unwrapped optional is nil and you try to access its wrapped value, you’ll trigger a runtime error. The result is exactly the same as if you place an exclamation mark after a normal optional that does not contain a value.</code></p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+    <div id='gitalk-container' class="comment link"
+        data-ae='true'
+        data-ci='ec894e2b66f752e8b7fb'
+        data-cs='3ccc2e92bb350688fe2c2dc2930189b62622bfb1'
+        data-r='blog-comments'
+        data-o='TriDiamond'
+        data-a='TriDiamond'
+        data-d='undefined'
+    >Comments</div>
+
+
+            
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Ting Zhou</p>
+                    <span>Think like an artist, develop like an artisan</span>
+                    <dl>
+                        <dd><a href="https://github.com/TriDiamond" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/TriDiamond6" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/7602324/tridiamond?tab=profile" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">22 <p>Articles</p></a></li>
+                    <li><a href="/categories">7 <p>Categories</p></a></li>
+                    <li><a href="/tags">24 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#constants-and-variables"><span class="toc-number">1.</span> <span class="toc-text"> &gt; Constants and Variables</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#type-annotations"><span class="toc-number">2.</span> <span class="toc-text"> &gt; Type Annotations</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#naming-constants-and-variables"><span class="toc-number">3.</span> <span class="toc-text"> &gt; Naming Constants and Variables</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#printing"><span class="toc-number">4.</span> <span class="toc-text"> &gt; Printing</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#uint"><span class="toc-number">5.</span> <span class="toc-text"> &gt; UInt</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#floating-point-numbers"><span class="toc-number">6.</span> <span class="toc-text"> &gt; Floating-Point Numbers</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#type-safety-and-type-inference"><span class="toc-number">7.</span> <span class="toc-text"> &gt; Type Safety and Type Inference</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#numeric-literals"><span class="toc-number">8.</span> <span class="toc-text"> &gt; Numeric Literals</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#type-aliases"><span class="toc-number">9.</span> <span class="toc-text"> &gt; Type Aliases</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#tuples"><span class="toc-number">10.</span> <span class="toc-text"> &gt; Tuples</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#optionals"><span class="toc-number">11.</span> <span class="toc-text"> &gt; Optionals</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#if-statements-and-forced-unwrapping"><span class="toc-number">11.1.</span> <span class="toc-text"> &gt; If Statements and Forced Unwrapping</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#optional-binding"><span class="toc-number">11.2.</span> <span class="toc-text"> &gt; Optional Binding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#implicitly-unwrapped-optional"><span class="toc-number">11.3.</span> <span class="toc-text"> &gt; implicitly unwrapped optional</span></a></li></ol></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Ting Zhou
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+    <link rel="stylesheet" href="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.css">
+    <script src="//cdn.bootcss.com/gitalk/1.5.0/gitalk.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+
+    <script src="/js/busuanzi.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            if ($('span[id^="busuanzi_"]').length) {
+                initialBusuanzi();
+            }
+        });
+    </script>
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="//www.googletagmanager.com/gtag/js?id=UA-149874671-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149874671-1');
+    </script>
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Think like an artist, develop like an artisan", "艺术家思维去思考问题，工匠创造精神去开发"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+
+
+</html>
