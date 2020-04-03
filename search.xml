@@ -122,15 +122,15 @@
             
             <tag> spacemacs </tag>
             
-            <tag> space-vim </tag>
-            
-            <tag> jetbrain </tag>
-            
             <tag> intellij idea </tag>
             
             <tag> pycharm </tag>
             
             <tag> webstorm </tag>
+            
+            <tag> space-vim </tag>
+            
+            <tag> jetbrain </tag>
             
         </tags>
       
@@ -265,15 +265,15 @@
             
             <tag> spacemacs </tag>
             
+            <tag> vscode </tag>
+            
+            <tag> space </tag>
+            
             <tag> intellij idea </tag>
             
             <tag> pycharm </tag>
             
             <tag> webstorm </tag>
-            
-            <tag> vscode </tag>
-            
-            <tag> space </tag>
             
         </tags>
       
