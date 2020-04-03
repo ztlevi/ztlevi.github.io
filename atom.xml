@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://ztlevi.github.io/"/>
-  <updated>2020-04-03T21:40:07.889Z</updated>
+  <updated>2020-04-03T22:49:02.231Z</updated>
   <id>https://ztlevi.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/"/>
     <id>https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/</id>
     <published>2019-02-25T23:49:08.000Z</published>
-    <updated>2020-04-03T21:40:07.889Z</updated>
+    <updated>2020-04-03T22:49:02.231Z</updated>
     
     <content type="html"><![CDATA[<p>How you navigate to your projects in terminal? <code>cd</code>? <code>ranger</code>? <code>nnn</code>? t a Well, these are notdesinged for navigating projects and they really do their jobs but not so efficient.</p><p>Let me introduce the <code>fzf_projects</code>.</p><p>First, you need to install fzf. Simply go through the tutorial here.</p><p>Second, put the following code in your shell configuration file.</p><blockquote><p>Note: <code>project_roots</code> is a list of directories that projects inside within depth 1 will be addedas projects candidates. <code>developer_root</code> is a directory that project inside within depth 2 will beadded.</p></blockquote><a id="more"></a><pre><code class="language-sh"># Switch projectsfunction fzf_projects(){    projects=()    # Scan roots with depth 1    project_roots=(&quot;$HOME&quot; &quot;$HOME/Dropbox&quot;)    for root in $project_roots; do        for dir in $(find $root -maxdepth 1 -type d); do            if [ -d $dir/.git ]; then                projects+=($dir)            fi        done    done    # Scan Developer directory with depth 2    developer_root=$HOME/Developer    for dir in $(find $developer_root -maxdepth 2 -type d); do        if [ -d $dir/.git ]; then            projects+=($dir)        fi    done    fzf_projects=&quot;&quot;    for project in $projects; do        fzf_projects=$fzf_projects\\n$project;    done    # Trim first \n    fzf_projects=${fzf_projects:2:${#fzf_projects}-1}    selected_project=$(echo $fzf_projects | fzf)    cd $selected_project}alias pp=fzf_projects</code></pre><p>Third, source your shell configuration again or open a new terminal window. Trigger <code>fzf_projects</code>by input <code>pp</code>.</p>]]></content>
     

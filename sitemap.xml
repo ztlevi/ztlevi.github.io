@@ -2,6 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://ztlevi.github.io/about/index.html</loc>
+    
+    <lastmod>2020-04-03T23:29:08.891Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/</loc>
+    
+    <lastmod>2020-04-03T22:49:02.231Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/tags/index.html</loc>
+    
+    <lastmod>2020-04-03T22:28:19.228Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/categories/index.html</loc>
+    
+    <lastmod>2020-04-03T22:28:10.221Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ztlevi.github.io/posts/A-complete-solution-for-TinyURL-Leetcode-System-Design/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
@@ -51,6 +79,13 @@
   </url>
   
   <url>
+    <loc>https://ztlevi.github.io/posts/SwiftBasics/</loc>
+    
+    <lastmod>2020-04-03T21:40:07.889Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://ztlevi.github.io/posts/A-simple-tweak-to-help-you-edit-minified-files-in-Emacs/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
@@ -65,14 +100,14 @@
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/posts/Org2Blog_Tutorial/</loc>
+    <loc>https://ztlevi.github.io/posts/Get%20your%20imenu%20ready%20for%20modern%20javascript/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/posts/spacemacsKeybindings/</loc>
+    <loc>https://ztlevi.github.io/posts/Org2Blog_Tutorial/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
     
@@ -86,21 +121,14 @@
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/posts/Get%20your%20imenu%20ready%20for%20modern%20javascript/</loc>
-    
-    <lastmod>2020-04-03T21:40:07.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/</loc>
-    
-    <lastmod>2020-04-03T21:40:07.889Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ztlevi.github.io/posts/Git-Commands/</loc>
+    
+    <lastmod>2020-04-03T21:40:07.889Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/spacemacsKeybindings/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
     
@@ -114,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/posts/Lagging-in-Chrome-with-Nvidia-Hackintosh/</loc>
+    <loc>https://ztlevi.github.io/posts/Hexo-embeded-with-tags-Youtube-Twitter-Instagram/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
     
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/posts/Hexo-embeded-with-tags-Youtube-Twitter-Instagram/</loc>
+    <loc>https://ztlevi.github.io/posts/Lagging-in-Chrome-with-Nvidia-Hackintosh/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
     
@@ -135,20 +163,6 @@
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/posts/SwiftBasics/</loc>
-    
-    <lastmod>2020-04-03T21:40:07.889Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/The-Minimal-Spacemacs-Tweaks-for-VSCode/</loc>
-    
-    <lastmod>2020-04-03T21:40:07.889Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://ztlevi.github.io/posts/myHackintoshBuild/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
@@ -156,7 +170,7 @@
   </url>
   
   <url>
-    <loc>https://ztlevi.github.io/about/index.html</loc>
+    <loc>https://ztlevi.github.io/posts/The-Minimal-Spacemacs-Tweaks-for-VSCode/</loc>
     
     <lastmod>2020-04-03T21:40:07.889Z</lastmod>
     
