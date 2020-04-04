@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>Overall experience with BSPWM and polybar</title>
+      <link href="/posts/Overall-experience-with-BSPWM-and-polybar/"/>
+      <url>/posts/Overall-experience-with-BSPWM-and-polybar/</url>
+      
+        <content type="html"><![CDATA[<h1 id="first-time-with-tiling-window-manager"><a class="header-anchor" href="#first-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1><p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen without anything. While you could something there by forking something’s setup. But it might not working for you cuz it’s really easy to break some dependencies on your system.</p><p>I would recommend you to start with something like Awesome tiling window manager. It comes with more built-in features. But I think overall BSPWM is a good fit for me. Polybar is supported in BSPWM and the keybinding system is clean.</p><p>I forked <a href="https://github.com/hlissner" target="_blank" rel="noopener">Henrik Lissner</a>’s dotfiles setup last year. So thanks for the amazing scripts that manage all the binaries and dependencies across multiple OS.</p><h1 id="multi-monitor-support"><a class="header-anchor" href="#multi-monitor-support"> &gt; </a>Multi-monitor support</h1><p>There are scripts enabled multi-monitors support.</p><ul><li><a href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-focus" target="_blank" rel="noopener">bspc-focus</a>: allow you to focus windows across monitors</li><li><a href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-swap" target="_blank" rel="noopener">bspc-swap</a>: allows you swap windows across monitors</li></ul><p>These scripts basically check if there is any window in the current monitor is on the direction of the current window. If not, then it will check the next monitor.</p><h1 id="hdpi-support"><a class="header-anchor" href="#hdpi-support"> &gt; </a>HDPI support</h1><p>There are many things needs customization to support 4K monitors.</p><p>I’m putting a lot of effort to make HDPI support comes out of box. Basically, I’m using <code>xrandr</code> to figure out the connected monitor resolution. Then calculate a <code>SCALE</code> factor based on the resolution. Passing that across multiple applications to make HDPI like a built-in feature.</p><p>In <code>.xprofile</code>.</p><pre><code class="language-bash">RESOLUTION=$(xrandr -q | grep primary | grep ' connected' | cut -d' ' -f4 | cut -d 'x' -f1)if [ -z $RESOLUTION ]; then RESOLUTION=1920; fi</code></pre><ul><li><p>Some apps can use system variables in their configuration. For example, <code>polybar</code>.</p><p>In <code>run-polybar.sh</code>:</p><pre><code class="language-bash">MONITOR=$(xrandr -q | grep primary | grep ' connected' | cut -d' ' -f1)MONITORS=($(xrandr -q | grep ' connected' | cut -d' ' -f1))MONITOR=${MONITOR:-${MONITORS[0]}}if [ &quot;$GDK_SCALE&quot; -eq 2 ]; thendpi=160elsedpi=92fikillall -q polybarwhile _is_running polybar; do sleep 1; donesource &quot;${0:A:h}/../../bin/inject-xcolors&quot;pushd ~ &gt;/dev/nullenv DPI=${dpi} MONITOR=${MONITOR} bash -c &quot;polybar main &gt;$XDG_DATA_HOME/polybar.log 2&gt;&amp;1 &amp;&quot;for mon in ${MONITORS[@]/${MONITOR}/}; doenv DPI=${dpi} SIDE_MONITOR=${mon} bash -c &quot;polybar side &gt;&gt;$XDG_DATA_HOME/polybar.log 2&gt;&amp;1 &amp;&quot;donepopd &gt;/dev/null</code></pre><p>In polybar config:</p><pre><code class="language-bash">[bar/side]inherit = bar/mastermonitor = ${env:SIDE_MONITOR}dpi = ${env:DPI}</code></pre></li><li><p>There are apps cannot use system environment variables. So I pass different configs.</p><pre><code class="language-bash">if [ &quot;$GDK_SCALE&quot; -eq 2 ]; thendunst -config $DOTFILES/desktop/bspwm/config/dunst/dunstrc_4K &amp;elsedunst -config $DOTFILES/desktop/bspwm/config/dunst/dunstrc &amp;fi</code></pre></li></ul><h1 id="polybar"><a class="header-anchor" href="#polybar"> &gt; </a>Polybar</h1><p>This is a light weight and fully customizable status bar. You could put almost everything there.</p><p>I have a clickable WIFI, sound, and icon workspaces module.</p><p><img src="https://raw.githubusercontent.com/ztlevi/picee_images/master/common/image.soyiqyuc4wi.png" alt="polybar"></p><p>While there are tons of themes on the web. Take a look at <a href="https://github.com/polybar/polybar" target="_blank" rel="noopener">here</a>.</p><h1 id="gnome-apps"><a class="header-anchor" href="#gnome-apps"> &gt; </a>Gnome apps</h1><p>I don’t know what other people typically do to modify settings in tiling window mangers. Because they usually don’t ship with setting applications.</p><p>So I would also install Gnome and it’s applications just so I can modify the settings like Bluetooth or WIFI.</p><h1 id="summary"><a class="header-anchor" href="#summary"> &gt; </a>Summary</h1><p>The reason most people choose tiling window manager is because it’s productive and cool. Talking about productivity, there won’t be a huge difference between tiling window manager and normal ones if you just use one or two monitors. It will be faster because you don’t need to move your hands to the mouse and then move back. Everything is under keyboard.</p><p>But the productivities will scale up when u have 4 or more monitors. In this case, a multi-monitor solution will be a life saver.</p><p>And finally, it’s cooooooool!</p><p>If you’re instead in tiling window manager. You’re welcome to fork <a href="https://github.com/ztlevi/Dotfiles" target="_blank" rel="noopener"> my setup </a>.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> coding </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> coding, bspwm </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>FZF all your projects in terminal</title>
       <link href="/posts/FZF-all-your-projects-in-terminal/"/>
       <url>/posts/FZF-all-your-projects-in-terminal/</url>
@@ -122,15 +147,15 @@
             
             <tag> spacemacs </tag>
             
+            <tag> space-vim </tag>
+            
+            <tag> jetbrain </tag>
+            
             <tag> intellij idea </tag>
             
             <tag> pycharm </tag>
             
             <tag> webstorm </tag>
-            
-            <tag> space-vim </tag>
-            
-            <tag> jetbrain </tag>
             
         </tags>
       
@@ -265,15 +290,15 @@
             
             <tag> spacemacs </tag>
             
-            <tag> vscode </tag>
-            
-            <tag> space </tag>
-            
             <tag> intellij idea </tag>
             
             <tag> pycharm </tag>
             
             <tag> webstorm </tag>
+            
+            <tag> vscode </tag>
+            
+            <tag> space </tag>
             
         </tags>
       
