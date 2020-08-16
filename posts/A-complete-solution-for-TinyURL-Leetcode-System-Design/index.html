@@ -1,14 +1,14 @@
 
 <!DOCTYPE html>
 <html lang="en" class="loading">
-<head><meta name="generator" content="Hexo 3.9.0">
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>A complete solution for TinyURL (Leetcode System Design) - Lady luck is smilin&#39;.</title>
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="google" content="notranslate">
+    <meta name="google" content="notranslate" />
     <meta name="keywords" content="ztlevi blog,"> 
     <meta name="description" content="Note: The solution is translated from the Segmentfault post over here.
 Thanks for liuqi627.
@@ -17,15 +17,29 @@ Thanks for liuqi627.
     <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
     <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
-    <link rel="stylesheet" href="/css/obsidian.css">
-    <link rel="stylesheet" href="/css/ball-atom.min.css">
-</head>
-</html>
+    
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+
+    
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+
+    
+<link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+
+    
+<link rel="stylesheet" href="/css/obsidian.css">
+
+    
+<link rel="stylesheet" href="/css/ball-atom.min.css">
+
+<meta name="generator" content="Hexo 5.0.2"></head>
+
 
 <body class="loading">
     <div class="loader">
@@ -80,7 +94,7 @@ Thanks for liuqi627.
                 
                 July 13, 2017
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/posts/A-complete-solution-for-TinyURL-Leetcode-System-Design/" title="A complete solution for TinyURL (Leetcode System Design)">A complete solution for TinyURL (Leetcode System Design)</a>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/A-complete-solution-for-TinyURL-Leetcode-System-Design/" title="A complete solution for TinyURL (Leetcode System Design)" class="">A complete solution for TinyURL (Leetcode System Design)</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
@@ -106,7 +120,7 @@ Thanks for liuqi627.
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/coding/">coding</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/leetcode/">leetcode</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/coding/" rel="tag">coding</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li></ul>
             
         </div>
     </div>
@@ -127,10 +141,10 @@ Thanks for liuqi627.
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <p>Note: The solution is translated from the Segmentfault post over <a href="https://segmentfault.com/a/1190000006140476" target="_blank" rel="noopener">here</a>.
+            <p>Note: The solution is translated from the Segmentfault post over <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006140476">here</a>.
 Thanks for liuqi627.</p>
 <h1 id="question-description"><a class="header-anchor" href="#question-description"> &gt; </a>Question Description</h1>
-<p>Over <a href="https://leetcode.com/problems/design-tinyurl/#/description" target="_blank" rel="noopener">here</a></p>
+<p>Over <a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-tinyurl/#/description">here</a></p>
 <h1 id="s-scenario"><a class="header-anchor" href="#s-scenario"> &gt; </a>S: Scenario</h1>
 <p>Long URL to short URL and reversed.</p>
 <h1 id="n-need-assume-the-system-is-not-massive-if-you-are-not-sure"><a class="header-anchor" href="#n-need-assume-the-system-is-not-massive-if-you-are-not-sure"> &gt; </a>N: Need (Assume the system is not massive if you are not sure)</h1>
@@ -167,9 +181,9 @@ by a single SSD Machine.</p>
 <li>Web Layer:</li>
 <li>REST API:</li>
 <li>GET: /{short_url}, return a http redirect response(301)</li>
-<li>POST: <a href="http://goo.gl" target="_blank" rel="noopener">goo.gl</a> method - <a href="https://developers.google.com/url-shortener/v1/getting_started#actions" target="_blank" rel="noopener">google shorten URL</a></li>
+<li>POST: <a target="_blank" rel="noopener" href="http://goo.gl">goo.gl</a> method - <a target="_blank" rel="noopener" href="https://developers.google.com/url-shortener/v1/getting_started#actions">google shorten URL</a></li>
 </ul>
-<p>Request Body: {url=longUrl} e.g. {“longUrl”: “<a href="http://www.google.com/" target="_blank" rel="noopener">http://www.google.com/</a>”} Return OK(200), short_url is included in the data</p>
+<p>Request Body: {url=longUrl} e.g. {“longUrl”: “<a target="_blank" rel="noopener" href="http://www.google.com/">http://www.google.com/</a>”} Return OK(200), short_url is included in the data</p>
 <h1 id="k-data-access"><a class="header-anchor" href="#k-data-access"> &gt; </a>K: Data Access</h1>
 <h2 id="step-1-pick-a-storage-structure"><a class="header-anchor" href="#step-1-pick-a-storage-structure"> &gt; </a>Step 1: Pick a storage structure</h2>
 <h3 id="sql-vs-nosql"><a class="header-anchor" href="#sql-vs-nosql"> &gt; </a>SQL vs NoSQL?</h3>
@@ -202,11 +216,11 @@ million level, MondoDB does 10K level, MySQL only supports K level.</li>
 <ul>
 <li>md5 convert a string into 128 binary bits, generally represented as 16 bytes hex:</li>
 </ul>
-<p><a href="http://site.douban.com/chuan" target="_blank" rel="noopener">http://site.douban.com/chuan</a> -&gt; c93a360dc7f3eb093ab6e304db516653</p>
+<p><a target="_blank" rel="noopener" href="http://site.douban.com/chuan">http://site.douban.com/chuan</a> -&gt; c93a360dc7f3eb093ab6e304db516653</p>
 <ul>
 <li>sha1 convert a string into 160 binary bits, generally represented as 20 bytes hex:</li>
 </ul>
-<p><a href="http://site.douban.com/chuan" target="_blank" rel="noopener">http://site.douban.com/chuan</a> -&gt; dff85871a72c73c3eae09e39ffe97aea63047094</p>
+<p><a target="_blank" rel="noopener" href="http://site.douban.com/chuan">http://site.douban.com/chuan</a> -&gt; dff85871a72c73c3eae09e39ffe97aea63047094</p>
 </li>
 </ol>
 <p>These two algorithms could make sure hash values are randomly distributed, but the conflicts are inevitable. Any hash
@@ -226,61 +240,61 @@ different because timestamp changes).</p>
 <li>base62 Take short_url as a 62 base notation. 6 bits could represent 62^6=57 billion.</li>
 </ol>
 <p>Each short_url represent a decimal digit. It could be the auto_increment_id in SQL database.</p>
-<pre><code class="language-java">public class URLService {
+<pre><code class="language-java">public class URLService &amp;#123;
     HashMap&lt;String, Integer&gt; ltos;
     HashMap&lt;Integer, String&gt; stol;
     static int COUNTER;
     String elements;
-    URLService() {
+    URLService() &amp;#123;
         ltos = new HashMap&lt;String, Integer&gt;();
         stol = new HashMap&lt;Integer, String&gt;();
         COUNTER = 1;
         elements = &quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
-    }
-    public String longToShort(String url) {
+    &amp;#125;
+    public String longToShort(String url) &amp;#123;
         String shorturl = base10ToBase62(COUNTER);
         ltos.put(url, COUNTER);
         stol.put(COUNTER, url);
         COUNTER++;
         return &quot;http://tiny.url/&quot; + shorturl;
-    }
-    public String shortToLong(String url) {
+    &amp;#125;
+    public String shortToLong(String url) &amp;#123;
         url = url.substring(&quot;http://tiny.url/&quot;.length());
         int n = base62ToBase10(url);
         return stol.get(n);
-    }
+    &amp;#125;
 
-    public int base62ToBase10(String s) {
+    public int base62ToBase10(String s) &amp;#123;
         int n = 0;
-        for (int i = 0; i &lt; s.length(); i++) {
+        for (int i = 0; i &lt; s.length(); i++) &amp;#123;
             n = n * 62 + convert(s.charAt(i));
-        }
+        &amp;#125;
         return n;
 
-    }
-    public int convert(char c) {
+    &amp;#125;
+    public int convert(char c) &amp;#123;
         if (c &gt;= '0' &amp;&amp; c &lt;= '9')
             return c - '0';
-        if (c &gt;= 'a' &amp;&amp; c &lt;= 'z') {
+        if (c &gt;= 'a' &amp;&amp; c &lt;= 'z') &amp;#123;
             return c - 'a' + 10;
-        }
-        if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') {
+        &amp;#125;
+        if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') &amp;#123;
             return c - 'A' + 36;
-        }
+        &amp;#125;
         return -1;
-    }
-    public String base10ToBase62(int n) {
+    &amp;#125;
+    public String base10ToBase62(int n) &amp;#123;
         StringBuilder sb = new StringBuilder();
-        while (n != 0) {
+        while (n != 0) &amp;#123;
             sb.insert(0, elements.charAt(n % 62));
             n /= 62;
-        }
-        while (sb.length() != 6) {
+        &amp;#125;
+        while (sb.length() != 6) &amp;#123;
             sb.insert(0, '0');
-        }
+        &amp;#125;
         return sb.toString();
-    }
-}
+    &amp;#125;
+&amp;#125;
 </code></pre>
 <h2 id="step-2-database-schema"><a class="header-anchor" href="#step-2-database-schema"> &gt; </a>Step 2: Database Schema</h2>
 <p>One table (id, long_url). id is the primary key, ordered by long_url</p>
@@ -360,9 +374,9 @@ Chinese websites, 1 for American websites.</p>
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">22 <p>Articles</p></a></li>
+                    <li><a href="/">23 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">24 <p>Tags</p></a></li>
+                    <li><a href="/tags">25 <p>Tags</p></a></li>
                 </ul>
             </div>
             
@@ -461,42 +475,72 @@ Chinese websites, 1 for American websites.</p>
 
 
 
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script src="/js/plugin.js"></script>
 <script src="/js/obsidian.js"></script>
 <script src="/js/jquery.truncate.js"></script>
 <script src="/js/search.js"></script>
+
+
 <script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+
+
 <script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
 
 <script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
 
-    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/lisp/lisp.min.js"></script>
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+
+    
+<script src="//cdn.bootcss.com/codemirror/5.48.4/mode/lisp/lisp.min.js"></script>
+
+
 
 
 
 
 <link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
 <link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+
+
 <script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
 <script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
 
 <!-- Root element of PhotoSwipe. Must have class pswp. -->
 <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
@@ -574,7 +618,9 @@ Chinese websites, 1 for American websites.</p>
 </script>
 
 
-    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
     <script>
 
         var valine = new Valine();
