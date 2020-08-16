@@ -1,0 +1,514 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>C and C++: you do not know - Lady luck is smilin&#39;.</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="ztlevi blog,"> 
+    <meta name="description" content="Some basic knowledge of C and C++ in the book[1]. Well, I pick the title “you don’t know”. Precisel,"> 
+    <meta name="author" content="Ting Zhou"> 
+    <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Lady luck is smilin&#39;.</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://ztlevi.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">C and C++: you do not know</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/coding"><b>「
+                    </b>CODING<b> 」</b></a>
+                
+                May 29, 2017
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/C-C++-you-do-not-know-I/" title="C and C++: you do not know">C and C++: you do not know</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    6.3k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    6 mins.
+                </span>
+                
+                
+                <span id="/posts/C-C++-you-do-not-know-I/" class="leancloud_visitors" data-flag-title="C and C++: you do not know">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/c/">c</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/c/">c++</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/coding/">coding</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <p>Some basic knowledge of C and C++ in the book<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. Well, I pick the title “you don’t know”. Precisely, it’s something I
+don’t know while you may already knew years ago. But it just sounds so stupid to named after “Java: I don’t know”…</p>
+<h1 id="pointers-an-references"><a class="header-anchor" href="#pointers-an-references"> &gt; </a>Pointers an References</h1>
+<ol>
+<li>A pointer holds the address of a variable and can be used to perform any operation that could be directly done on
+the variable, such as accessing and modifying it.</li>
+<li>Note that the size of a pointer varies depending on the architecture: 32 bits on a 32-bit machine and 64 bits on a
+64-bit machine.</li>
+<li>A reference is another name (an alias) for a pre-existing object and it does not have memory of its own. Unlike
+pointers, references cannot be null and cannot be reassigned to another piece of memory.</li>
+</ol>
+<a id="more"></a>
+<h1 id="hash-table-vs-stl-map-p423"><a class="header-anchor" href="#hash-table-vs-stl-map-p423"> &gt; </a>Hash Table vs STL Map <p423></p423></h1>
+<ol>
+<li>Since hash tables use the key to find the index that will store the value, an insert or loopup can be done in
+amortized O(1)</li>
+<li>A hash table is traditionally implemented with an array of linked lists, where each node in the linked list holds
+two pieces of data: the value and the original key.
+<ul>
+<li>We want to use a good hash function to ensure that the keys are well distributed.</li>
+<li>No matter how good the hash function is, there are still collisions.</li>
+<li>We may also wish to implement methods to dynamically increase or decrease the hash table size depending on
+capacity. For example, when the ratio of the number of elements to the table size exceeds a certain threshold, we
+may wish to increase the hash table size. This would mean creating a new hash table and transferring the entries
+from the old table to the new table. Because this is an expensive operation, we want to be careful to not do it
+too often.</li>
+</ul>
+</li>
+</ol>
+<h2 id="q-how-is-a-hash-table-implemented"><a class="header-anchor" href="#q-how-is-a-hash-table-implemented"> &gt; </a>Q: How is a hash table implemented?</h2>
+<p>A: A hash table is traditionally implemented with an array of linked lists, where each node in the linked list holds two
+pieces of data: the value and the original key. When we want to insert a key value pair, we map the key to index in the
+array using a hash function. The value is then inserted into the linked list at that position.</p>
+<blockquote>
+<p>Note that the elements in a linked list at a particular index of the array do not have the same key. Rather,
+<em>hashFunction(key)</em> is the same for these values.</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fixt173z44j30v60iojss.jpg" alt="hash table"></p>
+<p>In addition, we will want to note the following design criteria:</p>
+<ol>
+<li>
+<p>We want to use a good hash function to ensure that the keys are well distributed. If they are not well distributed,
+then we would get a lot of collisions and the speed to find an element would decline.</p>
+</li>
+<li>
+<p>No matter how good the hash function is, we still have collisions, so we need a method for handling them, This often
+means chaining via a linked list, but it’s not the only way.</p>
+</li>
+<li>
+<p>We may also wish to implement methods to dynamically increase or decrease the hash table size depending on capacity.
+For example, when the ratio of the number of element to the table size exceeds a certain threshold, we may wish to
+increase the hash table size. This would mean creating a new hash table and transferring the entries from the old
+table to the new table. Because this is an expensive operation, we want to be careful to not do it too often.</p>
+</li>
+</ol>
+<h1 id="virtual-functions-p424"><a class="header-anchor" href="#virtual-functions-p424"> &gt; </a>Virtual Functions <p424></p424></h1>
+<ol>
+<li>A virtual function depends on a “vtable” or “Virtual Table”. A vtable is constructed which stores addresses of the
+virtual functions of this class. The compiler also adds a hidden vptr variable in all such classes which points to
+the vtable of that class.</li>
+<li>if a virtual functions is not overridden in the derived class, the vtable of of the derived class stores the address
+of the function in its parent class.</li>
+<li>The vtable is used to resolved the address of the function when the virtual functions is called.</li>
+</ol>
+<h1 id="shallow-vs-deep-copy-p425"><a class="header-anchor" href="#shallow-vs-deep-copy-p425"> &gt; </a>Shallow vs Deep Copy <p425></p425></h1>
+<ol>
+<li>A shallow copy copies all the member values from one object to another. A deep copy does all this and also deep
+copies any pointer objects.</li>
+<li>One must also be careful with destructions of objects in a shallow copy.</li>
+<li>In real life, shallow copy is rarely used. Deep copy should be used in most cases, especially when the size of the
+copied structure is small.</li>
+</ol>
+<h1 id="volatile-p426"><a class="header-anchor" href="#volatile-p426"> &gt; </a>Volatile <p426></p426></h1>
+<ol>
+<li>
+<p>The key word volatile informs the compiler that the value of variable it it applied to can change from the outside,
+without any update done by the code.</p>
+</li>
+<li>
+<p>Declaration statement.</p>
+<pre><code>int volatile x
+volatile int x
+</code></pre>
+</li>
+</ol>
+<h1 id="virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"><a class="header-anchor" href="#virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"> &gt; </a>Virtual Base Class: Why does a destructor in base class need to be declared virtual? <p427></p427></h1>
+<ol>
+<li>
+<p>If destructor were not virtual, then Foo’s destructor would be called, even when p is really of type Bar.</p>
+<pre><code>class Foo{}
+class Bar : public Foo{}
+Foo * p = new Bar()
+</code></pre>
+</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p>Cracking the Coding Interview, 6th Edition. <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+            <div id="vcomments"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Ting Zhou</p>
+                    <span>Lady luck is smilin'.</span>
+                    <dl>
+                        <dd><a href="https://github.com/ztlevi" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/ztlevi" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/5517639/ztlevi" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">22 <p>Articles</p></a></li>
+                    <li><a href="/categories">7 <p>Categories</p></a></li>
+                    <li><a href="/tags">24 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#pointers-an-references"><span class="toc-number">1.</span> <span class="toc-text"> &gt; Pointers an References</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#hash-table-vs-stl-map-p423"><span class="toc-number">2.</span> <span class="toc-text"> &gt; Hash Table vs STL Map </span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#q-how-is-a-hash-table-implemented"><span class="toc-number">2.1.</span> <span class="toc-text"> &gt; Q: How is a hash table implemented?</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#virtual-functions-p424"><span class="toc-number">3.</span> <span class="toc-text"> &gt; Virtual Functions </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#shallow-vs-deep-copy-p425"><span class="toc-number">4.</span> <span class="toc-text"> &gt; Shallow vs Deep Copy </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#volatile-p426"><span class="toc-number">5.</span> <span class="toc-text"> &gt; Volatile </span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"><span class="toc-number">6.</span> <span class="toc-text"> &gt; Virtual Base Class: Why does a destructor in base class need to be declared virtual? </span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Ting Zhou
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/lisp/lisp.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Lady luck is smilin&#39;.", "命运女神在微笑。"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+
+        var valine = new Valine();
+
+        function initValine(path) {
+            if (!path) path = window.location.pathname;
+            let language = 'en';
+            if (!language) {
+                language = 'en';
+            } else {
+                language = language.toLowerCase();
+            }
+            valine.init({
+                el: '#vcomments',
+                appId: 'RnToQms179MrYGcnraqVtsxR-gzGzoHsz',
+                appKey: 'KLdofskonXGVXfEERtIaIR9e',
+                notify: 'false',
+                verify: 'false',
+                avatar: 'mp',
+                placeholder: 'Leave your throughs behind~',
+                visitor: 'true',
+                path: path,
+                lang: language
+            });
+        }
+
+        $(document).ready(function () {
+            initValine();
+        });
+    </script>
+
+
+
+</html>

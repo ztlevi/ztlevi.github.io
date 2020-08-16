@@ -1,0 +1,1585 @@
+
+<!DOCTYPE html>
+<html lang="en" class="loading">
+<head><meta name="generator" content="Hexo 3.9.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Spacemacs/Space-Vim Config for VSCode - Lady luck is smilin&#39;.</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate">
+    <meta name="keywords" content="ztlevi blog,"> 
+    <meta name="description" content=" &amp;gt; The space way
+ &amp;gt; Leader key
+Using space key as the leader is a very popular way of editing,"> 
+    <meta name="author" content="Ting Zhou"> 
+    <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    <link href="https://fonts.loli.net/css?family=Roboto+Mono|Rubik&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1429596_nzgqgvnmkjb.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/codemirror.min.css">
+    <link rel="stylesheet" href="//cdn.bootcss.com/codemirror/5.48.4/theme/dracula.css">
+    <link rel="stylesheet" href="/css/obsidian.css">
+    <link rel="stylesheet" href="/css/ball-atom.min.css">
+</head>
+</html>
+
+<body class="loading">
+    <div class="loader">
+        <div class="la-ball-atom la-2x">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <span id="config-title" style="display:none">Lady luck is smilin&#39;.</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div class="scrollbar gradient-bg-rev"></div>
+<div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <div class="navigation animated fadeIn fast delay-1s">
+        <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://ztlevi.github.io">
+        <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
+        <h3 class="subtitle">Spacemacs/Space-Vim Config for VSCode</h3>
+        <div class="social">
+            <!--        <div class="like-icon">-->
+            <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
+            <!--        </div>-->
+            <div>
+                <div class="share">
+                    
+                        <a href="javascript:;" class="iconfont icon-share1"></a>
+                        <div class="share-component-cc" data-disabled="facebook,douban,linkedin,diandian,tencent,google"></div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <div class="section">
+        <div class=article-header-wrapper>
+    <div class="article-header">
+        <div class="article-cover animated fadeIn" style="
+            animation-delay: 600ms;
+            animation-duration: 1.2s;
+            background-image: 
+                radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.65), #100e17),
+                url(/img/cover.jpg) ">
+        </div>
+        <div class="else">
+            <p class="animated fadeInDown">
+                
+                <a href="/categories/post"><b>「
+                    </b>POST<b> 」</b></a>
+                
+                December 02, 2017
+            </p>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/The-Minimal-Spacemacs-Tweaks-for-VSCode/" title="Spacemacs/Space-Vim Config for VSCode">Spacemacs/Space-Vim Config for VSCode</a>
+            </h3>
+            
+            <p class="post-count animated fadeInDown">
+                
+                <span>
+                    <b class="iconfont icon-text2"></b> <i>Words count</i>
+                    37k
+                </span>
+                
+                
+                <span>
+                    <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
+                    33 mins.
+                </span>
+                
+                
+                <span id="/posts/The-Minimal-Spacemacs-Tweaks-for-VSCode/" class="leancloud_visitors" data-flag-title="Spacemacs/Space-Vim Config for VSCode">
+                    <b class="iconfont icon-read"></b> <i>Read count</i>
+                    <span class="leancloud-visitors-count">1000000</span>
+                </span>
+                
+                
+            </p>
+            
+            
+            <ul class="animated fadeInDown post-tags-list"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/intellij-idea/">intellij idea</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/pycharm/">pycharm</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/space/">space</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/spacemacs/">spacemacs</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/vscode/">vscode</a></li><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/webstorm/">webstorm</a></li></ul>
+            
+        </div>
+    </div>
+</div>
+
+<div class="screen-gradient-after">
+    <div class="screen-gradient-content">
+        <div class="screen-gradient-content-inside">
+            <div class="bold-underline-links screen-gradient-sponsor">
+                <p>
+                    <span class="animated fadeIn delay-1s"></span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="article">
+    <div class='main'>
+        <div class="content markdown animated fadeIn">
+            <h1 id="the-space-way"><a class="header-anchor" href="#the-space-way"> &gt; </a>The space way</h1>
+<h2 id="leader-key"><a class="header-anchor" href="#leader-key"> &gt; </a>Leader key</h2>
+<p>Using <kbd>space</kbd> key as the leader is a very popular way of editing, navigation and commanding. There is never an
+easy way to get used to new shortcuts, but trust me, you would definitely like it once you use it.</p>
+<h2 id="sticky-key"><a class="header-anchor" href="#sticky-key"> &gt; </a>Sticky key</h2>
+<p>Think about how you invoke commands in VSCode before. When you want to call the <code>command-palette</code>, you need to put your
+left hand’s two fingers on <kbd>Ctrl + Shift</kbd> key or <kbd>Command + Shift</kbd> key and press <kbd>p</kbd>. And
+note that it’s a key chord combination when you actually press these keys.</p>
+<p>This looks so stupid when you compare it with just <kbd>Space Space</kbd> in Vim’s normal or visual mode. And by saying
+<kbd>Space Space</kbd>, it’s a sticky key bindings which means you just type <kbd>space</kbd> key twice in sequence. And
+you can just set your hands as the default typing position shown in this picture.</p>
+<a id="more"></a>
+<p><img src="https://ws2.sinaimg.cn/large/006tNc79gy1fm3jb9l72jj30r80i6ae1.jpg" alt></p>
+<h2 id="prefix-key"><a class="header-anchor" href="#prefix-key"> &gt; </a>Prefix key</h2>
+<p>Well, now you probably get the point of using <kbd>space</kbd> key. But there is more of it.</p>
+<p>Since sticky keys are just key sequences, you can cluster a lot of similar commands to a prefix like <kbd>space
+f</kbd>(file related commands). For example, <kbd>space f f</kbd> go to the explorer, <kbd>space f s</kbd>save file and
+<kbd>space f S</kbd>save all. In this case, you won’t mess up with these keys because they have the same prefix
+<kbd>space f</kbd>.</p>
+<h1 id="the-hybrid-editing-mode"><a class="header-anchor" href="#the-hybrid-editing-mode"> &gt; </a>The hybrid editing mode</h1>
+<h2 id="insert-mode"><a class="header-anchor" href="#insert-mode"> &gt; </a>Insert mode</h2>
+<p>Spacemacs has a hybrid mode that takes the normal and visual modes’ key bindings from Vim while still using the general
+Emacs key bindings in insert mode. To be honest, it’s super smart way of editing.</p>
+<p>The Unix key bindings (<kbd>C-a</kbd>-&gt;home, <kbd>C-e</kbd>-&gt;end, <kbd>C-b</kbd>-&gt;back, <kbd>C-f</kbd>-&gt;forward,
+<kbd>C-n</kbd>-&gt;next line, <kbd>C-p</kbd>-&gt;last line) work in almost every Mac application. You probably never find out
+they work out of box in your Mac or Linux, but many of your guys don’t know about it.</p>
+<p>So, why the hell people want to use Unix key bindings in their machines?</p>
+<p>There are many reasons:</p>
+<ol>
+<li>Your Mac does not has the <kbd>home</kbd>, <kbd>end</kbd> key like a full keyboard.</li>
+<li>It’s a much faster way for navigation once you get used to it</li>
+<li>Be more consistent about the key bindings. They work in terminal, intellij IDEA, even Wechat. So why not use it
+everywhere.</li>
+</ol>
+<h2 id="normal-visual-mode"><a class="header-anchor" href="#normal-visual-mode"> &gt; </a>Normal &amp; visual mode</h2>
+<p>As for the normal and visual mode, They are pretty much the same. But they can do much more now in space way.</p>
+<blockquote>
+<p>Note: The leader key is <kbd>space</kbd></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>leader space</kbd></td>
+<td>show commands</td>
+</tr>
+<tr>
+<td><kbd>leader b b</kbd></td>
+<td>quick open (see your opened files)</td>
+</tr>
+<tr>
+<td><kbd>leader f f</kbd></td>
+<td>go the explorer</td>
+</tr>
+<tr>
+<td><kbd>leader f s</kbd></td>
+<td>save file</td>
+</tr>
+<tr>
+<td><kbd>leader f S</kbd></td>
+<td>save all</td>
+</tr>
+<tr>
+<td><kbd>leader =</kbd></td>
+<td>beautify file</td>
+</tr>
+<tr>
+<td><kbd>leader w [lhjk]</kbd></td>
+<td>navigate window</td>
+</tr>
+<tr>
+<td><kbd>leader w v</kbd></td>
+<td>split vertically</td>
+</tr>
+<tr>
+<td><kbd>C-g</kbd> (Optional)</td>
+<td>ESC</td>
+</tr>
+</tbody>
+</table>
+<h1 id="to-use-it"><a class="header-anchor" href="#to-use-it"> &gt; </a>To use it</h1>
+<ol>
+<li>Add the following configuration in your VSCode’s <code>User Setting</code> (You can find out how to get to the <code>User Setting</code>
+<a href="https://code.visualstudio.com/docs/getstarted/settings" target="_blank" rel="noopener">over here</a>).</li>
+</ol>
+<pre><code class="language-json">{
+  // Vim setting
+  &quot;vim.useSystemClipboard&quot;: true,
+  &quot;vim.easymotion&quot;: false,
+  &quot;vim.easymotionMarkerFontFamily&quot;: &quot;Operator Mono Lig, Ubuntu Mono, Menlo, Monaco, 'Courier New', monospace&quot;,
+  &quot;vim.easymotionMarkerFontSize&quot;: &quot;14&quot;,
+  &quot;vim.handleKeys&quot;: {
+    &quot;&lt;C-n&gt;&quot;: false,
+    &quot;&lt;C-p&gt;&quot;: false,
+    &quot;&lt;C-a&gt;&quot;: false,
+    &quot;&lt;C-e&gt;&quot;: false
+  },
+  &quot;vim.leader&quot;: &quot;&lt;space&gt;&quot;,
+  &quot;vim.insertModeKeyBindings&quot;: [
+    {
+      &quot;before&quot;: [&quot;&lt;C-f&gt;&quot;],
+      &quot;after&quot;: [&quot;&lt;right&gt;&quot;]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-b&gt;&quot;],
+      &quot;after&quot;: [&quot;&lt;left&gt;&quot;]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-e&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;cursorEnd&quot;,
+          &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-a&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;cursorHome&quot;,
+          &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-d&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;deleteRight&quot;,
+          &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;
+        }
+      ]
+    }
+  ],
+  &quot;vim.normalModeKeyBindingsNonRecursive&quot;: [
+    {
+      &quot;before&quot;: [&quot;g&quot;, &quot;r&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.referenceSearch.trigger&quot;,
+          &quot;when&quot;: &quot;editorHasReferenceProvider &amp;&amp; editorTextFocus &amp;&amp; !inReferenceSearchEditor &amp;&amp; !isInEmbeddedEditor&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-a&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;cursorHome&quot;,
+          &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-e&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;cursorEnd&quot;,
+          &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-k&gt;&quot;],
+      &quot;after&quot;: [&quot;D&quot;]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;&lt;space&gt;&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.showCommands&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;'&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.terminal.toggleTerminal&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;1&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusFirstEditorGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;2&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusSecondEditorGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;3&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusThirdEditorGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;t&quot;, &quot;t&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.debug.action.toggleBreakpoint&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;d&quot;, &quot;d&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.debug.start&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;r&quot;, &quot;r&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.debug.run&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;b&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;CR&gt;&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;d&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.closeActiveEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;n&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.nextEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;p&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.previousEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;e&quot;, &quot;l&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.actions.view.problems&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;e&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.openGlobalSettings&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;f&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.openFile&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;r&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;s&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.save&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    // save file
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;S&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.saveAll&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;t&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.view.explorer&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;y&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.copyPathOfActiveFile&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;g&quot;, &quot;s&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.view.scm&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;j&quot;, &quot;=&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.formatDocument&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    // beautify files
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;=&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.formatDocument&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;f&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;l&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.openFolder&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;p&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;f&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;r&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.reloadWindow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;q&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;e&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.rename&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;j&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.gotoSymbol&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;p&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.findInFiles&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;P&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.findInFilesWithSelectedText&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;F&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.toggleFullScreen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;m&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.toggleMenuBar&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;s&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.selectTheme&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;t&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.toggleActivityBarVisibility&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;v&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.smartSelect.grow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;V&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.smartSelect.shrink&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;w&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusNextGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    // navigation
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;l&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateRight&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;h&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateLeft&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;j&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateDown&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;k&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateUp&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;v&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.splitEditor&quot;,
+          &quot;key&quot;: &quot;cmd+\\&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;W&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusPreviousGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;m&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.maximizeEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    }
+  ],
+  &quot;vim.visualModeKeyBindingsNonRecursive&quot;: [
+    {
+      &quot;before&quot;: [&quot;g&quot;, &quot;r&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.referenceSearch.trigger&quot;,
+          &quot;when&quot;: &quot;editorHasReferenceProvider &amp;&amp; editorTextFocus &amp;&amp; !inReferenceSearchEditor &amp;&amp; !isInEmbeddedEditor&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;backspace&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;deleteLeft&quot;,
+          &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-a&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;cursorHome&quot;,
+          &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-e&gt;&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;cursorEnd&quot;,
+          &quot;when&quot;: &quot;editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;C-k&gt;&quot;],
+      &quot;after&quot;: [&quot;D&quot;]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;&lt;space&gt;&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.showCommands&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;'&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.terminal.toggleTerminal&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;1&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusFirstEditorGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;2&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusSecondEditorGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;3&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusThirdEditorGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;b&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;CR&gt;&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;d&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.closeActiveEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;n&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.nextEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;p&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.previousEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;e&quot;, &quot;l&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.actions.view.problems&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;e&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.openGlobalSettings&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;f&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.openFile&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;r&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;s&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.save&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    // save file
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;S&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.saveAll&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;t&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.view.explorer&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;y&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.copyPathOfActiveFile&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;g&quot;, &quot;s&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.view.scm&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;j&quot;, &quot;=&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.formatDocument&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    // beautify files
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;=&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.formatDocument&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;f&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;l&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.files.openFolder&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;p&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;f&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;r&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.reloadWindow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;q&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;e&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.rename&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;j&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.gotoSymbol&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;p&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.findInFiles&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;P&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.findInFilesWithSelectedText&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;F&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.toggleFullScreen&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;m&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.toggleMenuBar&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;s&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.selectTheme&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;t&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.toggleActivityBarVisibility&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;v&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.smartSelect.grow&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;V&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;editor.action.smartSelect.shrink&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;w&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusNextGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    // navigation
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;l&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateRight&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;h&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateLeft&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;j&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateDown&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;k&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;extension.vim_navigateUp&quot;,
+          &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;v&quot;],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.splitEditor&quot;,
+          &quot;key&quot;: &quot;cmd+\\&quot;
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;W&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.focusPreviousGroup&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    },
+    {
+      &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;m&quot;],
+      &quot;after&quot;: [],
+      &quot;commands&quot;: [
+        {
+          &quot;command&quot;: &quot;workbench.action.maximizeEditor&quot;,
+          &quot;args&quot;: []
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<ol start="2">
+<li>Add the following to your VSCode’s <code>keybindings.json</code>.</li>
+</ol>
+<blockquote>
+<p>Note: You can find your keybindings.json here.
+<img src="https://ws4.sinaimg.cn/large/006tKfTcgy1fm2fa491z3j30y40d275w.jpg" alt="img"></p>
+</blockquote>
+<pre><code class="language-json">[
+  // unbind &quot;C-k .&quot;, needed to bind C-k as kill line
+  {
+    &quot;command&quot;: &quot;-extension.clipToHtml&quot;,
+    &quot;key&quot;: &quot;ctrl+k .&quot;,
+    &quot;when&quot;: &quot;editorTextFocus&quot;
+  },
+  // (Optional) bind &lt;C-g&gt; as &lt;ESC&gt;
+  {
+    &quot;key&quot;: &quot;ctrl-g&quot;,
+    &quot;command&quot;: &quot;extension.vim_escape&quot;,
+    &quot;when&quot;: &quot;editorTextFocus &amp;&amp; vim.active &amp;&amp; !inDebugRepl&quot;
+  },
+  {
+    &quot;command&quot;: &quot;-workbench.action.gotoLine&quot;,
+    &quot;key&quot;: &quot;ctrl+g&quot;
+  },
+  {
+    &quot;command&quot;: &quot;workbench.action.closeQuickOpen&quot;,
+    &quot;key&quot;: &quot;ctrl-g&quot;,
+    &quot;when&quot;: &quot;inQuickOpen&quot;
+  },
+  {
+    &quot;command&quot;: &quot;workbench.action.exitZenMode&quot;,
+    &quot;key&quot;: &quot;ctrl-g ctrl-g&quot;,
+    &quot;when&quot;: &quot;inZenMode&quot;
+  }
+]
+</code></pre>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls"
+                data-autoplay="false">
+                <source type="audio/mpeg" src="">
+            </audio>
+            
+            <ul id="audio-list" style="display:none">
+                
+                
+                <li title='0' data-url='/statics/chengdu.mp3'></li>
+                
+                    
+            </ul>
+            
+            
+            
+            <div id="vcomments"></div>
+            
+        </div>
+        <div class="sidebar">
+            <div class="box animated fadeInRight">
+                <div class="subbox">
+                    <img src="https://res.cloudinary.com/tridiamond/image/upload/v1573019751/TriDiamond_logo_ui_xeublz.jpg" height=300 width=300></img>
+                    <p>Ting Zhou</p>
+                    <span>Lady luck is smilin'.</span>
+                    <dl>
+                        <dd><a href="https://github.com/ztlevi" target="_blank"><span
+                                    class=" iconfont icon-github"></span></a></dd>
+                        <dd><a href="https://twitter.com/ztlevi" target="_blank"><span
+                                    class=" iconfont icon-twitter"></span></a></dd>
+                        <dd><a href="https://stackoverflow.com/users/5517639/ztlevi" target="_blank"><span
+                                    class=" iconfont icon-stack-overflow"></span></a></dd>
+                    </dl>
+                </div>
+                <ul>
+                    <li><a href="/">22 <p>Articles</p></a></li>
+                    <li><a href="/categories">7 <p>Categories</p></a></li>
+                    <li><a href="/tags">24 <p>Tags</p></a></li>
+                </ul>
+            </div>
+            
+            
+            
+            <div class="box sticky animated fadeInRight faster">
+                <div id="toc" class="subbox">
+                    <h4>Contents</h4>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#the-space-way"><span class="toc-number">1.</span> <span class="toc-text"> &gt; The space way</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#leader-key"><span class="toc-number">1.1.</span> <span class="toc-text"> &gt; Leader key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#sticky-key"><span class="toc-number">1.2.</span> <span class="toc-text"> &gt; Sticky key</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#prefix-key"><span class="toc-number">1.3.</span> <span class="toc-text"> &gt; Prefix key</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#the-hybrid-editing-mode"><span class="toc-number">2.</span> <span class="toc-text"> &gt; The hybrid editing mode</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#insert-mode"><span class="toc-number">2.1.</span> <span class="toc-text"> &gt; Insert mode</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#normal-visual-mode"><span class="toc-number">2.2.</span> <span class="toc-text"> &gt; Normal &amp; visual mode</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#to-use-it"><span class="toc-number">3.</span> <span class="toc-text"> &gt; To use it</span></a></li></ol>
+                </div>
+            </div>
+            
+            
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    <div id="back-to-top" class="animated fadeIn faster">
+        <div class="flow"></div>
+        <span class="percentage animated fadeIn faster">0%</span>
+        <span class="iconfont icon-top02 animated fadeIn faster"></span>
+    </div>
+</body>
+<footer>
+    <p class="copyright" id="copyright">
+        &copy; 2020
+        <span class="gradient-text">
+            Ting Zhou
+        </span>.
+        Powered by <a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        Theme
+        <span class="gradient-text">
+            <a href="https://github.com/TriDiamond/hexo-theme-obsidian" title="Obsidian" target="_blank" rel="noopener">Obsidian</a>
+        </span>
+        <small><a href="https://github.com/TriDiamond/hexo-theme-obsidian/blob/master/CHANGELOG.md" title="v1.4.3" target="_blank" rel="noopener">v1.4.3</a></small>
+    </p>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bootcss.com/mathjax/2.7.6/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+<script>
+  MathJax.Hub.Config({
+    "HTML-CSS": {
+      preferredFont: "TeX",
+      availableFonts: ["STIX", "TeX"],
+      linebreaks: {
+        automatic: true
+      },
+      EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50)
+    },
+    tex2jax: {
+      inlineMath: [
+        ["$", "$"],
+        ["\\(", "\\)"]
+      ],
+      processEscapes: true,
+      ignoreClass: "tex2jax_ignore|dno",
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      noUndefined: {
+        attributes: {
+          mathcolor: "red",
+          mathbackground: "#FFEEEE",
+          mathsize: "90%"
+        }
+      },
+      Macros: {
+        href: "{}"
+      }
+    },
+    messageStyle: "none"
+  });
+</script>
+<script>
+  function initialMathJax() {
+    MathJax.Hub.Queue(function () {
+      var all = MathJax.Hub.getAllJax(),
+        i;
+      // console.log(all);
+      for (i = 0; i < all.length; i += 1) {
+        console.log(all[i].SourceElement().parentNode)
+        all[i].SourceElement().parentNode.className += ' has-jax';
+      }
+    });
+  }
+
+  function reprocessMathJax() {
+    if (typeof MathJax !== 'undefined') {
+      MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+    }
+  }
+</script>
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/obsidian.js"></script>
+<script src="/js/jquery.truncate.js"></script>
+<script src="/js/search.js"></script>
+<script src="//cdn.bootcss.com/typed.js/2.0.10/typed.min.js"></script>
+<script src="//cdn.bootcss.com/blueimp-md5/2.12.0/js/md5.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+
+<script src="https://cdn.bootcss.com/codemirror/5.48.4/codemirror.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/javascript/javascript.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/css/css.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/xml/xml.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/htmlmixed/htmlmixed.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/clike/clike.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/php/php.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/shell/shell.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/python/python.min.js"></script>
+
+    <script src="//cdn.bootcss.com/codemirror/5.48.4/mode/lisp/lisp.min.js"></script>
+
+
+
+
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="//cdn.bootcss.com/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="//cdn.bootcss.com/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<script>
+    function initialTyped () {
+        var typedTextEl = $('.typed-text');
+        if (typedTextEl && typedTextEl.length > 0) {
+            var typed = new Typed('.typed-text', {
+                strings: ["Lady luck is smilin&#39;.", "命运女神在微笑。"],
+                typeSpeed: 90,
+                loop: true,
+                loopCount: Infinity,
+                backSpeed: 20,
+            });
+        }
+    }
+
+    if ($('.article-header') && $('.article-header').length) {
+        $(document).ready(function () {
+            initialTyped();
+        });
+    }
+</script>
+
+
+    <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+    <script>
+
+        var valine = new Valine();
+
+        function initValine(path) {
+            if (!path) path = window.location.pathname;
+            let language = 'en';
+            if (!language) {
+                language = 'en';
+            } else {
+                language = language.toLowerCase();
+            }
+            valine.init({
+                el: '#vcomments',
+                appId: 'RnToQms179MrYGcnraqVtsxR-gzGzoHsz',
+                appKey: 'KLdofskonXGVXfEERtIaIR9e',
+                notify: 'false',
+                verify: 'false',
+                avatar: 'mp',
+                placeholder: 'Leave your throughs behind~',
+                visitor: 'true',
+                path: path,
+                lang: language
+            });
+        }
+
+        $(document).ready(function () {
+            initValine();
+        });
+    </script>
+
+
+
+</html>
