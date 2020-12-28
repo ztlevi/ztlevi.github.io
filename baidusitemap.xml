@@ -1,6 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://ztlevi.github.io/posts/SwiftBasics/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/A-simple-tweak-to-help-you-edit-minified-files-in-Emacs/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/Automatically-scan-your-magit-repos/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/Get%20your%20imenu%20ready%20for%20modern%20javascript/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/Org2Blog_Tutorial/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/test/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
     <loc>https://ztlevi.github.io/posts/GPG-forwarding-over-ssh-on-the-fly/</loc>
     <lastmod>2020-12-28</lastmod>
   </url>
@@ -22,6 +50,10 @@
   </url>
   <url>
     <loc>https://ztlevi.github.io/posts/myHackintoshBuild/</loc>
+    <lastmod>2020-12-28</lastmod>
+  </url>
+  <url>
+    <loc>https://ztlevi.github.io/posts/spacemacsKeybindings/</loc>
     <lastmod>2020-12-28</lastmod>
   </url>
   <url>
@@ -62,38 +94,6 @@
   </url>
   <url>
     <loc>https://ztlevi.github.io/posts/Overall-experience-with-BSPWM-and-polybar/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/SwiftBasics/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/A-simple-tweak-to-help-you-edit-minified-files-in-Emacs/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/Automatically-scan-your-magit-repos/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/Get%20your%20imenu%20ready%20for%20modern%20javascript/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/Org2Blog_Tutorial/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/test/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/</loc>
-    <lastmod>2020-12-28</lastmod>
-  </url>
-  <url>
-    <loc>https://ztlevi.github.io/posts/spacemacsKeybindings/</loc>
     <lastmod>2020-12-28</lastmod>
   </url>
 </urlset> 
