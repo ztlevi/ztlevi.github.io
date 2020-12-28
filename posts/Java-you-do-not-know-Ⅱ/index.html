@@ -37,7 +37,7 @@ Q: Explain the differences between TreeMap, HashMap, and Lin,">
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -184,21 +184,21 @@ a list of all countries and the name of a continent.</p>
 <p>A: This question really comes in two parts. First, We need to generate a list of the countries in North America. Then,
 we need to compute their total population.</p>
 <p>Without lambda expression, this is fairly straightforward to do.</p>
-<pre><code class="language-java">int getPopulation(List&lt;Country&gt; countries, String continent) &amp;#123;
+<pre><code class="language-java">int getPopulation(List&lt;Country&gt; countries, String continent) &#123;
     int sum = 0;
-    for (Country c : countries) &amp;#123;
-        if (c.getContinent().equals(continent)) &amp;#123;
+    for (Country c : countries) &#123;
+        if (c.getContinent().equals(continent)) &#123;
             sum += c.getPopulation();
-        &amp;#125;
-    &amp;#125;
+        &#125;
+    &#125;
     return sum;
-&amp;#125;
+&#125;
 </code></pre>
 <p>To implement this with lambda expression, let’s break this up into multiple parts.</p>
-<pre><code class="language-java">int getPopulation(List&lt;Country&gt; countries, String continent) &amp;#123;
+<pre><code class="language-java">int getPopulation(List&lt;Country&gt; countries, String continent) &#123;
     /* Filter countries.*/
     Stream&lt;Country&gt; northAmerica = countries.stream.filter(
-        country -&gt; &amp;#123;return country.getContinent().equals(continent);&amp;#125;
+        country -&gt; &#123;return country.getContinent().equals(continent);&#125;
     );
 
     /* Convert to list of populations.*/
@@ -209,28 +209,28 @@ we need to compute their total population.</p>
     /* Sum list.*/
     int population = populations.reduce(0, (a, b) -&gt; a + b);
     return population;
-&amp;#125;
+&#125;
 </code></pre>
 <p>Alternatively, the following code will disregard the countries no within <em>continent</em> according to the sum.</p>
-<pre><code class="language-java">int getPopulation(List&lt;Country&gt; countries, String continent) &amp;#123;
+<pre><code class="language-java">int getPopulation(List&lt;Country&gt; countries, String continent) &#123;
     Stream&lt;Integer&gt; populations = countries.stream().map(
         c -&gt; c.getPopulation().equals(continent) ? c.getPopulation() : 0
         );
 
     return populations.reduce(0, (a, b) -&gt; a + b);
-&amp;#125;
+&#125;
 </code></pre>
 <h1 id="lambda-random-p439"><a class="header-anchor" href="#lambda-random-p439"> &gt; </a>Lambda Random <P439></h1>
 <p>Q: Using Lambda expressions, write a function <em>List<Integer> get RandomSubset(List<Integer> list)</em> that returns a random
 subset of arbitrary size. All subsets (including the empty set) should be equally likely to be chosen.</p>
 <p>A: To implement this approach using lambda expressions, we can do the following:</p>
-<pre><code class="language-java">List&lt;Integer&gt; getRandomSubset(List&lt;Integer&gt; list) &amp;#123;
+<pre><code class="language-java">List&lt;Integer&gt; getRandomSubset(List&lt;Integer&gt; list) &#123;
     Random random = new Random();
     List&lt;integer&gt; subset = list.stream().filter(
-        k -&gt; &amp;#123;return random.nextBoolean(); // Flip coin
-        &amp;#125;).collect(Collectors.toList());
+        k -&gt; &#123;return random.nextBoolean(); // Flip coin
+        &#125;).collect(Collectors.toList());
     return subset;
-&amp;#125;
+&#125;
 </code></pre>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
@@ -268,9 +268,9 @@ subset of arbitrary size. All subsets (including the empty set) should be equall
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             

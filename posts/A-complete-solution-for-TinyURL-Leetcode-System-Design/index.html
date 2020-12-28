@@ -38,7 +38,7 @@ Thanks for liuqi627.
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -240,61 +240,61 @@ different because timestamp changes).</p>
 <li>base62 Take short_url as a 62 base notation. 6 bits could represent 62^6=57 billion.</li>
 </ol>
 <p>Each short_url represent a decimal digit. It could be the auto_increment_id in SQL database.</p>
-<pre><code class="language-java">public class URLService &amp;#123;
+<pre><code class="language-java">public class URLService &#123;
     HashMap&lt;String, Integer&gt; ltos;
     HashMap&lt;Integer, String&gt; stol;
     static int COUNTER;
     String elements;
-    URLService() &amp;#123;
+    URLService() &#123;
         ltos = new HashMap&lt;String, Integer&gt;();
         stol = new HashMap&lt;Integer, String&gt;();
         COUNTER = 1;
         elements = &quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;;
-    &amp;#125;
-    public String longToShort(String url) &amp;#123;
+    &#125;
+    public String longToShort(String url) &#123;
         String shorturl = base10ToBase62(COUNTER);
         ltos.put(url, COUNTER);
         stol.put(COUNTER, url);
         COUNTER++;
         return &quot;http://tiny.url/&quot; + shorturl;
-    &amp;#125;
-    public String shortToLong(String url) &amp;#123;
+    &#125;
+    public String shortToLong(String url) &#123;
         url = url.substring(&quot;http://tiny.url/&quot;.length());
         int n = base62ToBase10(url);
         return stol.get(n);
-    &amp;#125;
+    &#125;
 
-    public int base62ToBase10(String s) &amp;#123;
+    public int base62ToBase10(String s) &#123;
         int n = 0;
-        for (int i = 0; i &lt; s.length(); i++) &amp;#123;
+        for (int i = 0; i &lt; s.length(); i++) &#123;
             n = n * 62 + convert(s.charAt(i));
-        &amp;#125;
+        &#125;
         return n;
 
-    &amp;#125;
-    public int convert(char c) &amp;#123;
+    &#125;
+    public int convert(char c) &#123;
         if (c &gt;= '0' &amp;&amp; c &lt;= '9')
             return c - '0';
-        if (c &gt;= 'a' &amp;&amp; c &lt;= 'z') &amp;#123;
+        if (c &gt;= 'a' &amp;&amp; c &lt;= 'z') &#123;
             return c - 'a' + 10;
-        &amp;#125;
-        if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') &amp;#123;
+        &#125;
+        if (c &gt;= 'A' &amp;&amp; c &lt;= 'Z') &#123;
             return c - 'A' + 36;
-        &amp;#125;
+        &#125;
         return -1;
-    &amp;#125;
-    public String base10ToBase62(int n) &amp;#123;
+    &#125;
+    public String base10ToBase62(int n) &#123;
         StringBuilder sb = new StringBuilder();
-        while (n != 0) &amp;#123;
+        while (n != 0) &#123;
             sb.insert(0, elements.charAt(n % 62));
             n /= 62;
-        &amp;#125;
-        while (sb.length() != 6) &amp;#123;
+        &#125;
+        while (sb.length() != 6) &#123;
             sb.insert(0, '0');
-        &amp;#125;
+        &#125;
         return sb.toString();
-    &amp;#125;
-&amp;#125;
+    &#125;
+&#125;
 </code></pre>
 <h2 id="step-2-database-schema"><a class="header-anchor" href="#step-2-database-schema"> &gt; </a>Step 2: Database Schema</h2>
 <p>One table (id, long_url). id is the primary key, ordered by long_url</p>
@@ -374,9 +374,9 @@ Chinese websites, 1 for American websites.</p>
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             

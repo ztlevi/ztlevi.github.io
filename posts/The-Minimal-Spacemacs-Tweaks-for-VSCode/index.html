@@ -38,7 +38,7 @@ Using space key as the leader is a very popular way of editing,">
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -101,13 +101,13 @@ Using space key as the leader is a very popular way of editing,">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    40k
+                    39k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    37 mins.
+                    35 mins.
                 </span>
                 
                 
@@ -231,1050 +231,1050 @@ everywhere.</li>
 <li>Add the following configuration in your VSCode’s <code>User Setting</code> (You can find out how to get to the <code>User Setting</code>
 <a target="_blank" rel="noopener" href="https://code.visualstudio.com/docs/getstarted/settings">over here</a>).</li>
 </ol>
-<pre><code class="language-json">&amp;#123;
+<pre><code class="language-json">&#123;
   // Vim setting
   &quot;vim.useSystemClipboard&quot;: true,
   &quot;vim.easymotion&quot;: false,
   &quot;vim.easymotionMarkerFontFamily&quot;: &quot;Operator Mono Lig, Ubuntu Mono, Menlo, Monaco, 'Courier New', monospace&quot;,
   &quot;vim.easymotionMarkerFontSize&quot;: &quot;14&quot;,
-  &quot;vim.handleKeys&quot;: &amp;#123;
+  &quot;vim.handleKeys&quot;: &#123;
     &quot;&lt;C-n&gt;&quot;: false,
     &quot;&lt;C-p&gt;&quot;: false,
     &quot;&lt;C-a&gt;&quot;: false,
     &quot;&lt;C-e&gt;&quot;: false
-  &amp;#125;,
+  &#125;,
   &quot;vim.leader&quot;: &quot;&lt;space&gt;&quot;,
   &quot;vim.insertModeKeyBindings&quot;: [
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-f&gt;&quot;],
       &quot;after&quot;: [&quot;&lt;right&gt;&quot;]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-b&gt;&quot;],
       &quot;after&quot;: [&quot;&lt;left&gt;&quot;]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-e&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;cursorEnd&quot;,
           &quot;when&quot;: &quot;editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-a&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;cursorHome&quot;,
           &quot;when&quot;: &quot;editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-d&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;deleteRight&quot;,
           &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;
+    &#125;
   ],
   &quot;vim.normalModeKeyBindingsNonRecursive&quot;: [
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;g&quot;, &quot;r&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.referenceSearch.trigger&quot;,
           &quot;when&quot;: &quot;editorHasReferenceProvider &amp;&amp; editorTextFocus &amp;&amp; !inReferenceSearchEditor &amp;&amp; !isInEmbeddedEditor&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-a&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;cursorHome&quot;,
           &quot;when&quot;: &quot;editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-e&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;cursorEnd&quot;,
           &quot;when&quot;: &quot;editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-k&gt;&quot;],
       &quot;after&quot;: [&quot;D&quot;]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;&lt;space&gt;&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.showCommands&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;'&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.terminal.toggleTerminal&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;1&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusFirstEditorGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;2&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusSecondEditorGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;3&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusThirdEditorGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;t&quot;, &quot;t&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.debug.action.toggleBreakpoint&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;d&quot;, &quot;d&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.debug.start&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;r&quot;, &quot;r&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.debug.run&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;b&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;CR&gt;&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;d&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.closeActiveEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;n&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.nextEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;p&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.previousEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;e&quot;, &quot;l&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.actions.view.problems&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;e&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.openGlobalSettings&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;f&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.openFile&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;r&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;s&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.save&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
+    &#125;,
     // save file
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;S&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.saveAll&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;t&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.view.explorer&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;y&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.copyPathOfActiveFile&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;g&quot;, &quot;s&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.view.scm&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;j&quot;, &quot;=&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.formatDocument&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
+    &#125;,
     // beautify files
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;=&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.formatDocument&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;f&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;l&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.openFolder&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;p&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;f&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;r&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.reloadWindow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;q&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;e&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.rename&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;j&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.gotoSymbol&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;p&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.findInFiles&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;P&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.findInFilesWithSelectedText&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;F&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.toggleFullScreen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;m&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.toggleMenuBar&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;s&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.selectTheme&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;t&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.toggleActivityBarVisibility&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;v&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.smartSelect.grow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;V&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.smartSelect.shrink&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;w&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusNextGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
+    &#125;,
     // navigation
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;l&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateRight&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;h&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateLeft&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;j&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateDown&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;k&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateUp&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;v&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.splitEditor&quot;,
           &quot;key&quot;: &quot;cmd+\\&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;W&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusPreviousGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;m&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.maximizeEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;
+    &#125;
   ],
   &quot;vim.visualModeKeyBindingsNonRecursive&quot;: [
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;g&quot;, &quot;r&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.referenceSearch.trigger&quot;,
           &quot;when&quot;: &quot;editorHasReferenceProvider &amp;&amp; editorTextFocus &amp;&amp; !inReferenceSearchEditor &amp;&amp; !isInEmbeddedEditor&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;backspace&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;deleteLeft&quot;,
           &quot;when&quot;: &quot;editorTextFocus &amp;&amp; !editorReadonly&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-a&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;cursorHome&quot;,
           &quot;when&quot;: &quot;editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-e&gt;&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;cursorEnd&quot;,
           &quot;when&quot;: &quot;editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;C-k&gt;&quot;],
       &quot;after&quot;: [&quot;D&quot;]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;&lt;space&gt;&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.showCommands&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;'&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.terminal.toggleTerminal&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;1&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusFirstEditorGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;2&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusSecondEditorGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;3&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusThirdEditorGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;b&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;CR&gt;&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;d&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.closeActiveEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;n&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.nextEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;b&quot;, &quot;p&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.previousEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;e&quot;, &quot;l&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.actions.view.problems&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;e&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.openGlobalSettings&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;f&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.openFile&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;r&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;s&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.save&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
+    &#125;,
     // save file
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;S&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.saveAll&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;t&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.view.explorer&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;f&quot;, &quot;y&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.copyPathOfActiveFile&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;g&quot;, &quot;s&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.view.scm&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;j&quot;, &quot;=&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.formatDocument&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
+    &#125;,
     // beautify files
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;=&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.formatDocument&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;f&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.quickOpen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;l&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.files.openFolder&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;p&quot;, &quot;p&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.openRecent&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;f&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;r&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.reloadWindow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;q&quot;, &quot;q&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.closeWindow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;e&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.rename&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;j&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.gotoSymbol&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;p&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.findInFiles&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;s&quot;, &quot;P&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.findInFilesWithSelectedText&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;F&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.toggleFullScreen&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;m&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.toggleMenuBar&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;s&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.selectTheme&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;T&quot;, &quot;t&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.toggleActivityBarVisibility&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;v&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.smartSelect.grow&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;V&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;editor.action.smartSelect.shrink&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;w&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusNextGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
+    &#125;,
     // navigation
-    &amp;#123;
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;l&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateRight&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;h&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateLeft&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;j&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateDown&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;k&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;extension.vim_navigateUp&quot;,
           &quot;when&quot;: &quot;vim.active &amp;&amp; vim.use&lt;C-w&gt; &amp;&amp; !editorTextFocus&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;leader&quot;, &quot;w&quot;, &quot;v&quot;],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.splitEditor&quot;,
           &quot;key&quot;: &quot;cmd+\\&quot;
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;W&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.focusPreviousGroup&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;,
-    &amp;#123;
+    &#125;,
+    &#123;
       &quot;before&quot;: [&quot;&lt;leader&gt;&quot;, &quot;w&quot;, &quot;m&quot;],
       &quot;after&quot;: [],
       &quot;commands&quot;: [
-        &amp;#123;
+        &#123;
           &quot;command&quot;: &quot;workbench.action.maximizeEditor&quot;,
           &quot;args&quot;: []
-        &amp;#125;
+        &#125;
       ]
-    &amp;#125;
+    &#125;
   ]
-&amp;#125;
+&#125;
 </code></pre>
 <ol start="2">
 <li>Add the following to your VSCode’s <code>keybindings.json</code>.</li>
@@ -1285,31 +1285,31 @@ everywhere.</li>
 </blockquote>
 <pre><code class="language-json">[
   // unbind &quot;C-k .&quot;, needed to bind C-k as kill line
-  &amp;#123;
+  &#123;
     &quot;command&quot;: &quot;-extension.clipToHtml&quot;,
     &quot;key&quot;: &quot;ctrl+k .&quot;,
     &quot;when&quot;: &quot;editorTextFocus&quot;
-  &amp;#125;,
+  &#125;,
   // (Optional) bind &lt;C-g&gt; as &lt;ESC&gt;
-  &amp;#123;
+  &#123;
     &quot;key&quot;: &quot;ctrl-g&quot;,
     &quot;command&quot;: &quot;extension.vim_escape&quot;,
     &quot;when&quot;: &quot;editorTextFocus &amp;&amp; vim.active &amp;&amp; !inDebugRepl&quot;
-  &amp;#125;,
-  &amp;#123;
+  &#125;,
+  &#123;
     &quot;command&quot;: &quot;-workbench.action.gotoLine&quot;,
     &quot;key&quot;: &quot;ctrl+g&quot;
-  &amp;#125;,
-  &amp;#123;
+  &#125;,
+  &#123;
     &quot;command&quot;: &quot;workbench.action.closeQuickOpen&quot;,
     &quot;key&quot;: &quot;ctrl-g&quot;,
     &quot;when&quot;: &quot;inQuickOpen&quot;
-  &amp;#125;,
-  &amp;#123;
+  &#125;,
+  &#123;
     &quot;command&quot;: &quot;workbench.action.exitZenMode&quot;,
     &quot;key&quot;: &quot;ctrl-g ctrl-g&quot;,
     &quot;when&quot;: &quot;inZenMode&quot;
-  &amp;#125;
+  &#125;
 ]
 </code></pre>
 
@@ -1348,9 +1348,9 @@ everywhere.</li>
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             

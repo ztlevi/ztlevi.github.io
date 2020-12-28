@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>A simple tweak to help you edit minified files in Emacs - Lady luck is smilin&#39;.</title>
+    <title>GPG forwarding over ssh on the fly - Lady luck is smilin&#39;.</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
     <meta name="keywords" content="ztlevi blog,"> 
-    <meta name="description" content="Emacs “stucks” at editing long line files. It does but that’s not Emacs’s fault. Emacs has excellen,"> 
+    <meta name="description" content="I’ve been seeking for GPG solutions over server side VS client side for a while. It’s so hard to
+le,"> 
     <meta name="author" content="Ting Zhou"> 
     <link rel="alternative" href="atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -57,7 +58,7 @@
     <div class="navigation animated fadeIn fast delay-1s">
         <img id="home-icon" class="icon-home" src="/img/favicon.png" alt="" data-url="https://ztlevi.github.io">
         <div id="play-icon" title="Play/Pause" class="iconfont icon-play"></div>
-        <h3 class="subtitle">A simple tweak to help you edit minified files in Emacs</h3>
+        <h3 class="subtitle">GPG forwarding over ssh on the fly</h3>
         <div class="social">
             <!--        <div class="like-icon">-->
             <!--            <a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -87,29 +88,29 @@
         <div class="else">
             <p class="animated fadeInDown">
                 
-                <a href="/categories/emacs"><b>「
-                    </b>EMACS<b> 」</b></a>
+                <a href="/categories/coding"><b>「
+                    </b>CODING<b> 」</b></a>
                 
-                July 01, 2018
+                December 27, 2020
             </p>
-            <h3 class="post-title animated fadeInDown"><a href="/posts/A-simple-tweak-to-help-you-edit-minified-files-in-Emacs/" title="A simple tweak to help you edit minified files in Emacs" class="">A simple tweak to help you edit minified files in Emacs</a>
+            <h3 class="post-title animated fadeInDown"><a href="/posts/GPG-forwarding-over-ssh-on-the-fly/" title="GPG forwarding over ssh on the fly" class="">GPG forwarding over ssh on the fly</a>
             </h3>
             
             <p class="post-count animated fadeInDown">
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    2.9k
+                    5k
                 </span>
                 
                 
                 <span>
                     <b class="iconfont icon-timer__s"></b> <i>Reading time</i>
-                    3 mins.
+                    5 mins.
                 </span>
                 
                 
-                <span id="/posts/A-simple-tweak-to-help-you-edit-minified-files-in-Emacs/" class="leancloud_visitors" data-flag-title="A simple tweak to help you edit minified files in Emacs">
+                <span id="/posts/GPG-forwarding-over-ssh-on-the-fly/" class="leancloud_visitors" data-flag-title="GPG forwarding over ssh on the fly">
                     <b class="iconfont icon-read"></b> <i>Read count</i>
                     <span class="leancloud-visitors-count">1000000</span>
                 </span>
@@ -118,7 +119,7 @@
             </p>
             
             
-            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/emacs/" rel="tag">emacs</a></li></ul>
+            <ul class="animated fadeInDown post-tags-list" itemprop="keywords"><li class="animated fadeInDown post-tags-list-item"><a class="animated fadeInDown post-tags-list-link" href="/tags/gpp-ssh/" rel="tag">gpp, ssh</a></li></ul>
             
         </div>
     </div>
@@ -139,59 +140,120 @@
 <div class="article">
     <div class='main'>
         <div class="content markdown animated fadeIn">
-            <p>Emacs “stucks” at editing long line files. It does but that’s not Emacs’s fault. Emacs has excellent
-<a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.common-lisp.net/project/flexichain/download/StrandhVilleneuveMoore.pdf">gap buffer</a>
-for large file editing. It’s due to the mode you apply to the file. These modes might freeze your Emacs when editing
-large file or minified files.</p>
-<h2 id="check-minified-files"><a class="header-anchor" href="#check-minified-files"> &gt; </a>Check Minified files</h2>
-<p>So here is a simple trick, I just check the first 30 line of the opened file. If first line is over 1000 in width, then
-it just enable <code>fundamental-mode</code> which works perfectly for these files.</p>
-<pre><code class="language-emacs-lisp">;; if the first line is too long, enable fundamental by default
-(defun get-nth-line-length (n)
-  &quot;Length of the Nth line.&quot;
-  (save-excursion
-    (goto-char (point-min))
-    (if (zerop (forward-line (1- n)))
-        (- (line-end-position)
-           (line-beginning-position)))))
-
-(defun +my/check-minified-file ()
-  (and
-   (not (member (file-name-extension (buffer-file-name))
-                '(&quot;org&quot; &quot;md&quot; &quot;markdown&quot; &quot;txt&quot; &quot;rtf&quot;)))
-   (cl-loop for i from 1 to (min 30 (count-lines (point-min) (point-max)))
-            if (&gt; (get-nth-line-length i) 1000)
-            return t
-            finally return nil)))
-
-(add-to-list 'magic-mode-alist (cons #'+my/check-minified-file 'fundamental-mode))
+            <p>I’ve been seeking for GPG solutions over server side VS client side for a while. It’s so hard to
+leverage multiple gpg session at the same especially over ssh.</p>
+<p>Fortunately, I realized there is a built-in feature call GPG forwarding that allows you to authorize
+the server side request in the client side.</p>
+<h2 id="gpg-forwarding"><a class="header-anchor" href="#gpg-forwarding"> &gt; </a>GPG forwarding</h2>
+<p>The idea is to forward your client sidse GPG socket to your server side, so that every time you
+trigger a GPG authentication in server side, it can pop the GPG authentication GUI (pinentry
+program) in your local machine.</p>
+<h2 id="steps"><a class="header-anchor" href="#steps"> &gt; </a>Steps</h2>
+<ol>
+<li>
+<p>Generate ssh config with gpg forwarding enabled using the following command. This will append a
+config to your <code>~/.ssh/config</code>.</p>
+<pre><code class="language-sh">generate-ssh-gpg-config kuro 10.0.0.3 ztlevi
 </code></pre>
-<a id="more"></a>
-<h2 id="check-large-file"><a class="header-anchor" href="#check-large-file"> &gt; </a>Check Large File</h2>
-<p>This piece of code is from spacemacs, we have to set a couple variables. But you could have your own version.</p>
-<pre><code class="language-emacs-lisp">(setq spacemacs-large-file-modes-list '(archive-mode tar-mode jka-compr git-commit-mode image-mode
-                 doc-view-mode doc-view-mode-maybe ebrowse-tree-mode
-                 pdf-view-mode))
-
-(setq dotspacemacs-large-file-size 1)
-
-;; check when opening large files - literal file open
-(defun spacemacs/check-large-file ()
-  (let* ((filename (buffer-file-name))
-         (size (nth 7 (file-attributes filename))))
-    (when (and
-           (not (memq major-mode spacemacs-large-file-modes-list))
-           size (&gt; size (* 1024 1024 dotspacemacs-large-file-size))
-           (y-or-n-p (format (concat &quot;%s is a large file, open literally to &quot;
-                                     &quot;avoid performance issues?&quot;)
-                             filename)))
-      (setq buffer-read-only t)
-      (buffer-disable-undo)
-      (fundamental-mode))))
-
-;; Prompt to open file literally if large file.
-(add-hook 'find-file-hook 'spacemacs/check-large-file)
+</li>
+<li>
+<p>You can either add <code>StreamLocalBindUnlink yes</code> to your <code>/etc/ssh/sshd_config</code> and restart your
+sshd service. Or use <code>ssh-with-gpg-socket-deleted kuro 10.0.0.3 ztlevi</code> to kill remote gpg-agent
+and then create a ssh session with local gpg forwarded.</p>
+</li>
+<li>
+<p>Copy the puclic key to the remote machine</p>
+<pre><code class="language-sh">scp $HOME/.gnupg/pubring.kbx kuro:/home/ztlevi/.gnupg
 </code></pre>
+<p>If you already exported it, you can do</p>
+<pre><code class="language-sh">gpg --import mypublickey.pub
+</code></pre>
+</li>
+</ol>
+<h2 id="testing-gpg"><a class="header-anchor" href="#testing-gpg"> &gt; </a>Testing GPG</h2>
+<p>Encrypt to a file and then decrypt. You can try both on client and server side.</p>
+<pre><code class="language-sh">echo &quot;test&quot; | gpg --encrypt -r &lt;your-gpg-email&gt;
+echo &quot;test&quot; | gpg --encrypt -r &lt;your-gpg-email&gt; &gt; output
+gpg --decrypt output
+</code></pre>
+<h2 id="bash-funcitons-used-in-previous-steps"><a class="header-anchor" href="#bash-funcitons-used-in-previous-steps"> &gt; </a>BASH funcitons used in previous steps</h2>
+<pre><code class="language-bash">alias gpg-restart=&quot;gpgconf --kill gpg-agent&quot;
+
+function test-ssh-connection() &#123;
+  server=$1         # server IP
+  port=22           # port
+  connect_timeout=5 # Connection timeout
+
+  timeout $connect_timeout bash -c &quot;&lt;/dev/tcp/$server/$port&quot;
+  if [[ $? -eq 0 ]]; then
+    echo &quot;SSH Connection to $server over port $port is possible&quot;
+    return 0
+  else
+    echo &quot;SSH connection to $server over port $port is not possible&quot;
+    return 1
+  fi
+&#125;
+
+function generate-ssh-gpg-config() &#123;
+  # Test the ssh connection before you gneretae the ssh config that enables gpg forwarding
+  # Args:
+  # connection_name: e.g. kuro
+  # hostname: e.g. 10.0.0.3
+  # user: e.g. ztlevi
+  #
+  # Usage: generate-ssh-gpg-config kuro 10.0.0.3 ztlevi
+  echo &quot;Generating ssh config that enables gpg forwarding...\n&quot;
+
+  if [[ $&#123;#@&#125; -ne 3 ]]; then
+    echo &quot;generate-ssh-gpg-config has wrong input arguments! Your inputs: \`$&#123;@&#125;\`&quot;
+    echo &quot;Usage: generate-ssh-gpg-config kuro 10.0.0.3 ztlevi&quot;
+  fi
+
+  local connection_name=$1
+  local hostname=$2
+  local user=$3
+  test-ssh-connection $hostname || return 1
+  # Mapping the remote socket to local's extra socket
+  local local_extra_socket=$(gpgconf --list-dir agent-extra-socket)
+  local remote_socket=$(ssh &quot;$user@$hostname&quot; &quot;gpgconf --list-dir agent-socket&quot;)
+
+  test -f $HOME/.ssh/config || touch $HOME/.ssh/config
+  cat &lt;&lt;EOF &gt;&gt;$HOME/.ssh/config
+host $&#123;connection_name&#125;
+  hostname $&#123;hostname&#125;
+  user $&#123;user&#125;
+  RemoteForward $&#123;remote_socket&#125; $&#123;local_extra_socket&#125;
+  ExitOnForwardFailure yes
+EOF
+&#125;
+
+function ssh-with-gpg-socket-deleted() &#123;
+  # You can either add `StreamLocalBindUnlink yes` to your /etc/ssh/sshd_config
+  # Or, delete the remote gpg socket file before ssh.
+  # Typically, kill gpg-agent will delete the socket files
+  #
+  # Args:
+  #   connection_name: e.g. kuro
+  #   hostname: e.g. 10.0.0.3
+  #   user: e.g. ztlevi
+  #
+  # Usage: ssh-with-gpg-socket-deleted kuro 10.0.0.3 ztlevi
+
+  # Start gpg-agent locally if not running
+  if ! pgrep -x &quot;gpg-agent&quot; &gt;/dev/null; then
+    gpg-agent --homedir $HOME/.gnupg --use-standard-socket --daemon
+  fi
+
+  local connection_name=$1
+  local hostname=$2
+  local user=$3
+  ssh &quot;$&#123;user&#125;@$&#123;hostname&#125;&quot; 'gpgconf --kill gpg-agent; rm -f $(gpgconf --list-dir agent-socket)'
+  ssh &quot;$&#123;connection_name&#125;&quot;
+&#125;
+</code></pre>
+<h2 id="references"><a class="header-anchor" href="#references"> &gt; </a>References</h2>
+<p><a target="_blank" rel="noopener" href="https://wiki.gnupg.org/AgentForwarding">AgentForwarding - GnuPG wiki</a></p>
+<p><a target="_blank" rel="noopener" href="https://gist.github.com/TimJDFletcher/85fafd023c81aabfad57454111c1564d">GNUPG_agent_forwarding</a></p>
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls"
@@ -239,7 +301,7 @@ it just enable <code>fundamental-mode</code> which works perfectly for these fil
             <div class="box sticky animated fadeInRight faster">
                 <div id="toc" class="subbox">
                     <h4>Contents</h4>
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#check-minified-files"><span class="toc-number">1.</span> <span class="toc-text"> &gt; Check Minified files</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#check-large-file"><span class="toc-number">2.</span> <span class="toc-text"> &gt; Check Large File</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#gpg-forwarding"><span class="toc-number">1.</span> <span class="toc-text"> &gt; GPG forwarding</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#steps"><span class="toc-number">2.</span> <span class="toc-text"> &gt; Steps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#testing-gpg"><span class="toc-number">3.</span> <span class="toc-text"> &gt; Testing GPG</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#bash-funcitons-used-in-previous-steps"><span class="toc-number">4.</span> <span class="toc-text"> &gt; BASH funcitons used in previous steps</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#references"><span class="toc-number">5.</span> <span class="toc-text"> &gt; References</span></a></li></ol>
                 </div>
             </div>
             

@@ -37,7 +37,7 @@ These days, I was working on a React Native project. In the meanwhile, I found i
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -100,7 +100,7 @@ These days, I was working on a React Native project. In the meanwhile, I found i
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    6.8k
+                    6.7k
                 </span>
                 
                 
@@ -167,8 +167,8 @@ see, it’s not beautiful.</p>
 ;; es6 js, e.g. ComponentDidMount(), render() function in React
 ;; https://emacs-china.org/t/topic/4538/7
 (defun js-exception-imenu-generic-expression-regexp ()
-  ;; (async)? xxx (e) &amp;#123; &amp;#125;
-  (if (re-search-backward &quot;^[ \t]*\\(async\\)?[ \t]*\\([A-Za-z_$][A-Za-z0-9_$]+\\)[ \t]*([a-zA-Z0-9, ]*) *\&amp;#123; *$&quot; nil t)
+  ;; (async)? xxx (e) &#123; &#125;
+  (if (re-search-backward &quot;^[ \t]*\\(async\\)?[ \t]*\\([A-Za-z_$][A-Za-z0-9_$]+\\)[ \t]*([a-zA-Z0-9, ]*) *\&#123; *$&quot; nil t)
       (progn
         (if (member (match-string 2) '(&quot;for&quot; &quot;if&quot; &quot;while&quot; &quot;switch&quot;))
             (js-exception-imenu-generic-expression-regexp)
@@ -208,12 +208,12 @@ see, it’s not beautiful.</p>
                                (&quot;Function&quot; &quot;^[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*:[ \t]*\\(async\\)?[ \t]*function[ \t]*(&quot; 1) ;; xxx : (async)? function (
                                (&quot;Function&quot; &quot;^[ \t]*\\(export\\)?[ \t]*\\(var\\|let\\|const\\)?[ \t]*\\([a-zA-Z0-9_$.]+\\)[ \t]*=[ \t]*\\(async\\)?[ \t]*function[ \t]*(&quot; 3) ;; (export)? (var|let|const)? xxx = (async)? function (
 
-                               ;; &amp;#123;&amp;#123; es6 beginning
-                               (&quot;Function&quot; js-exception-imenu-generic-expression-regexp 2) ;; (async)? xxx (e) &amp;#123; &amp;#125;
-                               (&quot;Function&quot; &quot;^[ \t]*\\([A-Za-z_$][A-Za-z0-9_$.]*\\)[ \t]*:[ \t]*\\(async\\)?[ \t]*(&quot; 1) ;; xxx : (async)? (
-                               (&quot;Function&quot; &quot;^[ \t]*\\(export\\)?[ \t]*\\(var\\|let\\|const\\)?[ \t]*\\([A-Za-z_$][A-Za-z0-9_$.]*\\)[ \t]*=[ \t]*\\(async\\)?[ \t]*(&quot; 3) ;; (export)? (var|let|const)? xxx = (async)? (
-                               (&quot;Function&quot; &quot;^[ \t]*\\(export\\)?[ \t]*\\(var\\|let\\|const\\)?[ \t]*\\([A-Za-z_$][A-Za-z0-9_$.]*\\)[ \t]*=[ \t]*\\(async\\)?[ \t]*[A-Za-z_$][A-Za-z0-9_$.]*[ \t]*=&gt;&quot; 3) ;; (export)? (var|let|const)? xxx = (async)? e =&gt;
-                               ;; &amp;#125;&amp;#125;
+                               ;; &#123;&#123; es6 beginning
+                               ("Function" js-exception-imenu-generic-expression-regexp 2) ;; (async)? xxx (e) &#123; &#125;
+                               ("Function" "^[ \t]*\\([A-Za-z_$][A-Za-z0-9_$.]*\\)[ \t]*:[ \t]*\\(async\\)?[ \t]*(" 1) ;; xxx : (async)? (
+                               ("Function" "^[ \t]*\\(export\\)?[ \t]*\\(var\\|let\\|const\\)?[ \t]*\\([A-Za-z_$][A-Za-z0-9_$.]*\\)[ \t]*=[ \t]*\\(async\\)?[ \t]*(" 3) ;; (export)? (var|let|const)? xxx = (async)? (
+                               ("Function" "^[ \t]*\\(export\\)?[ \t]*\\(var\\|let\\|const\\)?[ \t]*\\([A-Za-z_$][A-Za-z0-9_$.]*\\)[ \t]*=[ \t]*\\(async\\)?[ \t]*[A-Za-z_$][A-Za-z0-9_$.]*[ \t]*=>" 3) ;; (export)? (var|let|const)? xxx = (async)? e =>
+                               ;; &#125;&#125;
 
                                (&quot;Task&quot; &quot;[. \t]task([ \t]*['\&quot;]\\([^'\&quot;]+\\)&quot; 1)))))
 </code></pre>
@@ -253,9 +253,9 @@ see, it’s not beautiful.</p>
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             

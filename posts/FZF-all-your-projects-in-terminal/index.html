@@ -36,7 +36,7 @@
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -99,7 +99,7 @@
                 
                 <span>
                     <b class="iconfont icon-text2"></b> <i>Words count</i>
-                    1.9k
+                    1.7k
                 </span>
                 
                 
@@ -150,28 +150,28 @@ candidates. <code>developer_root</code> is a directory that project inside withi
 </blockquote>
 <a id="more"></a>
 <pre><code class="language-sh"># Switch projects
-function fzf_projects() &amp;#123;
+function fzf_projects() &#123;
   # Each root is consist of PATH:scan_depth
-  project_scans=(&quot;$&amp;#123;HOME&amp;#125;:1&quot; &quot;$&amp;#123;HOME&amp;#125;/Dropbox:1&quot; &quot;$&amp;#123;HOME&amp;#125;/go/src:1&quot; &quot;$&amp;#123;HOME&amp;#125;/Developer:2&quot;)
+  project_scans=(&quot;$&#123;HOME&#125;:1&quot; &quot;$&#123;HOME&#125;/Dropbox:1&quot; &quot;$&#123;HOME&#125;/go/src:1&quot; &quot;$&#123;HOME&#125;/Developer:2&quot;)
 
   projects=()
   local project scan_depth
-  for project_scan in $&amp;#123;project_scans[@]&amp;#125;; do
-    IFS=: read -r project scan_depth &lt;&lt;&lt;&quot;$&amp;#123;project_scan&amp;#125;&quot;
-    if [[ -d $&amp;#123;project&amp;#125; ]]; then
-      for dir in $(find $&amp;#123;project&amp;#125; -maxdepth $&amp;#123;scan_depth&amp;#125; -type d); do
-        if [[ -d $&amp;#123;dir&amp;#125;/.git ]]; then
-          projects+=($&amp;#123;dir&amp;#125;)
+  for project_scan in $&#123;project_scans[@]&#125;; do
+    IFS=: read -r project scan_depth &lt;&lt;&lt;&quot;$&#123;project_scan&#125;&quot;
+    if [[ -d $&#123;project&#125; ]]; then
+      for dir in $(find $&#123;project&#125; -maxdepth $&#123;scan_depth&#125; -type d); do
+        if [[ -d $&#123;dir&#125;/.git ]]; then
+          projects+=($&#123;dir&#125;)
         fi
       done
     fi
   done
 
   local IFS=$'\n'
-  selected_project=$(echo &quot;$&amp;#123;projects[*]&amp;#125;&quot; | fzf)
+  selected_project=$(echo &quot;$&#123;projects[*]&#125;&quot; | fzf)
 
-  cd $&amp;#123;selected_project&amp;#125;
-&amp;#125;
+  cd $&#123;selected_project&#125;
+&#125;
 alias pp=fzf_projects
 </code></pre>
 <p>Third, source your shell configuration again or open a new terminal window. Trigger <code>fzf_projects</code> by input <code>pp</code>.</p>
@@ -211,9 +211,9 @@ alias pp=fzf_projects
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             

@@ -37,7 +37,7 @@ If a stored value in your code is not going to change, always declare,">
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -275,9 +275,9 @@ It’s either an Int, or it’s nothing at all.)</p>
 <p>Once you’re sure that the optional does contain a value, you can access its underlying value by adding an exclamation
 mark (!) to the end of the optional’s name. The exclamation mark effectively says, “I know that this optional definitely
 has a value; please use it.” This is known as forced unwrapping of the optional’s value:</p>
-<pre><code class="language-swift">if convertedNumber != nil &amp;#123;
+<pre><code class="language-swift">if convertedNumber != nil &#123;
     print(&quot;convertedNumber has an integer value of \(convertedNumber!).&quot;)
-&amp;#125;
+&#125;
 // Prints &quot;convertedNumber has an integer value of 123.&quot;
 </code></pre>
 <p><code>NOTE: Trying to use ! to access a nonexistent optional value triggers a runtime error. Always make sure that an optional contains a non-nil value before using ! to force-unwrap its value.</code></p>
@@ -286,9 +286,9 @@ has a value; please use it.” This is known as forced unwrapping of the optiona
 temporary constant or variable. Optional binding can be used with if and while statements to check for a value inside an
 optional, and to extract that value into a constant or variable, as part of a single action.</p>
 <p>Write an optional binding for an if statement as follows:</p>
-<pre><code class="language-swift"> if let constantName = someOptional &amp;#123;
+<pre><code class="language-swift"> if let constantName = someOptional &#123;
     statements
-&amp;#125;
+&#125;
 </code></pre>
 <h2 id="implicitly-unwrapped-optional"><a class="header-anchor" href="#implicitly-unwrapped-optional"> &gt; </a>implicitly unwrapped optional</h2>
 <pre><code class="language-swift">let possibleString: String? = &quot;An optional string.&quot;
@@ -337,9 +337,9 @@ an exclamation mark after the optional’s type when you declare it.</strong></p
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             

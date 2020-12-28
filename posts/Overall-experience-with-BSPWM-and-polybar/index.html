@@ -37,7 +37,7 @@ I have to say BSPWM is not that friendly for the first-,">
     
 <link rel="stylesheet" href="/css/ball-atom.min.css">
 
-<meta name="generator" content="Hexo 5.0.2"></head>
+<meta name="generator" content="Hexo 5.3.0"></head>
 
 
 <body class="loading">
@@ -173,7 +173,7 @@ if [ -z $RESOLUTION ]; then RESOLUTION=1920; fi
 <p>In <code>run-polybar.sh</code>:</p>
 <pre><code class="language-bash">MONITOR=$(xrandr -q | grep primary | grep ' connected' | cut -d' ' -f1)
 MONITORS=($(xrandr -q | grep ' connected' | cut -d' ' -f1))
-MONITOR=$&amp;#123;MONITOR:-$&amp;#123;MONITORS[0]&amp;#125;&amp;#125;
+MONITOR=$&#123;MONITOR:-$&#123;MONITORS[0]&#125;&#125;
 
 if [ &quot;$GDK_SCALE&quot; -eq 2 ]; then
 dpi=160
@@ -184,13 +184,13 @@ fi
 killall -q polybar
 while _is_running polybar; do sleep 1; done
 
-source &quot;$&amp;#123;0:A:h&amp;#125;/../../bin/inject-xcolors&quot;
+source &quot;$&#123;0:A:h&#125;/../../bin/inject-xcolors&quot;
 pushd ~ &gt;/dev/null
 
-env DPI=$&amp;#123;dpi&amp;#125; MONITOR=$&amp;#123;MONITOR&amp;#125; bash -c &quot;polybar main &gt;$XDG_DATA_HOME/polybar.log 2&gt;&amp;1 &amp;&quot;
+env DPI=$&#123;dpi&#125; MONITOR=$&#123;MONITOR&#125; bash -c &quot;polybar main &gt;$XDG_DATA_HOME/polybar.log 2&gt;&amp;1 &amp;&quot;
 
-for mon in $&amp;#123;MONITORS[@]/$&amp;#123;MONITOR&amp;#125;/&amp;#125;; do
-env DPI=$&amp;#123;dpi&amp;#125; SIDE_MONITOR=$&amp;#123;mon&amp;#125; bash -c &quot;polybar side &gt;&gt;$XDG_DATA_HOME/polybar.log 2&gt;&amp;1 &amp;&quot;
+for mon in $&#123;MONITORS[@]/$&#123;MONITOR&#125;/&#125;; do
+env DPI=$&#123;dpi&#125; SIDE_MONITOR=$&#123;mon&#125; bash -c &quot;polybar side &gt;&gt;$XDG_DATA_HOME/polybar.log 2&gt;&amp;1 &amp;&quot;
 done
 
 popd &gt;/dev/null
@@ -198,9 +198,9 @@ popd &gt;/dev/null
 <p>In polybar config:</p>
 <pre><code class="language-bash">[bar/side]
 inherit = bar/master
-monitor = $&amp;#123;env:SIDE_MONITOR&amp;#125;
+monitor = $&#123;env:SIDE_MONITOR&#125;
 
-dpi = $&amp;#123;env:DPI&amp;#125;
+dpi = $&#123;env:DPI&#125;
 </code></pre>
 </li>
 <li>
@@ -266,9 +266,9 @@ life saver.</p>
                     </dl>
                 </div>
                 <ul>
-                    <li><a href="/">23 <p>Articles</p></a></li>
+                    <li><a href="/">24 <p>Articles</p></a></li>
                     <li><a href="/categories">7 <p>Categories</p></a></li>
-                    <li><a href="/tags">25 <p>Tags</p></a></li>
+                    <li><a href="/tags">26 <p>Tags</p></a></li>
                 </ul>
             </div>
             
