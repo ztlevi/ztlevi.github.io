@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-07-13</span>
-            <span class="time">23:56:25</span>
+            <span class="time">00:02:30</span>
           </span>
           
           <!--  Categories  -->
@@ -146,8 +146,8 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <p>Note: The solution is translated from the Segmentfault post over <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006140476">here</a>.
-Thanks for liuqi627.</p>
+          <p>Note: The solution is translated from the Segmentfault post over
+<a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006140476">here</a>. Thanks for liuqi627.</p>
 <h1 id="question-description"><a class="header-anchor" href="#question-description"> &gt; </a>Question Description</h1>
 <p>Over <a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-tinyurl/#/description">here</a></p>
 <h1 id="s-scenario"><a class="header-anchor" href="#s-scenario"> &gt; </a>S: Scenario</h1>
@@ -173,8 +173,8 @@ Thanks for liuqi627.</p>
 <li>1GB every day. 1 TB hard drive could stand for 3 years.</li>
 </ul>
 <p>Storage is not the problem for this kind of system. Service like Netflix may have storage issues.</p>
-<p>Through SN analysis, we could have a big picture of the system. In general, this system is not hard and could be handled
-by a single SSD Machine.</p>
+<p>Through SN analysis, we could have a big picture of the system. In general, this system is not hard
+and could be handled by a single SSD Machine.</p>
 <h1 id="a-api"><a class="header-anchor" href="#a-api"> &gt; </a>A: API</h1>
 <p>Only one service: URLService</p>
 <ul>
@@ -186,22 +186,25 @@ by a single SSD Machine.</p>
 <li>Web Layer:</li>
 <li>REST API:</li>
 <li>GET: /{short_url}, return a http redirect response(301)</li>
-<li>POST: <a target="_blank" rel="noopener" href="http://goo.gl">goo.gl</a> method - <a target="_blank" rel="noopener" href="https://developers.google.com/url-shortener/v1/getting_started#actions">google shorten URL</a></li>
+<li>POST: <a target="_blank" rel="noopener" href="http://goo.gl">goo.gl</a> method -
+<a target="_blank" rel="noopener" href="https://developers.google.com/url-shortener/v1/getting_started#actions">google shorten URL</a></li>
 </ul>
-<p>Request Body: {url=longUrl} e.g. {“longUrl”: “<a target="_blank" rel="noopener" href="http://www.google.com/">http://www.google.com/</a>”} Return OK(200), short_url is included in the data</p>
+<p>Request Body: {url=longUrl} e.g. {“longUrl”: “<a target="_blank" rel="noopener" href="http://www.google.com/">http://www.google.com/</a>”} Return OK(200), short_url is
+included in the data</p>
 <h1 id="k-data-access"><a class="header-anchor" href="#k-data-access"> &gt; </a>K: Data Access</h1>
 <h2 id="step-1-pick-a-storage-structure"><a class="header-anchor" href="#step-1-pick-a-storage-structure"> &gt; </a>Step 1: Pick a storage structure</h2>
 <h3 id="sql-vs-nosql"><a class="header-anchor" href="#sql-vs-nosql"> &gt; </a>SQL vs NoSQL?</h3>
 <ol>
 <li>Does it need to support transactions? NoSQL does not support transaction.</li>
 <li>Do we need rich SQL query? NoSQL does not support as many queries as SQL.</li>
-<li>Pursue development efficiency? Most Web Framework supports SQL database very well (with ORM). It means fewer codes
-for the system.</li>
-<li>Do we need to use AUTO_INCREMENT ID? NoSQL couldn’t do this. It only has a global unique Object_id.</li>
-<li>Does the system has a high requirement for QPS? NoSQL has high performance. For example, Memcached’s QPS could reach
-million level, MondoDB does 10K level, MySQL only supports K level.</li>
-<li>How high is the system’s scalability? SQL requires developers write their codes to scale, while NoSQL comes with them
-(sharding, replica).</li>
+<li>Pursue development efficiency? Most Web Framework supports SQL database very well (with ORM). It
+means fewer codes for the system.</li>
+<li>Do we need to use AUTO_INCREMENT ID? NoSQL couldn’t do this. It only has a global unique
+Object_id.</li>
+<li>Does the system has a high requirement for QPS? NoSQL has high performance. For example,
+Memcached’s QPS could reach million level, MondoDB does 10K level, MySQL only supports K level.</li>
+<li>How high is the system’s scalability? SQL requires developers write their codes to scale, while
+NoSQL comes with them (sharding, replica).</li>
 </ol>
 <h3 id="answer"><a class="header-anchor" href="#answer"> &gt; </a>Answer:</h3>
 <ol>
@@ -228,17 +231,18 @@ million level, MondoDB does 10K level, MySQL only supports K level.</li>
 <p><a target="_blank" rel="noopener" href="http://site.douban.com/chuan">http://site.douban.com/chuan</a> -&gt; dff85871a72c73c3eae09e39ffe97aea63047094</p>
 </li>
 </ol>
-<p>These two algorithms could make sure hash values are randomly distributed, but the conflicts are inevitable. Any hash
-algorithm could have inevitable conflicts.</p>
+<p>These two algorithms could make sure hash values are randomly distributed, but the conflicts are
+inevitable. Any hash algorithm could have inevitable conflicts.</p>
 <ul>
 <li>
 <p>Pros: Simple. We could take the first 6 chars of the converted string.</p>
 </li>
 <li>
 <p>Cons: Conflicts.</p>
-<p>Solutions: 1. use (long_url + timestamp) as the hash function key. 2. When conflicts, regenerates the hash value(it’s
-different because timestamp changes).</p>
-<p>Overall, when urls are over 1 billion, there would be a lot of conflicts and the efficiency could be very low.</p>
+<p>Solutions: 1. use (long_url + timestamp) as the hash function key. 2. When conflicts, regenerates
+the hash value(it’s different because timestamp changes).</p>
+<p>Overall, when urls are over 1 billion, there would be a lot of conflicts and the efficiency could
+be very low.</p>
 </li>
 </ul>
 <ol start="2">
@@ -253,11 +257,11 @@ different because timestamp changes).</p>
 <h1 id="o-optimize"><a class="header-anchor" href="#o-optimize"> &gt; </a>O: optimize</h1>
 <h2 id="how-to-improve-the-response-speed"><a class="header-anchor" href="#how-to-improve-the-response-speed"> &gt; </a>How to improve the response speed?</h2>
 <h3 id="improve-the-response-speed-between-web-server-and-database"><a class="header-anchor" href="#improve-the-response-speed-between-web-server-and-database"> &gt; </a>Improve the response speed between web server and database</h3>
-<p>Use Memcached to improve response speed. When getting long_url, search in the cache first, then database. We could put
-90% read request on the cache.</p>
+<p>Use Memcached to improve response speed. When getting long_url, search in the cache first, then
+database. We could put 90% read request on the cache.</p>
 <h3 id="improve-the-response-speed-between-web-server-and-user-s-browser"><a class="header-anchor" href="#improve-the-response-speed-between-web-server-and-user-s-browser"> &gt; </a>Improve the response speed between web server and user’s browser</h3>
-<p>Different locations use different web server and cache server. All the areas share a DB used to match the users to the
-closest web server (through DNS) when they have a miss on the cache.</p>
+<p>Different locations use different web server and cache server. All the areas share a DB used to
+match the users to the closest web server (through DNS) when they have a miss on the cache.</p>
 <h2 id="what-if-we-need-one-more-mysql-machine"><a class="header-anchor" href="#what-if-we-need-one-more-mysql-machine"> &gt; </a>What if we need one more MySQL machine?</h2>
 <h3 id="issues"><a class="header-anchor" href="#issues"> &gt; </a>Issues:</h3>
 <ul>
@@ -277,17 +281,17 @@ closest web server (through DNS) when they have a miss on the cache.</p>
 <p>Two ways: 1. use one more machine to maintain the id. 2. use zookeeper. Both suck.</p>
 <p>So, we do not use global auto_increment_id.</p>
 <p>The pro way is put the sharding key as the first byte of the short_url.</p>
-<p>Another way is to use consistent hashing to break the cycle into 62 pieces. It doesn’t matter how many pieces because
-there probably would not be over 62 machines (it could be 360 or whatever). Each machine is responsible for the service
-in the part of the cycle.</p>
-<p>write long_url -&gt; hash(long_url)%62 -&gt; put long_url to the specific machine according to hash value -&gt; generate
-short_url on this machine -&gt; return short_url</p>
-<p>short_url request -&gt; get the sharding key (first byte of the short_url) -&gt; search in the corresponding machine based on
-sharding key -&gt; return long_url</p>
+<p>Another way is to use consistent hashing to break the cycle into 62 pieces. It doesn’t matter how
+many pieces because there probably would not be over 62 machines (it could be 360 or whatever). Each
+machine is responsible for the service in the part of the cycle.</p>
+<p>write long_url -&gt; hash(long_url)%62 -&gt; put long_url to the specific machine according to hash value
+-&gt; generate short_url on this machine -&gt; return short_url</p>
+<p>short_url request -&gt; get the sharding key (first byte of the short_url) -&gt; search in the
+corresponding machine based on sharding key -&gt; return long_url</p>
 <p>Each time we add a new machine, put half of the range of the most used machine to the new machine.</p>
 <h1 id="more-optimization"><a class="header-anchor" href="#more-optimization"> &gt; </a>More Optimization</h1>
-<p>Put Chinese DB in China, American DB in the United States. Use geographical information as the sharding key, e.g. 0 for
-Chinese websites, 1 for American websites.</p>
+<p>Put Chinese DB in China, American DB in the United States. Use geographical information as the
+sharding key, e.g. 0 for Chinese websites, 1 for American websites.</p>
 
         </div>
       </div>

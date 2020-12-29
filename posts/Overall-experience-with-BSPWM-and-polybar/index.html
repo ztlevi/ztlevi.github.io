@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-04-03</span>
-            <span class="time">23:56:25</span>
+            <span class="time">00:02:30</span>
           </span>
           
           <!--  Categories  -->
@@ -139,7 +139,7 @@
           <div class="post-tags text-muted">
             Tags: 
 
-<a class="tag" href="/tags/coding-bspwm/">#coding, bspwm</a>
+<a class="tag" href="/tags/coding/">#coding</a> <a class="tag" href="/tags/bspwm/">#bspwm</a>
 
 
           </div>
@@ -147,28 +147,30 @@
         <!-- Post Main Content -->
         <div class="post-content">
           <h1 id="first-time-with-tiling-window-manager"><a class="header-anchor" href="#first-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
-<p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen without anything. While
-you could something there by forking something’s setup. But it might not working for you cuz it’s really easy to break
-some dependencies on your system.</p>
-<p>I would recommend you to start with something like Awesome tiling window manager. It comes with more built-in features.
-But I think overall BSPWM is a good fit for me. Polybar is supported in BSPWM and the keybinding system is clean.</p>
-<p>I forked <a target="_blank" rel="noopener" href="https://github.com/hlissner">Henrik Lissner</a>’s dotfiles setup last year. So thanks for the amazing scripts
-that manage all the binaries and dependencies across multiple OS.</p>
+<p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen
+without anything. While you could something there by forking something’s setup. But it might not
+working for you cuz it’s really easy to break some dependencies on your system.</p>
+<p>I would recommend you to start with something like Awesome tiling window manager. It comes with more
+built-in features. But I think overall BSPWM is a good fit for me. Polybar is supported in BSPWM and
+the keybinding system is clean.</p>
+<p>I forked <a target="_blank" rel="noopener" href="https://github.com/hlissner">Henrik Lissner</a>’s dotfiles setup last year. So thanks for the
+amazing scripts that manage all the binaries and dependencies across multiple OS.</p>
+<a id="more"></a>
 <h1 id="multi-monitor-support"><a class="header-anchor" href="#multi-monitor-support"> &gt; </a>Multi-monitor support</h1>
 <p>There are scripts enabled multi-monitors support.</p>
 <ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-focus">bspc-focus</a>: allow you to focus windows
-across monitors</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-swap">bspc-swap</a>: allows you swap windows
-across monitors</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-focus">bspc-focus</a>: allow
+you to focus windows across monitors</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-swap">bspc-swap</a>: allows
+you swap windows across monitors</li>
 </ul>
-<p>These scripts basically check if there is any window in the current monitor is on the direction of the current window.
-If not, then it will check the next monitor.</p>
+<p>These scripts basically check if there is any window in the current monitor is on the direction of
+the current window. If not, then it will check the next monitor.</p>
 <h1 id="hdpi-support"><a class="header-anchor" href="#hdpi-support"> &gt; </a>HDPI support</h1>
 <p>There are many things needs customization to support 4K monitors.</p>
-<p>I’m putting a lot of effort to make HDPI support comes out of box. Basically, I’m using <code>xrandr</code> to figure out the
-connected monitor resolution. Then calculate a <code>SCALE</code> factor based on the resolution. Passing that across multiple
-applications to make HDPI like a built-in feature.</p>
+<p>I’m putting a lot of effort to make HDPI support comes out of box. Basically, I’m using <code>xrandr</code> to
+figure out the connected monitor resolution. Then calculate a <code>SCALE</code> factor based on the
+resolution. Passing that across multiple applications to make HDPI like a built-in feature.</p>
 <p>In <code>.xprofile</code>.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">RESOLUTION=$(xrandr -q | grep primary | grep <span class="string">&#x27; connected&#x27;</span> | cut -d<span class="string">&#x27; &#x27;</span> -f4 | cut -d <span class="string">&#x27;x&#x27;</span> -f1)</span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$RESOLUTION</span> ]; <span class="keyword">then</span> RESOLUTION=1920; <span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <ul>
@@ -188,19 +190,23 @@ applications to make HDPI like a built-in feature.</p>
 <p>This is a light weight and fully customizable status bar. You could put almost everything there.</p>
 <p>I have a clickable WIFI, sound, and icon workspaces module.</p>
 <p><img src="https://raw.githubusercontent.com/ztlevi/picee_images/master/common/image.soyiqyuc4wi.png" alt="polybar"></p>
-<p>While there are tons of themes on the web. Take a look at <a target="_blank" rel="noopener" href="https://github.com/polybar/polybar">here</a>.</p>
+<p>While there are tons of themes on the web. Take a look at
+<a target="_blank" rel="noopener" href="https://github.com/polybar/polybar">here</a>.</p>
 <h1 id="gnome-apps"><a class="header-anchor" href="#gnome-apps"> &gt; </a>Gnome apps</h1>
-<p>I don’t know what other people typically do to modify settings in tiling window mangers. Because they usually don’t ship
-with setting applications.</p>
-<p>So I would also install Gnome and it’s applications just so I can modify the settings like Bluetooth or WIFI.</p>
+<p>I don’t know what other people typically do to modify settings in tiling window mangers. Because
+they usually don’t ship with setting applications.</p>
+<p>So I would also install Gnome and it’s applications just so I can modify the settings like Bluetooth
+or WIFI.</p>
 <h1 id="summary"><a class="header-anchor" href="#summary"> &gt; </a>Summary</h1>
-<p>The reason most people choose tiling window manager is because it’s productive and cool. Talking about productivity,
-there won’t be a huge difference between tiling window manager and normal ones if you just use one or two monitors. It
-will be faster because you don’t need to move your hands to the mouse and then move back. Everything is under keyboard.</p>
-<p>But the productivities will scale up when u have 4 or more monitors. In this case, a multi-monitor solution will be a
-life saver.</p>
+<p>The reason most people choose tiling window manager is because it’s productive and cool. Talking
+about productivity, there won’t be a huge difference between tiling window manager and normal ones
+if you just use one or two monitors. It will be faster because you don’t need to move your hands to
+the mouse and then move back. Everything is under keyboard.</p>
+<p>But the productivities will scale up when u have 4 or more monitors. In this case, a multi-monitor
+solution will be a life saver.</p>
 <p>And finally, it’s cooooooool!</p>
-<p>If you’re instead in tiling window manager. You’re welcome to fork <a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles"> my setup </a>.</p>
+<p>If you’re instead in tiling window manager. You’re welcome to fork
+<a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles"> my setup </a>.</p>
 
         </div>
       </div>

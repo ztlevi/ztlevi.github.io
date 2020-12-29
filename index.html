@@ -136,13 +136,20 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo">No Post Excerpt</div>
+    <div class="excerpt typo"><p>I’ve been seeking for GPG solutions over server side VS client side for a while. It’s so hard to
+leverage multiple gpg session at the same especially over ssh.</p>
+<p>Fortunately, I realized there is a built-in feature call GPG forwarding that allows you to authorize
+the server side request in the client side.</p>
+<h2 id="gpg-forwarding"><a class="header-anchor" href="#gpg-forwarding"> &gt; </a>GPG forwarding</h2>
+<p>The idea is to forward your client sidse GPG socket to your server side, so that every time you
+trigger a GPG authentication in server side, it can pop the GPG authentication GUI (pinentry
+program) in your local machine.</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
         
 
-<a class="tag" href="/tags/gpp-ssh/">gpp, ssh</a>
+<a class="tag" href="/tags/gpp/">gpp</a> <a class="tag" href="/tags/ssh/">ssh</a>
 
 
       
@@ -171,13 +178,21 @@
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo">No Post Excerpt</div>
+    <div class="excerpt typo"><h1 id="first-time-with-tiling-window-manager"><a class="header-anchor" href="#first-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
+<p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen
+without anything. While you could something there by forking something’s setup. But it might not
+working for you cuz it’s really easy to break some dependencies on your system.</p>
+<p>I would recommend you to start with something like Awesome tiling window manager. It comes with more
+built-in features. But I think overall BSPWM is a good fit for me. Polybar is supported in BSPWM and
+the keybinding system is clean.</p>
+<p>I forked <a target="_blank" rel="noopener" href="https://github.com/hlissner">Henrik Lissner</a>’s dotfiles setup last year. So thanks for the
+amazing scripts that manage all the binaries and dependencies across multiple OS.</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
         
 
-<a class="tag" href="/tags/coding-bspwm/">coding, bspwm</a>
+<a class="tag" href="/tags/coding/">coding</a> <a class="tag" href="/tags/bspwm/">bspwm</a>
 
 
       
@@ -375,13 +390,13 @@ it just enable <code>fundamental-mode</code> which works perfectly for these fil
     </div>
     <!-- Post Excerpt -->
     <div class="excerpt typo"><h1 id="another-spacemacs-configuration-for-jetbrain-ides"><a class="header-anchor" href="#another-spacemacs-configuration-for-jetbrain-ides"> &gt; </a>Another Spacemacs configuration for Jetbrain IDEs</h1>
-<p>Recently, I’m working on a React Native project. I have tried using Emacs to do the coding, but I cannot really pick up
-the whole new stuff without a fancy auto-completion or finding definitions since the syntax of React is so different and
-special. That’s why I pick up Webstorm as a workaround. And there, I find a way to build my Jetbrain IDEs just like
-Spacemacs.</p>
-<p>Like I said in my previous post, space way is good for Vim users and only Vim can do this because it has other modes
-other than just insert mode. In this case, key bindings will never be a problem. We are using the sticky key sequences
-and prefix key for memorization.</p>
+<p>Recently, I’m working on a React Native project. I have tried using Emacs to do the coding, but I
+cannot really pick up the whole new stuff without a fancy auto-completion or finding definitions
+since the syntax of React is so different and special. That’s why I pick up Webstorm as a
+workaround. And there, I find a way to build my Jetbrain IDEs just like Spacemacs.</p>
+<p>Like I said in my previous post, space way is good for Vim users and only Vim can do this because it
+has other modes other than just insert mode. In this case, key bindings will never be a problem. We
+are using the sticky key sequences and prefix key for memorization.</p>
 <p>Welcome to the heaven!!!</p>
 <img src="https://tctechcrunch2011.files.wordpress.com/2015/08/safe_image.gif" alt="" style="width:500px;margin:auto;display:block;"/></div>
     <!-- Post Tags -->
@@ -418,23 +433,27 @@ and prefix key for memorization.</p>
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><p>This is my 2017 Hackintosh build. I was using GTX 970 before but I just switch to Vega 64 recently. And it works out of
-box!!! That’s the key to the whole build. With Vega GPU, you don’t have to worry about tricky bugs any more. We just
-need to set up a clean build.</p>
+    <div class="excerpt typo"><p>This is my 2017 Hackintosh build. I was using GTX 970 before but I just switch to Vega 64 recently.
+And it works out of box!!! That’s the key to the whole build. With Vega GPU, you don’t have to worry
+about tricky bugs any more. We just need to set up a clean build.</p>
 <h1 id="parts-list"><a class="header-anchor" href="#parts-list"> &gt; </a>Parts list</h1>
 <ul>
 <li>Case:
 <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01blhp5hs/ref=oh_aui_detailpage_o00_s00?ie=utf8&amp;psc=1">Phanteks Eclipse Series P400 Stell ATX</a></li>
 <li>Mobo:
 <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mryhw6b/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Gigabyte GA-Z270X-UD5</a></li>
-<li>CPU: <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mxsi216/ref=oh_aui_detailpage_o01_s02?ie=utf8&amp;psc=1">i7 7700K</a></li>
+<li>CPU:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mxsi216/ref=oh_aui_detailpage_o01_s02?ie=utf8&amp;psc=1">i7 7700K</a></li>
 <li>Cooler:
 <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b019exssbg/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">Corsair Hydro Series H100i v2</a></li>
 <li>GPU:
 <a target="_blank" rel="noopener" href="https://www.newegg.com/Product/Product.aspx?Item=N82E16814202321&amp;cm_re=vega_64-_-14-202-321-_-Product">Sapphire Nitro+ Radeon RX Vega 64</a></li>
-<li>SSD: <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01lyfkjr7/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Samsung 960 EVO</a></li>
-<li>RAM: <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01b4f3ijy/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Ballistix Sport LT</a></li>
-<li>HDD: <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b00fjrs6fu/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">WD Black 1TB</a></li>
+<li>SSD:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01lyfkjr7/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Samsung 960 EVO</a></li>
+<li>RAM:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01b4f3ijy/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Ballistix Sport LT</a></li>
+<li>HDD:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b00fjrs6fu/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">WD Black 1TB</a></li>
 <li>WIFI&amp;BT:
 <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mdlg51u/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">fenvi FV-T919(802.11AC Desktop Wifi Card)</a></li>
 <li>PW:
@@ -475,14 +494,15 @@ need to set up a clean build.</p>
     </div>
     <!-- Post Excerpt -->
     <div class="excerpt typo"><h1 id="introduction"><a class="header-anchor" href="#introduction"> &gt; </a>Introduction</h1>
-<p>For those of you love simplicity and complexity that Chrome provides, and also running a Hackintosh with Nvidia drivers,
-you might notice it’s super lagging when browsing or even just open your Chrome.</p>
+<p>For those of you love simplicity and complexity that Chrome provides, and also running a Hackintosh
+with Nvidia drivers, you might notice it’s super lagging when browsing or even just open your
+Chrome.</p>
 <blockquote>
 <p><strong>Note</strong>: The version I’m running: Chrome 64.0.3282.140, MacOs 10.13.3</p>
 </blockquote>
-<p>I’m not if it’s Nvidia’s fault or Apple’s, but it seems like they have a terrible partnership. So, unless you try to buy
-a AMD GPU, I suppose you would like to disable you hardware acceleration in Google Chrome. I feel like my Chrome has
-revived after all the suffer.</p></div>
+<p>I’m not if it’s Nvidia’s fault or Apple’s, but it seems like they have a terrible partnership. So,
+unless you try to buy a AMD GPU, I suppose you would like to disable you hardware acceleration in
+Google Chrome. I feel like my Chrome has revived after all the suffer.</p></div>
     <!-- Post Tags -->
     <div class="tags">
       
@@ -604,48 +624,48 @@ man am I.😂😂😂 So I just put other people’s nice one here as examples.<
 		<h4>Tags</h4>
 		<ul class="tag_box inline list-inline">		
 		
-			<li><a href="/tags/intellij-idea/">intellij idea<span>2</span></a></li>
+			<li><a href="/tags/bspwm/">bspwm<span>1</span></a></li>
+		
+			<li><a href="/tags/emacs/">emacs<span>4</span></a></li>
+		
+			<li><a href="/tags/mac/">mac<span>1</span></a></li>
+		
+			<li><a href="/tags/java/">java<span>2</span></a></li>
+		
+			<li><a href="/tags/hexo/">hexo<span>1</span></a></li>
+		
+			<li><a href="/tags/IP-kernel/">IP-kernel<span>1</span></a></li>
+		
+			<li><a href="/tags/spacemacs/">spacemacs<span>2</span></a></li>
+		
+			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
 		
 			<li><a href="/tags/hackintosh/">hackintosh<span>2</span></a></li>
 		
-			<li><a href="/tags/IP-kernel/">IP-kernel<span>1</span></a></li>
+			<li><a href="/tags/gpp/">gpp<span>1</span></a></li>
+		
+			<li><a href="/tags/nvidia/">nvidia<span>1</span></a></li>
+		
+			<li><a href="/tags/terminal/">terminal<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c++<span>1</span></a></li>
+		
+			<li><a href="/tags/git/">git<span>2</span></a></li>
 		
 			<li><a href="/tags/webstorm/">webstorm<span>2</span></a></li>
 		
 			<li><a href="/tags/imenu/">imenu<span>1</span></a></li>
 		
-			<li><a href="/tags/gpp-ssh/">gpp, ssh<span>1</span></a></li>
-		
-			<li><a href="/tags/leetcode/">leetcode<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c++<span>1</span></a></li>
-		
-			<li><a href="/tags/pycharm/">pycharm<span>2</span></a></li>
-		
-			<li><a href="/tags/vscode/">vscode<span>1</span></a></li>
-		
-			<li><a href="/tags/java/">java<span>2</span></a></li>
-		
-			<li><a href="/tags/coding-bspwm/">coding, bspwm<span>1</span></a></li>
-		
-			<li><a href="/tags/terminal/">terminal<span>1</span></a></li>
-		
-			<li><a href="/tags/git/">git<span>2</span></a></li>
-		
-			<li><a href="/tags/hexo/">hexo<span>1</span></a></li>
-		
 			<li><a href="/tags/swift/">swift<span>1</span></a></li>
 		
-			<li><a href="/tags/emacs/">emacs<span>4</span></a></li>
+			<li><a href="/tags/intellij-idea/">intellij idea<span>2</span></a></li>
 		
-			<li><a href="/tags/chrome/">chrome<span>1</span></a></li>
+			<li><a href="/tags/c/">c<span>1</span></a></li>
 		
-			<li><a href="/tags/nvidia/">nvidia<span>1</span></a></li>
-		
-			<li><a href="/tags/space-vim/">space-vim<span>1</span></a></li>
+			<li><a href="/tags/jetbrain/">jetbrain<span>1</span></a></li>
 		
 		
-		   <li><a href="/tags">...<span>26</span></a></li>
+		   <li><a href="/tags">...<span>27</span></a></li>
 		 
 		</ul>
 	</div>
