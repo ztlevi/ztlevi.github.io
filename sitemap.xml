@@ -2,60 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://ztlevi.github.io/posts/A-complete-solution-for-TinyURL-Leetcode-System-Design/</loc>
-    
-    <lastmod>2021-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/C-C++-you-do-not-know-I/</loc>
-    
-    <lastmod>2021-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/Databases-you-do-not-know/</loc>
-    
-    <lastmod>2021-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/Game-theory-Solutions-for-coins-in-a-line/</loc>
-    
-    <lastmod>2021-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/Game-theory-Solutions-for-others/</loc>
-    
-    <lastmod>2021-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://ztlevi.github.io/posts/Java-you-do-not-know-I/</loc>
-    
-    <lastmod>2021-12-05</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://ztlevi.github.io/posts/Java-you-do-not-know-%E2%85%A1/</loc>
     
     <lastmod>2021-12-05</lastmod>
@@ -255,6 +201,60 @@
   
   <url>
     <loc>https://ztlevi.github.io/tags/index.html</loc>
+    
+    <lastmod>2021-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/A-complete-solution-for-TinyURL-Leetcode-System-Design/</loc>
+    
+    <lastmod>2021-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/C-C++-you-do-not-know-I/</loc>
+    
+    <lastmod>2021-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/Databases-you-do-not-know/</loc>
+    
+    <lastmod>2021-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/Game-theory-Solutions-for-coins-in-a-line/</loc>
+    
+    <lastmod>2021-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/Game-theory-Solutions-for-others/</loc>
+    
+    <lastmod>2021-12-05</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://ztlevi.github.io/posts/Java-you-do-not-know-I/</loc>
     
     <lastmod>2021-12-05</lastmod>
     
