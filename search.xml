@@ -488,25 +488,6 @@
     
     
     <entry>
-      <title>test</title>
-      <link href="/posts/test/"/>
-      <url>/posts/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> nonsense </category>
-          
-      </categories>
-      
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>Java: you do not know Ⅱ</title>
       <link href="/posts/Java-you-do-not-know-%E2%85%A1/"/>
       <url>/posts/Java-you-do-not-know-%E2%85%A1/</url>
