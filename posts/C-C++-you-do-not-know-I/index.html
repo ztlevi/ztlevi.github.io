@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="C and C++: you do not know"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">C and C++: you do not know</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-29</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/coding/">#coding</a> <a class="tag" href="/tags/c/">#c</a> <a class="tag" href="/tags/c/">#c++</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>Some basic knowledge of C and C++ in the book<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. Well, I pick the title “you don’t know”.
+Precisely, it’s something I don’t know while you may already knew years ago. But it just sounds so
+stupid to named after “Java: I don’t know”…</p>
+<h1 id="pointers-an-references"><a class="header-anchor" href="#pointers-an-references"> &gt; </a>Pointers an References</h1>
+<ol>
+<li>A pointer holds the address of a variable and can be used to perform any operation that could be
+directly done on the variable, such as accessing and modifying it.</li>
+<li>Note that the size of a pointer varies depending on the architecture: 32 bits on a 32-bit
+machine and 64 bits on a 64-bit machine.</li>
+<li>A reference is another name (an alias) for a pre-existing object and it does not have memory of
+its own. Unlike pointers, references cannot be null and cannot be reassigned to another piece of
+memory.</li>
+</ol>
+<span id="more"></span>
+<h1 id="hash-table-vs-stl-map-p423"><a class="header-anchor" href="#hash-table-vs-stl-map-p423"> &gt; </a>Hash Table vs STL Map <p423></h1>
+<ol>
+<li>Since hash tables use the key to find the index that will store the value, an insert or loopup
+can be done in amortized O(1)</li>
+<li>A hash table is traditionally implemented with an array of linked lists, where each node in the
+linked list holds two pieces of data: the value and the original key.
+<ul>
+<li>We want to use a good hash function to ensure that the keys are well distributed.</li>
+<li>No matter how good the hash function is, there are still collisions.</li>
+<li>We may also wish to implement methods to dynamically increase or decrease the hash table size
+depending on capacity. For example, when the ratio of the number of elements to the table size
+exceeds a certain threshold, we may wish to increase the hash table size. This would mean
+creating a new hash table and transferring the entries from the old table to the new table.
+Because this is an expensive operation, we want to be careful to not do it too often.</li>
+</ul>
+</li>
+</ol>
+<h2 id="q-how-is-a-hash-table-implemented"><a class="header-anchor" href="#q-how-is-a-hash-table-implemented"> &gt; </a>Q: How is a hash table implemented?</h2>
+<p>A: A hash table is traditionally implemented with an array of linked lists, where each node in the
+linked list holds two pieces of data: the value and the original key. When we want to insert a key
+value pair, we map the key to index in the array using a hash function. The value is then inserted
+into the linked list at that position.</p>
+<blockquote>
+<p>Note that the elements in a linked list at a particular index of the array do not have the same
+key. Rather, <em>hashFunction(key)</em> is the same for these values.</p>
+</blockquote>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fixt173z44j30v60iojss.jpg" alt="hash table"></p>
+<p>In addition, we will want to note the following design criteria:</p>
+<ol>
+<li>
+<p>We want to use a good hash function to ensure that the keys are well distributed. If they are not
+well distributed, then we would get a lot of collisions and the speed to find an element would
+decline.</p>
+</li>
+<li>
+<p>No matter how good the hash function is, we still have collisions, so we need a method for
+handling them, This often means chaining via a linked list, but it’s not the only way.</p>
+</li>
+<li>
+<p>We may also wish to implement methods to dynamically increase or decrease the hash table size
+depending on capacity. For example, when the ratio of the number of element to the table size
+exceeds a certain threshold, we may wish to increase the hash table size. This would mean
+creating a new hash table and transferring the entries from the old table to the new table.
+Because this is an expensive operation, we want to be careful to not do it too often.</p>
+</li>
+</ol>
+<h1 id="virtual-functions-p424"><a class="header-anchor" href="#virtual-functions-p424"> &gt; </a>Virtual Functions <p424></h1>
+<ol>
+<li>A virtual function depends on a “vtable” or “Virtual Table”. A vtable is constructed which
+stores addresses of the virtual functions of this class. The compiler also adds a hidden vptr
+variable in all such classes which points to the vtable of that class.</li>
+<li>if a virtual functions is not overridden in the derived class, the vtable of of the derived
+class stores the address of the function in its parent class.</li>
+<li>The vtable is used to resolved the address of the function when the virtual functions is called.</li>
+</ol>
+<h1 id="shallow-vs-deep-copy-p425"><a class="header-anchor" href="#shallow-vs-deep-copy-p425"> &gt; </a>Shallow vs Deep Copy <p425></h1>
+<ol>
+<li>A shallow copy copies all the member values from one object to another. A deep copy does all
+this and also deep copies any pointer objects.</li>
+<li>One must also be careful with destructions of objects in a shallow copy.</li>
+<li>In real life, shallow copy is rarely used. Deep copy should be used in most cases, especially
+when the size of the copied structure is small.</li>
+</ol>
+<h1 id="volatile-p426"><a class="header-anchor" href="#volatile-p426"> &gt; </a>Volatile <p426></h1>
+<ol>
+<li>
+<p>The key word volatile informs the compiler that the value of variable it it applied to can
+change from the outside, without any update done by the code.</p>
+</li>
+<li>
+<p>Declaration statement.</p>
+<pre><code>int volatile x
+volatile int x
+</code></pre>
+</li>
+</ol>
+<h1 id="virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"><a class="header-anchor" href="#virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"> &gt; </a>Virtual Base Class: Why does a destructor in base class need to be declared virtual? <p427></h1>
+<ol>
+<li>
+<p>If destructor were not virtual, then Foo’s destructor would be called, even when p is really of
+type Bar.</p>
+<pre><code>class Foo&#123;&#125;
+class Bar : public Foo&#123;&#125;
+Foo * p = new Bar()
+</code></pre>
+</li>
+</ol>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p>Cracking the Coding Interview, 6th Edition. <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/C-C++-you-do-not-know-I/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

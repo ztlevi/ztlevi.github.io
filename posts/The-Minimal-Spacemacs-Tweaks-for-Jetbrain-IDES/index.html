@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Spacemacs/Space-Vim Config for Jetbrain IDEs"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Spacemacs/Space-Vim Config for Jetbrain IDEs</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2018-06-11</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/post/">post</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/spacemacs/">#spacemacs</a> <a class="tag" href="/tags/space-vim/">#space-vim</a> <a class="tag" href="/tags/jetbrain/">#jetbrain</a> <a class="tag" href="/tags/intellij-idea/">#intellij idea</a> <a class="tag" href="/tags/pycharm/">#pycharm</a> <a class="tag" href="/tags/webstorm/">#webstorm</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="another-spacemacs-configuration-for-jetbrain-ides"><a class="header-anchor" href="#another-spacemacs-configuration-for-jetbrain-ides"> &gt; </a>Another Spacemacs configuration for Jetbrain IDEs</h1>
+<p>Recently, I’m working on a React Native project. I have tried using Emacs to do the coding, but I
+cannot really pick up the whole new stuff without a fancy auto-completion or finding definitions
+since the syntax of React is so different and special. That’s why I pick up Webstorm as a
+workaround. And there, I find a way to build my Jetbrain IDEs just like Spacemacs.</p>
+<p>Like I said in my previous post, space way is good for Vim users and only Vim can do this because it
+has other modes other than just insert mode. In this case, key bindings will never be a problem. We
+are using the sticky key sequences and prefix key for memorization.</p>
+<p>Welcome to the heaven!!!</p>
+<img src="https://tctechcrunch2011.files.wordpress.com/2015/08/safe_image.gif" alt="" style="width:500px;margin:auto;display:block;"/>
+<span id="more"></span>
+<blockquote>
+<p>If you’re too lazy to read the whole stuff, grab my
+<a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles/blob/master/ideavimrc">.ideavimrc</a> on Github</p>
+</blockquote>
+<h1 id="the-space-way"><a class="header-anchor" href="#the-space-way"> &gt; </a>The space way</h1>
+<h2 id="leader-key"><a class="header-anchor" href="#leader-key"> &gt; </a>Leader key</h2>
+<p>Using <kbd>space</kbd> key as the leader is a very popular way of editing, navigation, and
+commanding. There is never an easy way to get used to new shortcuts, but trust me, you would
+definitely like it once you use it.</p>
+<h2 id="sticky-key"><a class="header-anchor" href="#sticky-key"> &gt; </a>Sticky key</h2>
+<p>Think about how you invoke commands in VSCode before. When you want to call the <code>command-palette</code>,
+you need to put your left hand’s two fingers on <kbd>Ctrl + Shift</kbd> key or <kbd>Command +
+Shift</kbd> key and press <kbd>p</kbd>. And note that it’s a key chord combination when you actually
+press these keys.</p>
+<p>This looks so stupid when you compare it with just <kbd>Space Space</kbd> in Vim’s normal or visual
+mode. And by saying <kbd>Space Space</kbd>, it’s a sticky key binding which means you just type
+<kbd>space</kbd> key twice in sequence. And you can just set your hands as the default typing
+position shown in this picture.</p>
+<img src="https://ws2.sinaimg.cn/large/006tNc79gy1fm3jb9l72jj30r80i6ae1.jpg" alt="" style="width:500px;margin:auto;display:block;"/>
+<h2 id="prefix-key"><a class="header-anchor" href="#prefix-key"> &gt; </a>Prefix key</h2>
+<p>Well, now you probably get the point of using <kbd>space</kbd> key. But there is more of it.</p>
+<p>Since sticky keys are just key sequences, you can cluster a lot of similar commands to a prefix like
+<kbd>space f</kbd> (file related commands). For example, <kbd>space&gt; f f</kbd> go to the explorer,
+<kbd>space&gt; f s</kbd> save file and <kbd>space&gt; f S</kbd> save all. In this case, you won’t mess up
+with these keys because they have the same prefix <kbd>space&gt; f</kbd>.</p>
+<h1 id="keybindings"><a class="header-anchor" href="#keybindings"> &gt; </a>Keybindings</h1>
+<p>For the normal and visual mode, They are pretty much the same. But they can do much more now in
+space way.</p>
+<p>The <kbd>space w m</kbd> and other window pop up combination is just beautiful.</p>
+<p>The most used ones are in bold text.</p>
+<p><kbd><space> f t</kbd> is very helpful when you want to navigate to the file you’re currently
+viewing in the project view.</p>
+<blockquote>
+<p>Note: The leader key is <kbd>space</kbd></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><kbd>C-i</kbd></td>
+<td>Forward</td>
+</tr>
+<tr>
+<td><kbd>C-o</kbd></td>
+<td>Go back</td>
+</tr>
+<tr>
+<td><kbd>g d</kbd></td>
+<td><strong>Go to declaration</strong></td>
+</tr>
+<tr>
+<td><kbd>g h</kbd></td>
+<td>Go to Documentation</td>
+</tr>
+<tr>
+<td><kbd>g r</kbd></td>
+<td><strong>Find Usages</strong></td>
+</tr>
+<tr>
+<td><kbd>g s</kbd></td>
+<td>Go to Symbol</td>
+</tr>
+<tr>
+<td><kbd>leader ’</kbd></td>
+<td>Active terminal window</td>
+</tr>
+<tr>
+<td><kbd>leader R</kbd></td>
+<td>reload <code>~/.ideavimrc</code></td>
+</tr>
+<tr>
+<td><kbd>leader a a</kbd></td>
+<td>Select All</td>
+</tr>
+<tr>
+<td><kbd>leader a l</kbd></td>
+<td>Prompt action list</td>
+</tr>
+<tr>
+<td><kbd>leader b b</kbd> (<kbd>&lt;CR&gt;</kbd>)</td>
+<td><strong>Recent files</strong> (You can still use <kbd>command+e</kbd> or <kbd>ctrl+e</kbd>)</td>
+</tr>
+<tr>
+<td><kbd>leader b i</kbd></td>
+<td><strong>Active structure tool window</strong></td>
+</tr>
+<tr>
+<td><kbd>leader b u</kbd></td>
+<td>Reopen Closed Tab</td>
+</tr>
+<tr>
+<td><kbd>leader c c</kbd></td>
+<td>Go to Class</td>
+</tr>
+<tr>
+<td><kbd>leader d D</kbd></td>
+<td>Debug Class</td>
+</tr>
+<tr>
+<td><kbd>leader d d</kbd></td>
+<td><strong>Debug</strong></td>
+</tr>
+<tr>
+<td><kbd>leader e e</kbd></td>
+<td>show error description</td>
+</tr>
+<tr>
+<td><kbd>leader f T</kbd></td>
+<td><strong>Select current file in project view</strong></td>
+</tr>
+<tr>
+<td><kbd>leader f b</kbd></td>
+<td><strong>Show Bookmarks</strong></td>
+</tr>
+<tr>
+<td><kbd>leader f d</kbd></td>
+<td>Smart search launcher (You have to install Dash or Zeal first)</td>
+</tr>
+<tr>
+<td><kbd>leader f f</kbd></td>
+<td><strong>Search Everywhere</strong></td>
+</tr>
+<tr>
+<td><kbd>leader f s</kbd></td>
+<td>save all files (I still use <kbd>command+s</kbd> or <kbd>ctrl+s</kbd>)</td>
+</tr>
+<tr>
+<td><kbd>leader f t</kbd></td>
+<td><strong>Active file tree window</strong></td>
+</tr>
+<tr>
+<td><kbd>leader i m</kbd></td>
+<td>Implement Methods</td>
+</tr>
+<tr>
+<td><kbd>leader g S<kbd>/</td>
+<td>Active version control window</td>
+</tr>
+<tr>
+<td><kbd>leader g s</kbd></td>
+<td><strong>Vsc quick list pop up</strong></td>
+</tr>
+<tr>
+<td><kbd>leader j i</kbd></td>
+<td>Fire structure pop up (similar to structure tool)</td>
+</tr>
+<tr>
+<td><kbd>leader j j</kbd></td>
+<td>Ace Action</td>
+</tr>
+<tr>
+<td><kbd>leader j l</kbd></td>
+<td>Ace Line Action</td>
+</tr>
+<tr>
+<td><kbd>leader m =</kbd></td>
+<td><strong>beautify file</strong></td>
+</tr>
+<tr>
+<td><kbd>leader r R</kbd></td>
+<td>Run Class</td>
+</tr>
+<tr>
+<td><kbd>leader r p</kbd></td>
+<td><strong>Replace in project</strong></td>
+</tr>
+<tr>
+<td><kbd>leader r r</kbd></td>
+<td><strong>Run</strong></td>
+</tr>
+<tr>
+<td><kbd>leader s s</kbd></td>
+<td><strong>Stop</strong></td>
+</tr>
+<tr>
+<td><kbd>leader s p</kbd></td>
+<td><strong>Search in project</strong></td>
+</tr>
+<tr>
+<td><kbd>leader space</kbd></td>
+<td><strong>Go to Action</strong></td>
+</tr>
+<tr>
+<td><kbd>leader t b</kbd></td>
+<td>Toggle Bookmark</td>
+</tr>
+<tr>
+<td><kbd>leader t t</kbd></td>
+<td><strong>Toggle Line Breakpoint</strong></td>
+</tr>
+<tr>
+<td><kbd>leader w [lhjk]</kbd></td>
+<td><strong>navigate window</strong></td>
+</tr>
+<tr>
+<td><kbd>leader w c</kbd></td>
+<td>close window</td>
+</tr>
+<tr>
+<td><kbd>leader w m</kbd></td>
+<td><strong>hide all windows except the editor tabs</strong> (You can invoke again to revert)</td>
+</tr>
+<tr>
+<td><kbd>leader w s</kbd></td>
+<td>split window horizontally</td>
+</tr>
+<tr>
+<td><kbd>leader w v</kbd></td>
+<td><strong>split window vertically</strong></td>
+</tr>
+<tr>
+<td><kbd>leader w z</kbd></td>
+<td>Toggle Zen mode</td>
+</tr>
+<tr>
+<td><kbd>z C</kbd></td>
+<td>collapse all region</td>
+</tr>
+<tr>
+<td><kbd>z O</kbd></td>
+<td>expand all region</td>
+</tr>
+<tr>
+<td><kbd>z c</kbd></td>
+<td><strong>collapse region</strong></td>
+</tr>
+<tr>
+<td><kbd>z o</kbd></td>
+<td><strong>expand region</strong></td>
+</tr>
+</tbody>
+</table>
+<h1 id="install"><a class="header-anchor" href="#install"> &gt; </a>Install</h1>
+<ol>
+<li>Install ideaVim and create a <code>.ideavimrc</code> file in home directory, just like <code>~/.ideavimrc</code>.</li>
+</ol>
+<blockquote>
+<p>In case you want to sync your settings across multiple machines, you should checkout the <strong>Setting
+Repository</strong> &gt;
+<a target="_blank" rel="noopener" href="https://www.jetbrains.com/help/idea/sharing-your-ide-settings.html#settings-repository">here</a>.</p>
+</blockquote>
+<ol start="2">
+<li>If you want to use the Emacs key in Vim’s insert mode, which is the hybrid mode in Spacemacs,
+copy the following script to <code>~/.ideavimrc</code>.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot; ============================================================================</span><br><span class="line">&quot; emacs keymaping for cursor movement&#123;&#123;&#123;</span><br><span class="line">&quot; You have to unbind C-g before it works</span><br><span class="line">&quot; ============================================================================</span><br><span class="line">nmap &lt;c-g&gt; &lt;Esc&gt;</span><br><span class="line">vmap &lt;c-g&gt; &lt;Esc&gt;</span><br><span class="line">imap &lt;c-g&gt; &lt;Esc&gt;a</span><br><span class="line">nmap &lt;c-a&gt; ^</span><br><span class="line">nmap &lt;c-e&gt; $</span><br><span class="line">vmap &lt;c-a&gt; ^</span><br><span class="line">vmap &lt;c-e&gt; $</span><br><span class="line">imap &lt;c-e&gt; &lt;Esc&gt;A</span><br><span class="line">imap &lt;c-a&gt; &lt;Esc&gt;I</span><br><span class="line">imap &lt;c-d&gt; &lt;del&gt;</span><br><span class="line">inoremap &lt;c-p&gt; &lt;up&gt;</span><br><span class="line">inoremap &lt;c-n&gt; &lt;down&gt;</span><br><span class="line">&quot; command line</span><br><span class="line">cnoremap &lt;C-a&gt; &lt;Home&gt;</span><br><span class="line">cnoremap &lt;C-e&gt; &lt;End&gt;</span><br><span class="line">&quot;&#125;&#125;&#125;</span><br></pre></td></tr></table></figure>
+<p>Note: You have to disable the <kbd>C-a</kbd>, <kbd>C-e</kbd> in Jetbrain IDE to have the visual mode
+working correctly.</p>
+<p>You can click the from here to find the action by key.</p>
+<p><img src="https://ws1.sinaimg.cn/large/006tKfTcgy1fm6eh3f8mgj31hg0fk42l.jpg" alt=""></p>
+<ol start="3">
+<li>To bind the actions under <kbd>space</kbd>, put the following script in the <code>~/.ideavimrc</code>.</li>
+</ol>
+<p>The ugly <code>&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;</code> is because when we enter the
+command mode from visual mode, we have <code>:'&lt;,'&gt;</code>. The extra chars need to be deleted before we invoke
+the actions.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">let mapleader = &quot; &quot;</span><br><span class="line"></span><br><span class="line">&quot; ============================================================================</span><br><span class="line">&quot; key bindings for quickly moving between windows</span><br><span class="line">&quot; h left, l right, k up, j down</span><br><span class="line">&quot; ============================================================================</span><br><span class="line">nmap &lt;leader&gt;wh &lt;c-w&gt;h</span><br><span class="line">nmap &lt;leader&gt;wl &lt;c-w&gt;l</span><br><span class="line">nmap &lt;leader&gt;wk &lt;c-w&gt;k</span><br><span class="line">nmap &lt;leader&gt;wj &lt;c-w&gt;j</span><br><span class="line">nmap &lt;leader&gt;wv &lt;c-w&gt;v</span><br><span class="line">nmap &lt;leader&gt;ws &lt;c-w&gt;s</span><br><span class="line">nmap &lt;leader&gt;wc &lt;c-w&gt;c</span><br><span class="line">nmap &lt;leader&gt;wm :action HideAllWindows&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;wz :action ToggleDistractionFreeMode&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">vmap &lt;leader&gt;wh &lt;c-w&gt;h</span><br><span class="line">vmap &lt;leader&gt;wl &lt;c-w&gt;l</span><br><span class="line">vmap &lt;leader&gt;wk &lt;c-w&gt;k</span><br><span class="line">vmap &lt;leader&gt;wj &lt;c-w&gt;j</span><br><span class="line">vmap &lt;leader&gt;wv &lt;c-w&gt;v</span><br><span class="line">vmap &lt;leader&gt;ws &lt;c-w&gt;s</span><br><span class="line">vmap &lt;leader&gt;wc &lt;c-w&gt;c</span><br><span class="line">vmap &lt;leader&gt;wm :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action HideAllWindows&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;wz :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ToggleDistractionFreeMode&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; ============================================================================</span><br><span class="line">&quot; expand and collapse</span><br><span class="line">&quot; ============================================================================</span><br><span class="line">nmap zO :action ExpandAllRegions&lt;CR&gt;</span><br><span class="line">nmap zo :action ExpandRegion&lt;CR&gt;</span><br><span class="line">nmap zc :action CollapseRegion&lt;CR&gt;</span><br><span class="line">nmap zC :action CollapseAllRegions&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; ============================================================================</span><br><span class="line">&quot; IDE actions</span><br><span class="line">&quot; ============================================================================</span><br><span class="line"></span><br><span class="line">nmap &lt;CR&gt;            :action RecentFiles&lt;CR&gt;</span><br><span class="line">nmap &lt;c-i&gt;           :action Forward&lt;CR&gt;</span><br><span class="line">nmap &lt;c-o&gt;           :action Back&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;&#x27;       :action ActivateTerminalToolWindow&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;&lt;Space&gt; :action GotoAction&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;&lt;tab&gt;   :action RecentFiles&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;aa      :action $SelectAll&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;al      :actionlist&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;bb      :action RecentFiles&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;bi      :action ActivateStructureToolWindow&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;bu      :action ReopenClosedTab&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;cc      :action GotoClass&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;dD      :action DebugClass&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;dd      :action Debug&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;ee      :action ShowErrorDescription&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;fT      :action SelectInProjectView&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;fb      :action ShowBookmarks&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;fd      :action SmartSearchAction&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;ff      :action SearchEverywhere&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;fs      :action SaveAll&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;ft      :action ActivateProjectToolWindow&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;im      :action ImplementMethods&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;ji      :action FileStructurePopup&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;jj      :action AceAction&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;jl      :action AceLineAction&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;m=      :action ReformatCode&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;rR      :action RunClass&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;rr      :action Run&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;ss      :action Stop&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;tb      :action ToggleBookmark&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;tt      :action ToggleLineBreakpoint&lt;CR&gt;</span><br><span class="line">nmap gd              :action GotoDeclaration&lt;CR&gt;</span><br><span class="line">nmap gh              :action QuickJavaDoc&lt;CR&gt;</span><br><span class="line">nmap gr              :action FindUsages&lt;CR&gt;</span><br><span class="line">nmap gs              :action GotoSymbol&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">vmap &lt;CR&gt;            :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RecentFiles&lt;CR&gt;</span><br><span class="line">vmap &lt;c-i&gt;           :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Forward&lt;CR&gt;</span><br><span class="line">vmap &lt;c-o&gt;           :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Back&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;&#x27;       :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ActivateTerminalToolWindow&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;&lt;Space&gt; :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action GotoAction&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;&lt;tab&gt;   :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RecentFiles&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;aa      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action $SelectAll&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;al      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;actionlist&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;bb      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RecentFiles&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;bi      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ActivateStructureToolWindow&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;bu      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ReopenClosedTab&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;cc      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action GotoClass&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;dD      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action DebugClass&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;dd      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Debug&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;ee      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ShowErrorDescription&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;fT      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SelectInProjectView&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;fb      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ShowBookmarks&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;fd      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SmartSearchAction&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;ff      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SearchEverywhere&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;fs      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SaveAll&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;ft      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;:action ActivateProjectToolWindow&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;im      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ImplementMethods&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;ji      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FileStructurePopup&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;m=      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ReformatCode&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;rR      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action RunClass&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;rr      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Run&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;ss      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Stop&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;tb      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ToggleBookmark&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;tt      :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ToggleLineBreakpoint&lt;CR&gt;</span><br><span class="line">vmap gd              :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action GotoDeclaration&lt;CR&gt;</span><br><span class="line">vmap gr              :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FindUsages&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; tab is used in karabiner as &lt;C-i&gt;, &lt;C-d&gt; as delete</span><br><span class="line">nmap &lt;tab&gt;           :action Forward&lt;CR&gt;</span><br><span class="line">nmap &lt;delete&gt;        &lt;C-d&gt;</span><br><span class="line">vmap &lt;tab&gt;           :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Forward&lt;CR&gt;</span><br><span class="line">vmap &lt;delete&gt;        &lt;C-d&gt;</span><br><span class="line"></span><br><span class="line">&quot; Reload .ideavimrc</span><br><span class="line">nmap &lt;leader&gt;R :source ~/.ideavimrc&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;R :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;source ~/.ideavimrc&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; check the action list</span><br><span class="line">nmap &lt;leader&gt;al :actionlist&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;al :a&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;ctionlist&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; git</span><br><span class="line">nmap &lt;leader&gt;gs :action Vcs.QuickListPopupAction&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;gs :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action Vcs.QuickListPopupAction&lt;CR&gt;</span><br><span class="line">nmap &lt;leader&gt;gS :action ActivateVersionControlToolWindow&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;gS :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action ActivateVersionControlToolWindow&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; search in project</span><br><span class="line">nmap &lt;leader&gt;sp :action FindInPath&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;sp :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FindInPath&lt;CR&gt;</span><br><span class="line"></span><br><span class="line">&quot; replace in project</span><br><span class="line">nmap &lt;leader&gt;rp :action ReplaceInPath&lt;CR&gt;</span><br><span class="line">vmap &lt;leader&gt;rp :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action FindInPath&lt;CR&gt;</span><br></pre></td></tr></table></figure>
+<ol start="4">
+<li>The multi-cursor action does not work correctly as well as the extend region and shrink region.
+They mess up some visual selection in Vim and the original selection. That’s the reason. But so
+far I cannot do anything. So I just put the script here in case they work later on.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&quot; select occurrence, they do not work when editing</span><br><span class="line">nmap mn :action SelectNextOccurrence&lt;CR&gt;</span><br><span class="line">nmap mp :action UnselectPreviousOccurrence&lt;CR&gt;</span><br><span class="line">nmap ma :action SelectAllOccurrences&lt;CR&gt;</span><br><span class="line">vmap mn :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SelectNextOccurrence&lt;CR&gt;</span><br><span class="line">vmap mp :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action UnselectPreviousOccurrence&lt;CR&gt;</span><br><span class="line">vmap ma :&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;&lt;Backspace&gt;action SelectAllOccurrences&lt;CR&gt;</span><br></pre></td></tr></table></figure>
+<ol start="5">
+<li>There are other options you might want to add.</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">set gdefault</span><br><span class="line">set smartcase</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&quot; use system clipboard</span><br><span class="line">set clipboard=unnamedplus,unnamed</span><br><span class="line"></span><br><span class="line">set surround</span><br><span class="line"></span><br><span class="line">&quot; Allow backspace and cursor keys to cross line boundaries</span><br><span class="line">set whichwrap+=&lt;,&gt;,h,l</span><br><span class="line"></span><br><span class="line">&quot; black hole register</span><br><span class="line">vmap &lt;backspace&gt; &quot;_d</span><br><span class="line">vmap &lt;del&gt; &quot;_d</span><br></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/The-Minimal-Spacemacs-Tweaks-for-Jetbrain-IDES/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

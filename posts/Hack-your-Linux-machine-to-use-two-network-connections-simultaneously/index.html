@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Hack your Linux machine to use two network connections simultaneously"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Hack your Linux machine to use two network connections simultaneously</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2019-01-10</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/IP-kernel/">#IP-kernel</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>A lot of people have this working scenario during their daily work. They are assigned with a linux machine. Generally,
+the guest/public network is better for them to browse the outside world, while they have to connect to the intranet
+inside the company for specific tasks, e.g. source control and data management. I’m one of them and I just come across a
+solution for this.</p>
+<p>It’s basicly just hacking your IP kernel, adding rules for your intranet. Now let’s get started.</p>
+<p>Your probably need to install the <code>net-tools</code> before getting started. In ubuntu, you can use
+<code>sudo apt install net-tools</code>.</p>
+<span id="more"></span>
+<p>First, keep in mind, you will only need to have a default IP rule. Check your IP routes by <code>ip route list</code>, or
+<code>route -n</code>.</p>
+<p>Here is mine when I both connect to ethernet and wifi.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">default via 10.193.35.1 dev enp6s0 proto static metric 20100</span><br><span class="line">default via 100.65.100.1 dev wlp5s0 proto dhcp metric 20600</span><br><span class="line">10.193.35.0/24 dev enp6s0 proto kernel scope link src 10.193.35.68 metric 100</span><br><span class="line">100.65.100.0/22 dev wlp5s0 proto kernel scope link src 100.65.101.20 metric 600</span><br><span class="line">169.254.0.0/16 dev enp6s0 scope link metric 1000</span><br></pre></td></tr></table></figure>
+<p>You can tell from above there are two default rule in my IP kernel. In this case, our goal is to delete the ethernet
+default and add some specific rules to route intranet IP.</p>
+<blockquote>
+<p>Note: enp6s0 is my ethernet device name, and wlp5s0 is my wifi device name.</p>
+</blockquote>
+<p>Second, we can remove the default ethernet rule with:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo route del default gw 0.0.0.0 enp6s0</span><br></pre></td></tr></table></figure>
+<p>Then, we add the network segment <code>10.213.37.0/24</code> rule, routing it via the intranet gateway, in my case, it’s the
+intranet router’s IP address <code>10.193.35.1</code>.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">sudo ip route add 10.213.37.0/24 via 10.193.35.1 dev enp6s0</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>Note: <code>/24</code> is the subnet mask = 255.255.255.0</p>
+</blockquote>
+<p>Finally, if you use a domain rather than ip as default, you need to add the entry to <code>/etc/hosts</code> to help the PC resolve
+the IP when it cannot reach the proper DNS server.</p>
+<p>For example:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">172.217.195.106 www.google.com</span><br></pre></td></tr></table></figure>
+<p>That’s all for the tutorial. You might need to adapt this tutorial in your own scenario. But all the tools are on the
+table, feel free to hack it by yourself.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/Hack-your-Linux-machine-to-use-two-network-connections-simultaneously/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

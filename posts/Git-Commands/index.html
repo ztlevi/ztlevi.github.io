@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Git Commands"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Git Commands</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-25</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/git/">#git</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <!-- markdown-toc start - Don't edit this section. Run M-x markdown-toc-generate-toc again -->
+<p><strong>Table of Contents</strong></p>
+<ul>
+<li><a href="#git-commands">Git Commands</a>
+<ul>
+<li><a href="#create-a-new-repository-on-the-command-line">Create a new repository on the command line</a></li>
+<li><a href="#1-creating-repository">1. Creating repository</a></li>
+<li><a href="#2-version-rollback">2. Version rollback</a></li>
+<li><a href="#3-undo-changes-and-delete-files">3. Undo changes and delete files</a></li>
+<li><a href="#31-delete-commits">3.1 Delete commits</a></li>
+<li><a href="#4-remote-repository">4. Remote repository</a>
+<ul>
+<li><a href="#step-1-create-ssh-key">Step 1: Create SSH Key</a></li>
+<li><a href="#step-2-open-github---settings---ssh-and-new-gpg-keys---new-ssh-keys">Step 2: Open github -&gt; settings -&gt; SSH and New GPG keys -&gt; New SSH keys</a></li>
+<li><a href="#a-add-remote-repository">a. Add remote repository</a></li>
+<li><a href="#b-clone-the-remote-repository">b. Clone the remote repository</a></li>
+</ul>
+</li>
+<li><a href="#5-create-and-merge-branch">5. Create and merge branch</a></li>
+<li><a href="#6-bug-branch">6. Bug branch</a></li>
+<li><a href="#7-cooperation">7. Cooperation</a></li>
+</ul>
+</li>
+</ul>
+<!-- markdown-toc end -->
+<span id="more"></span>
+<h1 id="git-commands"><a class="header-anchor" href="#git-commands"> &gt; </a>Git Commands</h1>
+<h2 id="create-a-new-repository-on-the-command-line"><a class="header-anchor" href="#create-a-new-repository-on-the-command-line"> &gt; </a>Create a new repository on the command line</h2>
+<ul>
+<li>git init</li>
+<li>git add <a target="_blank" rel="noopener" href="http://README.md">README.md</a></li>
+<li>git commit -m “first commit”</li>
+<li>git remote add origin <a target="_blank" rel="noopener" href="https://github.com/ztlevi/DeployWebsite.git">https://github.com/ztlevi/DeployWebsite.git</a></li>
+<li>git push -u origin master</li>
+<li>Push an existing repository from the command line</li>
+<li>git remote add origin <a target="_blank" rel="noopener" href="https://github.com/ztlevi/DeployWebsite.git">https://github.com/ztlevi/DeployWebsite.git</a></li>
+<li>git push -u origin master</li>
+</ul>
+<ol>
+<li>Creating repository</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git init</td>
+<td>Initialize a git project</td>
+</tr>
+<tr>
+<td>git add <filename></td>
+<td>. or * means all new files</td>
+</tr>
+<tr>
+<td>git rm —cached -</td>
+<td>Remove all files from cache</td>
+</tr>
+<tr>
+<td>git commit</td>
+<td>Commit your changes to repository</td>
+</tr>
+<tr>
+<td>git commit -a</td>
+<td>Combined the add and commit step</td>
+</tr>
+<tr>
+<td>git status</td>
+<td>Check what the file changed</td>
+</tr>
+<tr>
+<td>git diff <a target="_blank" rel="noopener" href="http://readme.md">readme.md</a></td>
+<td>See the changes of <a target="_blank" rel="noopener" href="http://readme.md">readme.md</a></td>
+</tr>
+<tr>
+<td>git diff v2.5 HEAD</td>
+<td>Compare the current HEAD to v2.5</td>
+</tr>
+</tbody>
+</table>
+<p>The commit you are currently on is known as the HEAD commit.</p>
+<ol start="2">
+<li>Version rollback</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git log</td>
+<td>Show the logs(SHA)</td>
+</tr>
+<tr>
+<td>git log --pretty=oneline</td>
+<td>Show the logs concisely</td>
+</tr>
+<tr>
+<td>git reflog</td>
+<td>Get the version number(first 7 characters of the SHA)</td>
+</tr>
+<tr>
+<td>git reset --hard HEAD^</td>
+<td>Go back to the last version, --hard is used to reset the index and working directory</td>
+</tr>
+<tr>
+<td>git reset --hard HEAD@{n}</td>
+<td>Go back to the nth versions before</td>
+</tr>
+<tr>
+<td>git reset --hard version_number</td>
+<td>Reset to the specific version</td>
+</tr>
+</tbody>
+</table>
+<ol start="3">
+<li>Undo changes and delete files</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git checkout HEAD <filename></td>
+<td>Undo the file changes and recover the file to the HEAD</td>
+</tr>
+</tbody>
+</table>
+<img src="https://ww1.sinaimg.cn/large/006tNc79gy1fd8dh32mgwj31960q041o.jpg" alt="img" title="image title"/>
+3.1 Delete commits
+------------------
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Git glog</td>
+<td>See commit ids</td>
+</tr>
+<tr>
+<td>Git rebase -i commit_id</td>
+<td>Edit the commits from HEAD to commit_id (delete line to remove commits)</td>
+</tr>
+<tr>
+<td>Git push -f origin branch</td>
+<td>Force push to origin branch</td>
+</tr>
+</tbody>
+</table>
+<ol start="4">
+<li>Remote repository</li>
+</ol>
+<hr>
+<h3 id="step-1-create-ssh-key"><a class="header-anchor" href="#step-1-create-ssh-key"> &gt; </a>Step 1: Create SSH Key</h3>
+<p>ssh-keygen -t rsa -C “your email” —&gt; generate puclic/private rsa key pair</p>
+<h3 id="step-2-open-github-settings-ssh-and-new-gpg-keys-new-ssh-keys"><a class="header-anchor" href="#step-2-open-github-settings-ssh-and-new-gpg-keys-new-ssh-keys"> &gt; </a>Step 2: Open github -&gt; settings -&gt; SSH and New GPG keys -&gt; New SSH keys</h3>
+<p>Fill anything in the title and copy the id_rsa.pub to the key text box. Then click Add Key.</p>
+<h3 id="a-add-remote-repository"><a class="header-anchor" href="#a-add-remote-repository"> &gt; </a>a. Add remote repository</h3>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git remote add origin <a target="_blank" rel="noopener" href="https://github.com/ztlevi/MRS.git">https://github.com/ztlevi/MRS.git</a></td>
+<td>Add remote repository</td>
+</tr>
+<tr>
+<td>git remote add origin <a href="mailto:git@github.com">git@github.com</a>:ztlevi/MRS.git</td>
+<td>The same.</td>
+</tr>
+<tr>
+<td>git push -u origin/dev dev <br>= git push -u origin dev<br>= git push origin dev</td>
+<td>Set upstream for git pull/status. dev branch will be created if not existed.</td>
+</tr>
+<tr>
+<td>git checkout origin/dev –b dev</td>
+<td>Checkout to dev branch and set upstream to origin/dev. Contain the next command</td>
+</tr>
+<tr>
+<td>git branch -u origin/dev dev <br>= git branch -u origin dev</td>
+<td>dev set up to track remote branch dev from origin.</td>
+</tr>
+</tbody>
+</table>
+<p>After that, use git push/git push origin master</p>
+<h3 id="b-clone-the-remote-repository"><a class="header-anchor" href="#b-clone-the-remote-repository"> &gt; </a>b. Clone the remote repository</h3>
+<p><code>git clone remote_location //clone_directory</code></p>
+<p>Remote location can be local or online location, such as http/ssh. If there is no clone_directory, then the default
+directory is the root directory.</p>
+<ol start="5">
+<li>Create and merge branch</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git checkout -b <name></td>
+<td>Create and switch to the branch created. This command equals<br> the following two commonds git branch dev and git checkout dev</td>
+</tr>
+<tr>
+<td>git branch (-v)</td>
+<td>List all the branches</td>
+</tr>
+<tr>
+<td>git branch <name></td>
+<td>Create branch</td>
+</tr>
+<tr>
+<td>git checkout <name></td>
+<td>Switch branch and will automaticlly merge</td>
+</tr>
+<tr>
+<td>git branch -d <name></td>
+<td>Delete branch</td>
+</tr>
+<tr>
+<td>git push origin -d <branch name></td>
+<td>DeleteDelet remote branch</td>
+</tr>
+</tbody>
+</table>
+<p>On master branch</p>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git merge dev</td>
+<td>Merge dev into the master</td>
+</tr>
+<tr>
+<td>git merge --no-ff -m “…” dev</td>
+<td>Merge without fast forward mode</td>
+</tr>
+<tr>
+<td>git merge origin/master</td>
+<td>Merge into the remote origin/master branch</td>
+</tr>
+</tbody>
+</table>
+<ol start="6">
+<li>Bug branch</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git stash</td>
+<td>record the current state of the working directory and the index, <br>and go back to the clean HEAD.</td>
+</tr>
+<tr>
+<td>git stash list</td>
+<td>show the working directory</td>
+</tr>
+<tr>
+<td>git stash apply</td>
+<td>recover the working directory</td>
+</tr>
+<tr>
+<td>git stash drop</td>
+<td>delete the WIP(working in process)</td>
+</tr>
+<tr>
+<td>git stash pop</td>
+<td>equals apply + drop</td>
+</tr>
+</tbody>
+</table>
+<ol start="7">
+<li>Cooperation</li>
+</ol>
+<hr>
+<table>
+<thead>
+<tr>
+<th>git commands</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>git remote</td>
+<td>check the remote repository status</td>
+</tr>
+<tr>
+<td>git remote -v</td>
+<td>check the detailed information</td>
+</tr>
+<tr>
+<td>git remote remove <name></td>
+<td>Remove the remote</td>
+</tr>
+<tr>
+<td>git remote rename <old> <new></td>
+<td>Rename the remote</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/Git-Commands/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

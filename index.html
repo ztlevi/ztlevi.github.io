@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Lady luck is smilin&#39;."/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Lady luck is smilin&#39;.</p>
+          <p class="subtitle">No gun, no cigar. Just a fake cowboy...</p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Home Page Post List -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-9">
+      
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/GPG-forwarding-over-ssh-on-the-fly/" class="post-title">
+      GPG forwarding over ssh on the fly
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2020-12-27</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/coding/">coding</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>I’ve been seeking for GPG solutions over server side VS client side for a while. It’s so hard to
+leverage multiple gpg session at the same especially over ssh.</p>
+<p>Fortunately, I realized there is a built-in feature call GPG forwarding that allows you to authorize
+the server side request in the client side.</p>
+<h2 id="gpg-forwarding"><a class="header-anchor" href="#gpg-forwarding"> &gt; </a>GPG forwarding</h2>
+<p>The idea is to forward your client sidse GPG socket to your server side, so that every time you
+trigger a GPG authentication in server side, it can pop the GPG authentication GUI (pinentry
+program) in your local machine.</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/gpp/">gpp</a> <a class="tag" href="/tags/ssh/">ssh</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/Overall-experience-with-BSPWM-and-polybar/" class="post-title">
+      Overall experience with BSPWM and polybar
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2020-04-03</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/coding/">coding</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h1 id="first-time-with-tiling-window-manager"><a class="header-anchor" href="#first-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
+<p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen
+without anything. While you could something there by forking something’s setup. But it might not
+working for you cuz it’s really easy to break some dependencies on your system.</p>
+<p>I would recommend you to start with something like Awesome tiling window manager. It comes with more
+built-in features. But I think overall BSPWM is a good fit for me. Polybar is supported in BSPWM and
+the keybinding system is clean.</p>
+<p>I forked <a target="_blank" rel="noopener" href="https://github.com/hlissner">Henrik Lissner</a>’s dotfiles setup last year. So thanks for the
+amazing scripts that manage all the binaries and dependencies across multiple OS.</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/coding/">coding</a> <a class="tag" href="/tags/bspwm/">bspwm</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/FZF-all-your-projects-in-terminal/" class="post-title">
+      FZF all your projects in terminal
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2019-02-25</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/coding/">coding</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>How you navigate to your projects in terminal? <code>cd</code>? <code>ranger</code>? <code>nnn</code>? t a Well, these are not desinged for navigating
+projects and they really do their jobs but not so efficient.</p>
+<p>Let me introduce the <code>fzf_projects</code>.</p>
+<p>First, you need to install fzf. Simply go through the tutorial here.</p>
+<p>Second, put the following code in your shell configuration file.</p>
+<blockquote>
+<p>Note: <code>project_roots</code> is a list of directories that projects inside within depth 1 will be added as projects
+candidates. <code>developer_root</code> is a directory that project inside within depth 2 will be added.</p>
+</blockquote></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/terminal/">terminal</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/Automatically-scan-your-magit-repos/" class="post-title">
+      Automatically scan your magit repos
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2019-02-25</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/coding/">coding</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p><code>projectile</code> is amazing. It helps people to quickly switch between projects. Unfortunatelly, it cannot automatically
+scan the projects on your machine and load them when you first time fire projectile.</p>
+<p>Also, it doesn’t really remove those invalid project entires for me. For example, there is a git projcet under
+<code>~/Developer/dummy-git</code> and I move this projcet to <code>~/Developer/new-git</code>. Both entires will exists every time I trigger
+<code>M-x counsel-projectile-switch-project</code> (or helm-projectile). It makes me confused sometimes.</p>
+<p>Here is the solution. For me, basically I every project I created is by git. So I utilzed the <code>magit-list-repos-1</code> func
+in <code>magit</code>. For those of you use other source control tool or <code>.projectile</code> in your project, you might need to find the
+corresponding func or write your own.</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/git/">git</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/Hack-your-Linux-machine-to-use-two-network-connections-simultaneously/" class="post-title">
+      Hack your Linux machine to use two network connections simultaneously
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2019-01-10</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/coding/">coding</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>A lot of people have this working scenario during their daily work. They are assigned with a linux machine. Generally,
+the guest/public network is better for them to browse the outside world, while they have to connect to the intranet
+inside the company for specific tasks, e.g. source control and data management. I’m one of them and I just come across a
+solution for this.</p>
+<p>It’s basicly just hacking your IP kernel, adding rules for your intranet. Now let’s get started.</p>
+<p>Your probably need to install the <code>net-tools</code> before getting started. In ubuntu, you can use
+<code>sudo apt install net-tools</code>.</p></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/IP-kernel/">IP-kernel</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/Spell-checking-with-Cspell-in-Emacs/" class="post-title">
+      Spell checking with Cspell in Emacs
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2018-11-05</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/emacs/">emacs</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo">No Post Excerpt</div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/emacs/">emacs</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/A-simple-tweak-to-help-you-edit-minified-files-in-Emacs/" class="post-title">
+      A simple tweak to help you edit minified files in Emacs
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2018-07-01</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/emacs/">emacs</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>Emacs “stucks” at editing long line files. It does but that’s not Emacs’s fault. Emacs has excellent
+<a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.common-lisp.net/project/flexichain/download/StrandhVilleneuveMoore.pdf">gap buffer</a>
+for large file editing. It’s due to the mode you apply to the file. These modes might freeze your Emacs when editing
+large file or minified files.</p>
+<h2 id="check-minified-files"><a class="header-anchor" href="#check-minified-files"> &gt; </a>Check Minified files</h2>
+<p>So here is a simple trick, I just check the first 30 line of the opened file. If first line is over 1000 in width, then
+it just enable <code>fundamental-mode</code> which works perfectly for these files.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;; if the first line is too long, enable fundamental by default</span><br><span class="line">(defun get-nth-line-length (n)</span><br><span class="line">  &quot;Length of the Nth line.&quot;</span><br><span class="line">  (save-excursion</span><br><span class="line">    (goto-char (point-min))</span><br><span class="line">    (if (zerop (forward-line (1- n)))</span><br><span class="line">        (- (line-end-position)</span><br><span class="line">           (line-beginning-position)))))</span><br><span class="line"></span><br><span class="line">(defun +my/check-minified-file ()</span><br><span class="line">  (and</span><br><span class="line">   (not (member (file-name-extension (buffer-file-name))</span><br><span class="line">                &#x27;(&quot;org&quot; &quot;md&quot; &quot;markdown&quot; &quot;txt&quot; &quot;rtf&quot;)))</span><br><span class="line">   (cl-loop for i from 1 to (min 30 (count-lines (point-min) (point-max)))</span><br><span class="line">            if (&gt; (get-nth-line-length i) 1000)</span><br><span class="line">            return t</span><br><span class="line">            finally return nil)))</span><br><span class="line"></span><br><span class="line">(add-to-list &#x27;magic-mode-alist (cons #&#x27;+my/check-minified-file &#x27;fundamental-mode))</span><br></pre></td></tr></table></figure></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/emacs/">emacs</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/The-Minimal-Spacemacs-Tweaks-for-Jetbrain-IDES/" class="post-title">
+      Spacemacs/Space-Vim Config for Jetbrain IDEs
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2018-06-11</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/post/">post</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><h1 id="another-spacemacs-configuration-for-jetbrain-ides"><a class="header-anchor" href="#another-spacemacs-configuration-for-jetbrain-ides"> &gt; </a>Another Spacemacs configuration for Jetbrain IDEs</h1>
+<p>Recently, I’m working on a React Native project. I have tried using Emacs to do the coding, but I
+cannot really pick up the whole new stuff without a fancy auto-completion or finding definitions
+since the syntax of React is so different and special. That’s why I pick up Webstorm as a
+workaround. And there, I find a way to build my Jetbrain IDEs just like Spacemacs.</p>
+<p>Like I said in my previous post, space way is good for Vim users and only Vim can do this because it
+has other modes other than just insert mode. In this case, key bindings will never be a problem. We
+are using the sticky key sequences and prefix key for memorization.</p>
+<p>Welcome to the heaven!!!</p>
+<img src="https://tctechcrunch2011.files.wordpress.com/2015/08/safe_image.gif" alt="" style="width:500px;margin:auto;display:block;"/></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/spacemacs/">spacemacs</a> <a class="tag" href="/tags/space-vim/">space-vim</a> <a class="tag" href="/tags/jetbrain/">jetbrain</a> <a class="tag" href="/tags/intellij-idea/">intellij idea</a> <a class="tag" href="/tags/pycharm/">pycharm</a> <a class="tag" href="/tags/webstorm/">webstorm</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+        
+          <div class="post-item-wrapper">
+  <a href="/posts/myHackintoshBuild/" class="post-title">
+      With 1% effort to build 99% working Hackintosh
+  </a>
+  <div class="post-excerpt">
+    <!-- Post Date and Categories -->
+    <div class="date-and-category">
+      <div class="date">2018-04-02</div>
+      <div class="categories">
+        
+          
+
+<a href="/categories/mac/">mac</a>
+
+        
+      </div>
+    </div>
+    <!-- Post Excerpt -->
+    <div class="excerpt typo"><p>This is my 2017 Hackintosh build. I was using GTX 970 before but I just switch to Vega 64 recently.
+And it works out of box!!! That’s the key to the whole build. With Vega GPU, you don’t have to worry
+about tricky bugs any more. We just need to set up a clean build.</p>
+<h1 id="parts-list"><a class="header-anchor" href="#parts-list"> &gt; </a>Parts list</h1>
+<ul>
+<li>Case:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01blhp5hs/ref=oh_aui_detailpage_o00_s00?ie=utf8&amp;psc=1">Phanteks Eclipse Series P400 Stell ATX</a></li>
+<li>Mobo:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mryhw6b/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Gigabyte GA-Z270X-UD5</a></li>
+<li>CPU:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mxsi216/ref=oh_aui_detailpage_o01_s02?ie=utf8&amp;psc=1">i7 7700K</a></li>
+<li>Cooler:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b019exssbg/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">Corsair Hydro Series H100i v2</a></li>
+<li>GPU:
+<a target="_blank" rel="noopener" href="https://www.newegg.com/Product/Product.aspx?Item=N82E16814202321&amp;cm_re=vega_64-_-14-202-321-_-Product">Sapphire Nitro+ Radeon RX Vega 64</a></li>
+<li>SSD:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01lyfkjr7/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Samsung 960 EVO</a></li>
+<li>RAM:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01b4f3ijy/ref=oh_aui_detailpage_o01_s00?ie=utf8&amp;psc=1">Ballistix Sport LT</a></li>
+<li>HDD:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b00fjrs6fu/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">WD Black 1TB</a></li>
+<li>WIFI&amp;BT:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01mdlg51u/ref=oh_aui_detailpage_o01_s01?ie=utf8&amp;psc=1">fenvi FV-T919(802.11AC Desktop Wifi Card)</a></li>
+<li>PW:
+<a target="_blank" rel="noopener" href="https://www.amazon.com/corsair-cx750m-bronze-haswell-modular/dp/b00alk3kem/ref=sr_1_1?s=electronics&amp;ie=utf8&amp;qid=1497980491&amp;sr=1-1&amp;keywords=corsair+cx+750m">Corsair CX750M</a></li>
+</ul></div>
+    <!-- Post Tags -->
+    <div class="tags">
+      
+        
+
+<a class="tag" href="/tags/hackintosh/">hackintosh</a> <a class="tag" href="/tags/mac/">mac</a>
+
+
+      
+    </div>
+  </div>
+</div>
+
+        
+      
+    </div>
+
+    
+        <div class="col-lg-3 col-md-3 hidden-sm hidden-xs">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+
+		
+			
+<div class="widget">
+	<h4>Social</h4>
+	<ul class="blogroll list-inline">
+	
+		<li><a href="http://www.github.com/ztlevi" title="My Github" target="_blank"]);"><i class="fa fa-github fa-2x"></i></a></li>
+	
+		<li><a href="http://www.linkedin.com/in/ztlevi" title="My LinkedIn" target="_blank"]);"><i class="fa fa-linkedin fa-2x"></i></a></li>
+	
+		<li><a href="/atom.xml" title="My RSS" target="_blank"]);"><i class="fa fa-rss fa-2x"></i></a></li>
+	
+		<li><a href="https://twitter.com/ztlevi" title="My Twitter" target="_blank"]);"><i class="fa fa-twitter fa-2x"></i></a></li>
+	
+		<li><a href="https://facebook.com/ztlevi" title="My Facebook" target="_blank"]);"><i class="fa fa-facebook fa-2x"></i></a></li>
+	
+	</ul>
+</div>
+
+
+		
+			
+	<div class="widget">
+		<h4>Categories</h4>
+		<ul class="tag_box inline list-inline">
+		
+			<li><a href="/categories/coding/">coding<span>14</span></a></li>
+		
+			<li><a href="/categories/emacs/">emacs<span>5</span></a></li>
+		
+			<li><a href="/categories/hackintosh/">hackintosh<span>1</span></a></li>
+		
+			<li><a href="/categories/hexo/">hexo<span>1</span></a></li>
+		
+			<li><a href="/categories/mac/">mac<span>1</span></a></li>
+		
+			<li><a href="/categories/nonsense/">nonsense<span>2</span></a></li>
+		
+			<li><a href="/categories/post/">post<span>2</span></a></li>
+		
+		</ul>
+	</div>
+
+
+		
+			
+	<div class="widget">
+		<h4>Tags</h4>
+		<ul class="tag_box inline list-inline">		
+		
+			<li><a href="/tags/vscode/">vscode<span>1</span></a></li>
+		
+			<li><a href="/tags/imenu/">imenu<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c++<span>1</span></a></li>
+		
+			<li><a href="/tags/intellij-idea/">intellij idea<span>2</span></a></li>
+		
+			<li><a href="/tags/terminal/">terminal<span>1</span></a></li>
+		
+			<li><a href="/tags/c/">c<span>1</span></a></li>
+		
+			<li><a href="/tags/hackintosh/">hackintosh<span>2</span></a></li>
+		
+			<li><a href="/tags/swift/">swift<span>1</span></a></li>
+		
+			<li><a href="/tags/jetbrain/">jetbrain<span>1</span></a></li>
+		
+			<li><a href="/tags/java/">java<span>2</span></a></li>
+		
+			<li><a href="/tags/mac/">mac<span>1</span></a></li>
+		
+			<li><a href="/tags/bspwm/">bspwm<span>1</span></a></li>
+		
+			<li><a href="/tags/nonsense/">nonsense<span>1</span></a></li>
+		
+			<li><a href="/tags/IP-kernel/">IP-kernel<span>1</span></a></li>
+		
+			<li><a href="/tags/leetcode/">leetcode<span>1</span></a></li>
+		
+			<li><a href="/tags/space-vim/">space-vim<span>1</span></a></li>
+		
+			<li><a href="/tags/spacemacs/">spacemacs<span>2</span></a></li>
+		
+			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
+		
+			<li><a href="/tags/gpp/">gpp<span>1</span></a></li>
+		
+			<li><a href="/tags/pycharm/">pycharm<span>2</span></a></li>
+		
+		
+		   <li><a href="/tags">...<span>28</span></a></li>
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
+    
+      <li>
+        <a href="/posts/california-memories/" ><i class="fa fa-file-o"></i>记在加州的那些事儿 2018.1-2021.1</a>
+      </li>
+    
+      <li>
+        <a href="/posts/GPG-forwarding-over-ssh-on-the-fly/" ><i class="fa fa-file-o"></i>GPG forwarding over ssh on ...</a>
+      </li>
+    
+      <li>
+        <a href="/posts/Overall-experience-with-BSPWM-and-polybar/" ><i class="fa fa-file-o"></i>Overall experience with BSP...</a>
+      </li>
+    
+      <li>
+        <a href="/posts/FZF-all-your-projects-in-terminal/" ><i class="fa fa-file-o"></i>FZF all your projects in te...</a>
+      </li>
+    
+      <li>
+        <a href="/posts/Automatically-scan-your-magit-repos/" ><i class="fa fa-file-o"></i>Automatically scan your mag...</a>
+      </li>
+    
+  </ul>
+</div>
+
+
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+    
+    </div>
+  </div>
+
+<!-- Pagination -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-10 col-md-10 col-md-offset-1">
+      <ul class="pagination">
+          
+          
+            <li class="next">
+              <a href="/page/2/">
+                <span>NEXT</span>
+                <span class="symbol-right">&gt;</span>
+              </a>
+            </li>
+          
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/count.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

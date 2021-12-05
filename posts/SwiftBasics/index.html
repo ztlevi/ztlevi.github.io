@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Swift Basics"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Swift Basics</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-29</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/coding/">#coding</a> <a class="tag" href="/tags/swift/">#swift</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="constants-and-variables"><a class="header-anchor" href="#constants-and-variables"> &gt; </a>Constants and Variables</h1>
+<p>If a stored value in your code is not going to change, always declare it as a constant with the let
+keyword. Use variables only for storing values that need to be able to change.</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> maximumNumberOfLoginAttempts <span class="operator">=</span> <span class="number">10</span></span><br><span class="line"><span class="keyword">var</span> currentLoginAttempt <span class="operator">=</span> <span class="number">0</span>”</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+<h1 id="type-annotations"><a class="header-anchor" href="#type-annotations"> &gt; </a>Type Annotations</h1>
+<p>It is rare that you need to write type annotations in practice. If you provide an initial value for
+a constant or variable at the point that it is defined, Swift can almost always infer the type to be
+used for that constant or variable, as described in Type Safety and Type Inference.</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> welcomeMessage: <span class="type">String</span></span><br><span class="line">welcomeMessage <span class="operator">=</span> <span class="string">&quot;Hello&quot;</span></span><br></pre></td></tr></table></figure>
+<p>In the welcomeMessage example above, no initial value is provided, and so the type of the
+welcomeMessage variable is specified with a type annotation rather than being inferred from an
+initial value.</p>
+<h1 id="naming-constants-and-variables"><a class="header-anchor" href="#naming-constants-and-variables"> &gt; </a>Naming Constants and Variables</h1>
+<p>Constant and variable names can contain almost any character, including Unicode characters:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> π <span class="operator">=</span> <span class="number">3.14159</span></span><br><span class="line"><span class="keyword">let</span> 你好 <span class="operator">=</span> <span class="string">&quot;你好世界&quot;</span></span><br><span class="line"><span class="keyword">let</span> 🐶🐮 <span class="operator">=</span> <span class="string">&quot;dogcow&quot;</span></span><br></pre></td></tr></table></figure>
+<h1 id="printing"><a class="header-anchor" href="#printing"> &gt; </a>Printing</h1>
+<p>Swift uses string interpolation to include the name of a constant or variable as a placeholder in a
+longer string, and to prompt Swift to replace it with the current value of that constant or
+variable. Wrap the name in parentheses and escape it with a backslash before the opening
+parenthesis:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The current value of friendlyWelcome is <span class="subst">\(friendlyWelcome)</span>&quot;</span>)”</span><br></pre></td></tr></table></figure>
+<h1 id="uint"><a class="header-anchor" href="#uint"> &gt; </a>UInt</h1>
+<p>Swift also provides an unsigned integer type, UInt, which has the same size as the current
+platform’s native word size:</p>
+<ul>
+<li>On a 32-bit platform, UInt is the same size as UInt32.</li>
+<li>On a 64-bit platform, UInt is the same size as UInt64.</li>
+</ul>
+<h1 id="floating-point-numbers"><a class="header-anchor" href="#floating-point-numbers"> &gt; </a>Floating-Point Numbers</h1>
+<p>Floating-point types can represent a much wider range of values than integer types, and can store
+numbers that are much larger or smaller than can be stored in an Int. Swift provides two signed
+floating-point number types:</p>
+<ul>
+<li>Double represents a 64-bit floating-point number.</li>
+<li>Float represents a 32-bit floating-point number.</li>
+</ul>
+<p>Double has a precision of at least 15 decimal digits, whereas the precision of Float can be as
+little as 6 decimal digits.</p>
+<h1 id="type-safety-and-type-inference"><a class="header-anchor" href="#type-safety-and-type-inference"> &gt; </a>Type Safety and Type Inference</h1>
+<p>Because of type inference, Swift requires far fewer type declarations than languages such as C or
+Objective-C. Constants and variables are still explicitly typed, but much of the work of specifying
+their type is done for you.</p>
+<p>Type inference is particularly useful when you declare a constant or variable with an initial value.
+This is often done by assigning a literal value (or literal) to the constant or variable at the
+point that you declare it.</p>
+<h1 id="numeric-literals"><a class="header-anchor" href="#numeric-literals"> &gt; </a>Numeric Literals</h1>
+<p>Integer literals can be written as:</p>
+<ul>
+<li>A decimal number, with no prefix</li>
+<li>A binary number, with a 0b prefix</li>
+<li>An octal number, with a 0o prefix</li>
+<li>A hexadecimal number, with a 0x prefix</li>
+</ul>
+<p>All of these integer literals have a decimal value of 17:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> decimalInteger <span class="operator">=</span> <span class="number">17</span></span><br><span class="line"><span class="keyword">let</span> binaryInteger <span class="operator">=</span> <span class="number">0b10001</span>       <span class="comment">// 17 in binary notation</span></span><br><span class="line"><span class="keyword">let</span> octalInteger <span class="operator">=</span> <span class="number">0o21</span>           <span class="comment">// 17 in octal notation</span></span><br><span class="line"><span class="keyword">let</span> hexadecimalInteger <span class="operator">=</span> <span class="number">0x11</span>     <span class="comment">// 17 in hexadecimal notation”</span></span><br></pre></td></tr></table></figure>
+<p>Floating-point literals can be decimal (with no prefix), or hexadecimal (with a 0x prefix). They
+must always have a number (or hexadecimal number) on both sides of the decimal point. Decimal floats
+can also have an optional exponent, indicated by an uppercase or lowercase e; hexadecimal floats
+must have an exponent, indicated by an uppercase or lowercase p.</p>
+<p>For decimal numbers with an exponent of exp, the base number is multiplied by 10exp:</p>
+<p>1.25e2 means 1.25 x 10<sup>2</sup>, or 125.0. 1.25e-2 means 1.25 x 10<sup>-2</sup>, or 0.0125. For
+hexadecimal numbers with an exponent of exp, the base number is multiplied by 2exp:</p>
+<p>0xFp2 means 15 x 2<sup>2</sup>, or 60.0. 0xFp-2 means 15 x 2<sup>-2</sup>, or 3.75. All of these
+floating-point literals have a decimal value of 12.1875:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> decimalDouble <span class="operator">=</span> <span class="number">12.1875</span></span><br><span class="line"><span class="keyword">let</span> exponentDouble <span class="operator">=</span> <span class="number">1.21875e1</span></span><br><span class="line"><span class="keyword">let</span> hexadecimalDouble <span class="operator">=</span> <span class="number">0xC.3p0</span></span><br></pre></td></tr></table></figure>
+<p>Numeric literals can contain extra formatting to make them easier to read. Both integers and floats
+can be padded with extra zeros and can contain underscores to help with readability. Neither type of
+formatting affects the underlying value of the literal:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> paddedDouble <span class="operator">=</span> <span class="number">000123.456</span></span><br><span class="line"><span class="keyword">let</span> oneMillion <span class="operator">=</span> <span class="number">1_000_000</span></span><br><span class="line"><span class="keyword">let</span> justOverOneMillion <span class="operator">=</span> <span class="number">1_000_000.000_000_1</span></span><br></pre></td></tr></table></figure>
+<h1 id="type-aliases"><a class="header-anchor" href="#type-aliases"> &gt; </a>Type Aliases</h1>
+<p>Type aliases define an alternative name for an existing type. You define type aliases with the
+typealias keyword.</p>
+<p>Type aliases are useful when you want to refer to an existing type by a name that is contextually
+more appropriate, such as when working with data of a specific size from an external source:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">typealias</span> <span class="type">AudioSample</span> <span class="operator">=</span> <span class="type">UInt16</span>”</span><br></pre></td></tr></table></figure>
+<h1 id="tuples"><a class="header-anchor" href="#tuples"> &gt; </a>Tuples</h1>
+<p>Tuples group multiple values into a single compound value. The values within a tuple can be of any
+type and do not have to be of the same type as each other.</p>
+<p>In this example, (404, “Not Found”) is a tuple that describes an HTTP status code. An HTTP status
+code is a special value returned by a web server whenever you request a web page. A status code of
+404 Not Found is returned if you request a webpage that doesn’t exist.</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> http404Error <span class="operator">=</span> (<span class="number">404</span>, <span class="string">&quot;Not Found&quot;</span>)</span><br><span class="line"><span class="comment">// http404Error is of type (Int, String), and equals (404, &quot;Not Found&quot;)</span></span><br></pre></td></tr></table></figure>
+<p>If you only need some of the tuple’s values, ignore parts of the tuple with an underscore (_) when
+you decompose the tuple:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> (justTheStatusCode, <span class="keyword">_</span>) <span class="operator">=</span> http404Error</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The status code is <span class="subst">\(justTheStatusCode)</span>&quot;</span>)</span><br><span class="line"><span class="comment">// Prints &quot;The status code is 404&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Alternatively, access the individual element values in a tuple using index numbers starting at zero:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The status code is <span class="subst">\(http404Error.<span class="number">0</span>)</span>&quot;</span>)</span><br><span class="line"><span class="comment">// Prints &quot;The status code is 404&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The status message is <span class="subst">\(http404Error.<span class="number">1</span>)</span>&quot;</span>)</span><br><span class="line"><span class="comment">// Prints &quot;The status message is Not Found&quot;</span></span><br></pre></td></tr></table></figure>
+<p>You can name the individual elements in a tuple when the tuple is defined:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> http200Status <span class="operator">=</span> (statusCode: <span class="number">200</span>, description: <span class="string">&quot;OK&quot;</span>)</span><br></pre></td></tr></table></figure>
+<p>If you name the elements in a tuple, you can use the element names to access the values of those
+elements:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The status code is <span class="subst">\(http200Status.statusCode)</span>&quot;</span>)</span><br><span class="line"><span class="comment">// Prints &quot;The status code is 200&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;The status message is <span class="subst">\(http200Status.description)</span>&quot;</span>)</span><br><span class="line"><span class="comment">// Prints &quot;The status message is OK</span></span><br></pre></td></tr></table></figure>
+<p><code>Note: Tuples are useful for temporary groups of related values. They are not suited to the creation of complex data structures. If your data structure is likely to persist beyond a temporary scope, model it as a class or structure, rather than as a tuple. For more information, see Classes and Structures.</code></p>
+<h1 id="optionals"><a class="header-anchor" href="#optionals"> &gt; </a>Optionals</h1>
+<p>You use optionals in situations where a value may be absent. An optional represents two
+possibilities: <strong>Either there is a value, and you can unwrap the optional to access that value, or
+there isn’t a value at all.</strong></p>
+<p>The example below uses the initializer to try to convert a String into an Int:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> possibleNumber <span class="operator">=</span> <span class="string">&quot;123&quot;</span></span><br><span class="line"><span class="keyword">let</span> convertedNumber <span class="operator">=</span> <span class="type">Int</span>(possibleNumber)</span><br><span class="line"><span class="comment">// convertedNumber is inferred to be of type &quot;Int?&quot;, or &quot;optional Int&quot;</span></span><br></pre></td></tr></table></figure>
+<p>Because the initializer might fail, it returns an optional Int, rather than an Int. An optional Int
+is written as Int?, not Int. The question mark indicates that the value it contains is optional,
+meaning that it might contain some Int value, or it might contain no value at all. (It can’t contain
+anything else, such as a Bool value or a String value. It’s either an Int, or it’s nothing at all.)</p>
+<h2 id="if-statements-and-forced-unwrapping"><a class="header-anchor" href="#if-statements-and-forced-unwrapping"> &gt; </a>If Statements and Forced Unwrapping</h2>
+<p>Once you’re sure that the optional does contain a value, you can access its underlying value by
+adding an exclamation mark (!) to the end of the optional’s name. The exclamation mark effectively
+says, “I know that this optional definitely has a value; please use it.” This is known as forced
+unwrapping of the optional’s value:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> convertedNumber <span class="operator">!=</span> <span class="literal">nil</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;convertedNumber has an integer value of <span class="subst">\(convertedNumber<span class="operator">!</span>)</span>.&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// Prints &quot;convertedNumber has an integer value of 123.&quot;</span></span><br></pre></td></tr></table></figure>
+<p><code>NOTE: Trying to use ! to access a nonexistent optional value triggers a runtime error. Always make sure that an optional contains a non-nil value before using ! to force-unwrap its value.</code></p>
+<h2 id="optional-binding"><a class="header-anchor" href="#optional-binding"> &gt; </a>Optional Binding</h2>
+<p>You use optional binding to find out whether an optional contains a value, and if so, to make that
+value available as a temporary constant or variable. Optional binding can be used with if and while
+statements to check for a value inside an optional, and to extract that value into a constant or
+variable, as part of a single action.</p>
+<p>Write an optional binding for an if statement as follows:</p>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"> <span class="keyword">if</span> <span class="keyword">let</span> constantName <span class="operator">=</span> someOptional &#123;</span><br><span class="line">    statements</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="implicitly-unwrapped-optional"><a class="header-anchor" href="#implicitly-unwrapped-optional"> &gt; </a>implicitly unwrapped optional</h2>
+<figure class="highlight swift"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> possibleString: <span class="type">String</span>? <span class="operator">=</span> <span class="string">&quot;An optional string.&quot;</span></span><br><span class="line"><span class="keyword">let</span> forcedString: <span class="type">String</span> <span class="operator">=</span> possibleString<span class="operator">!</span> <span class="comment">// requires an exclamation mark</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> assumedString: <span class="type">String</span>! <span class="operator">=</span> <span class="string">&quot;An implicitly unwrapped optional string.&quot;</span></span><br><span class="line"><span class="keyword">let</span> implicitString: <span class="type">String</span> <span class="operator">=</span> assumedString <span class="comment">// no need for an exclamation mark</span></span><br></pre></td></tr></table></figure>
+<p>You can think of an implicitly unwrapped optional as giving permission for the optional to be
+unwrapped automatically whenever it is used. <strong>Rather than placing an exclamation mark after the
+optional’s name each time you use it, you place an exclamation mark after the optional’s type when
+you declare it.</strong></p>
+<p><code>NOTE: If an implicitly unwrapped optional is nil and you try to access its wrapped value, you’ll trigger a runtime error. The result is exactly the same as if you place an exclamation mark after a normal optional that does not contain a value.</code></p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/SwiftBasics/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

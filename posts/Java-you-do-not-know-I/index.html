@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Java: you do not know I"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Java: you do not know I</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-29</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/coding/">#coding</a> <a class="tag" href="/tags/java/">#java</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>Some basic knowledge of Java in the book<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. Well, I pick the title “you don’t know”. Precisely,
+it’s something I don’t know while you may already knew years ago. But it just sounds so stupid to
+named after “Java: I don’t know”…</p>
+<p>Your interviewer may be equally—or more—impressed if you can derive the answer than if you
+automatically knew it.</p>
+<h1 id="overriding"><a class="header-anchor" href="#overriding"> &gt; </a>Overriding</h1>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">computeArea</span><span class="params">(Circle c)</span> </span>&#123;...&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">computeArea</span><span class="params">(Square s)</span> </span>&#123;...&#125;</span><br></pre></td></tr></table></figure>
+<p>Overriding, however, occurs when a method shares the same name and function signature as another
+method in its super class.</p>
+<span id="more"></span>
+<h1 id="collection-framework-p166"><a class="header-anchor" href="#collection-framework-p166"> &gt; </a>Collection Framework <P166></h1>
+<p>Java’s collection framework is incredibly useful.</p>
+<ul>
+<li>ArrayList: An ArrayList is dynamically resizing array, which grows as you insert elements.</li>
+<li>Vector: A vector is very similar to ArrayList, while Vector is synchronized. This means if one
+thread is working on Vector, no other thread can get a hold of it. Unlike ArrayList, only one
+thread can perform an operation on vector at a time.</li>
+<li>LinkedList: LinkedList is, of course, Java’s built-in ListkedList class. Though it rarely comes up
+in an interview, it’s useful to study because it demonstrates some of the syntax for an iterator.</li>
+<li>HashMap: The HashMap collection is widely used, both in interviews and in the real world. Also Set
+collections like HashSet are required to learn.</li>
+</ul>
+<h1 id="private-constructor-p433"><a class="header-anchor" href="#private-constructor-p433"> &gt; </a>Private Constructor <P433></h1>
+<p>Q: In terms of inheritance, what is the effect of keeping a constructor private?</p>
+<p>This has direct implications for inheritance, since a subclass class calls its parent’s constructor.
+Who, other than A, can access A’s private methods and constructor? A’s inner classes can. This
+means, the class A can be inherited, but only by its own or its parent’s inner classes.</p>
+<h1 id="return-from-finally-p433"><a class="header-anchor" href="#return-from-finally-p433"> &gt; </a>Return from Finally <P433></h1>
+<p>Q: In Java, does the finally block get executed if we insert a return statement inside the try block
+o a try-catch-finally?</p>
+<p>Yes, it will get executed. The finally block always executes when the try block exits. This ensures
+that the finally block is executed even if an unexpected exception occurs. But finally is useful for
+more than just exception handling — it allows the programmer to avoid having cleanup code
+accidentally bypassed by a return, continue, or break. Putting cleanup code in a finally block is
+always a good practice, even when no exceptions are anticipated.</p>
+<p>Note: If the JVM exits while the try or catch code is being executed, then the finally block may not
+execute. Likewise, if the thread executing the try or catch code is interrupted or killed, the
+finally block may not execute even though the application as a whole continues.</p>
+<h1 id="what-s-the-difference-between-final-finally-and-finalize-p433-435"><a class="header-anchor" href="#what-s-the-difference-between-final-finally-and-finalize-p433-435"> &gt; </a>What’s the difference between final, finally, and finalize? <P433-435></h1>
+<p>Despite their similar sounding names, <strong>final</strong>, <strong>finally</strong> and <strong>finalize</strong> have very different
+purposes. To speak in very general terms:</p>
+<ol>
+<li>The <strong>final</strong> is used to control whether a variable, method, or class is “changeable”.</li>
+</ol>
+<p>The <strong>final</strong> statement has a different meaning depending on context.</p>
+<ul>
+<li>When applied to a variable(primitive): The value of the variable cannot change.</li>
+<li>When applied to a variable(reference): The reference variable cannot point to any other object on
+the heap.</li>
+<li>When applied to a method: The method cannot be overridden.</li>
+<li>When applied to a class: The class cannot. be subclassed</li>
+</ul>
+<ol start="2">
+<li>The <strong>finally</strong> keyword is used in a try/catch block to ensure that a segment of code is always
+executed.</li>
+</ol>
+<p>There is an optional <strong>finally</strong> block after the try block or after the catch block. The <strong>finally</strong>
+block is often used to write the clean-up code. It will be executed after the try and catch blocks,
+but before control transfers back to its origin.</p>
+<ol start="3">
+<li>The <strong>finalize</strong>() method is called by the garbage collector once it determines that no more
+references exist.</li>
+</ol>
+<p>The automatic garbage collector calls the <strong>finalized</strong>() method just before actually destroying the
+object. A class can therefore override the <strong>finalized</strong>() method from the Object class in order to
+define custom behavior during garbage collection.</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">finalize</span><span class="params">()</span> <span class="keyword">throws</span> Throwable </span>&#123;</span><br><span class="line">    <span class="comment">/* Close open files, release resources, etc */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="generics-vs-templates-p435"><a class="header-anchor" href="#generics-vs-templates-p435"> &gt; </a>Generics vs Templates <P435></h1>
+<p>Q: Explain the difference between templates in C++ dand generics in Java.</p>
+<p>Many programmers consider templates and generics to be essentially equivalent because both allow you
+to do something like <strong>List<String></strong>. But, how each language does this, and why, varies
+significantly.</p>
+<p>The implementation of Java generics is rooted in an idea of “type erasure”. This technique
+eliminates the parameterized types then source code is translated to the Java Virtual Machine(JVM)
+byte code.</p>
+<p>For example, suppose you have the Java code below:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Vector&lt;String&gt; vector = <span class="keyword">new</span> Vector&lt;String&gt;();</span><br><span class="line">vector.add(<span class="keyword">new</span> String(<span class="string">&quot;hello&quot;</span>));</span><br><span class="line">String str = vector.get(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+<p>During the compilation, this code is re-written into:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">Vector vector = <span class="keyword">new</span> Vector();</span><br><span class="line">vector.add(<span class="keyword">new</span> String(<span class="string">&quot;hello&quot;</span>));</span><br><span class="line">String str = (String) vector.get(<span class="number">0</span>);</span><br></pre></td></tr></table></figure>
+<p>The use of Java generics didn’t really change much about our capabilities; it just made things a bit
+prettier. For this reason, Java generics are sometimes called “syntactic sugar”.</p>
+<p>This is quite different from C++. In C++, templates are essentially a glorified macro set, with the
+compiler creating a new copy of the template code for each type.</p>
+<p>In Java, static variables are shared across instances of Class, regardless of the different type
+parameters.</p>
+<p>There are other differences between Java generics and C++ templates.</p>
+<ul>
+<li>C++ templates can use primitive types, like <strong>int</strong>, Java cannot and must instead use <strong>Integer</strong>.</li>
+<li>In Java, you can restrict the template’s type parameters to be of a certain type. For instance,
+you might use generics to implement a <strong>CardDeck</strong> and specify that the type parameter must extend
+from <strong>CardGame</strong>.</li>
+<li>In C++, the type parameter can be instantiated, whereas Java does not support this.</li>
+<li>In Java, the type parameter cannot be used for static methods and variables, since these would be
+shared between classes. In C++, these classes are different, so the type parameter can be used for
+static methods and variables.</li>
+<li>In Java, all instances of the same class, regardless of their type parameters, are the same type.
+The type parameters are erased at runtime. In C++, instances with different type parameters are
+different types.</li>
+</ul>
+<hr class="footnotes-sep">
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1"  class="footnote-item"><p>Cracking the Coding Interview, 6th Edition. <a href="#fnref1" class="footnote-backref">↩</a></p>
+</li>
+</ol>
+</section>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/Java-you-do-not-know-I/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

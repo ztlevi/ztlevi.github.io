@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Spacemacs keybindings"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Spacemacs keybindings</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-25</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/emacs/">emacs</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/emacs/">#emacs</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>This is my Spacemacs personal config on Github: <a target="_blank" rel="noopener" href="https://github.com/ztlevi/spacemacs-config">https://github.com/ztlevi/spacemacs-config</a></p>
+<h2 id="common-stuffs"><a class="header-anchor" href="#common-stuffs"> &gt; </a>Common Stuffs</h2>
+<p>In key bindings, M stands for Alt key (option key for mac), s for Command key, C for Control key, SPC for Space key.</p>
+<span id="more"></span>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-g</td>
+<td>Quit</td>
+</tr>
+<tr>
+<td><strong>! !</strong></td>
+<td>evil shell command output to the current line</td>
+</tr>
+<tr>
+<td><strong>C-o</strong></td>
+<td>Evil jump backward</td>
+</tr>
+<tr>
+<td><strong>C-i</strong></td>
+<td>Evil jump forward</td>
+</tr>
+<tr>
+<td><strong>C-o</strong></td>
+<td>Open Action panel when mini dired enabled</td>
+</tr>
+<tr>
+<td>C-h k/v/f/d</td>
+<td>Key/ variable/ function/ Documentation</td>
+</tr>
+<tr>
+<td>C-h C-k/v/f</td>
+<td>Find key/ variable/ function</td>
+</tr>
+<tr>
+<td>C-h e</td>
+<td>Show Emacs’s errors</td>
+</tr>
+<tr>
+<td>SPC SPC (M-x)</td>
+<td>eval-buffer, customize-group</td>
+</tr>
+<tr>
+<td>SPC e n</td>
+<td>Js2-next-error</td>
+</tr>
+<tr>
+<td><strong>s-/</strong></td>
+<td>Comment</td>
+</tr>
+<tr>
+<td><strong>SPC j i</strong></td>
+<td>Imenu (show all the functions)</td>
+</tr>
+<tr>
+<td><strong>SPC v</strong></td>
+<td>Expand Region</td>
+</tr>
+<tr>
+<td>SPC x o</td>
+<td>Open link</td>
+</tr>
+<tr>
+<td><strong>C-q</strong></td>
+<td>Insert Quote</td>
+</tr>
+<tr>
+<td>SPC s e</td>
+<td>iedit: need to select in vim-visual mode, and then press the key to edit them.</td>
+</tr>
+<tr>
+<td>SPC ?</td>
+<td>List key bindings</td>
+</tr>
+<tr>
+<td>*SPC '*</td>
+<td>Pop up shell</td>
+</tr>
+</tbody>
+</table>
+<h2 id="debug"><a class="header-anchor" href="#debug"> &gt; </a>Debug</h2>
+<p>Kill emacs when not responding: <code>pkill -SIGUSR2 -i emacs</code>, and use <code>toggle-debug-on-quit</code> to enable C-g.</p>
+<p>The following command profile the CPU.</p>
+<pre><code>Profiler-start
+Profiler-report
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-x C-e</td>
+<td>eval-last-sexp</td>
+</tr>
+<tr>
+<td>M-.</td>
+<td>pop last command execute</td>
+</tr>
+<tr>
+<td>Diminish Undo</td>
+<td>Show mode detail in the mode line, e.g. company-mode</td>
+</tr>
+<tr>
+<td>SPC o (</td>
+<td>Switches to the buffer ‘*ielm*’, or creates it if it does not exist.</td>
+</tr>
+<tr>
+<td>*, d m*</td>
+<td>macrostep-transient-state, expand and collapse funcs and macros</td>
+</tr>
+</tbody>
+</table>
+<h3 id="python"><a class="header-anchor" href="#python"> &gt; </a>Python</h3>
+<p>In python mode, keys are start with prefix key <code>C-c</code>. | Key Bindings | Description |
+|--------------|------------------------------| | C-c C-p | run python | | C-c C-c | python shell send buffer | | C-c
+C-l | python shell send file | | <strong>C-c C-r</strong> | python shell send region | | C-c C-z | python shell switch to shell |</p>
+<h2 id="search"><a class="header-anchor" href="#search"> &gt; </a>Search</h2>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SPC o d</strong> (M-s o)</td>
+<td><strong>Occur dwim</strong> (see the occurrences in codes and <br>go through them by toggling them), use e to enter edit</td>
+</tr>
+<tr>
+<td>e</td>
+<td>Go to edit mode (Under Occur mode)</td>
+</tr>
+<tr>
+<td>C-c C-c</td>
+<td>Exit edit mode (Under Occur mode)</td>
+</tr>
+<tr>
+<td><strong>C-s</strong></td>
+<td>Swiper</td>
+</tr>
+<tr>
+<td><strong>SPC r i / C-c C-r</strong> (F6)</td>
+<td>Ivy-resume, e.g. resume the swiper view</td>
+</tr>
+<tr>
+<td><strong>SPC r h</strong></td>
+<td>Helm-resume, e.g. resume counsel-git view</td>
+</tr>
+<tr>
+<td>SPC s</td>
+<td>Grep(g), ag(a), ack(k), pt(t) &lt;br&gt;Project a/g p, Directory t/k f.</td>
+</tr>
+<tr>
+<td><strong>C-c C-e</strong></td>
+<td>Show results in another buffer, and then edit(e.g. replace).</td>
+</tr>
+<tr>
+<td><strong>C-c C-c</strong></td>
+<td>On the result buffer, commit changes.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="replace"><a class="header-anchor" href="#replace"> &gt; </a>Replace</h2>
+<ol>
+<li>Just use vim, <code>:%s/xxx/yyy/g(c)</code></li>
+<li>Mark a key word, then use C-r (evil-quick-replace). It will automatically generate the vim command.</li>
+<li>Use Occur-dwim (SPC o d), then use iedit (SPC s e).</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M-%</td>
+<td>query-replace</td>
+</tr>
+<tr>
+<td>C-M-%</td>
+<td>query-replace-regexp</td>
+</tr>
+</tbody>
+</table>
+<h2 id="toggle"><a class="header-anchor" href="#toggle"> &gt; </a>Toggle</h2>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spc t n</td>
+<td>Toggle line number</td>
+</tr>
+<tr>
+<td>Spc t r</td>
+<td>Toggle relative line number</td>
+</tr>
+<tr>
+<td><strong>SPC t g</strong></td>
+<td>toggle golden ration</td>
+</tr>
+<tr>
+<td><strong>SPC t -</strong></td>
+<td>Center point</td>
+</tr>
+<tr>
+<td>SPC t f</td>
+<td>Toggle fci-mode</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bookmark-related-opeation"><a class="header-anchor" href="#bookmark-related-opeation"> &gt; </a>Bookmark Related Opeation</h2>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spc h b</td>
+<td>Open bookmarks in helm window</td>
+</tr>
+<tr>
+<td>C-d</td>
+<td>delete the selected bookmark</td>
+</tr>
+<tr>
+<td>C-e</td>
+<td>edit the selected bookmark</td>
+</tr>
+<tr>
+<td>C-f</td>
+<td>toggle filename location</td>
+</tr>
+<tr>
+<td>C-o</td>
+<td>open the selected bookmark in another window</td>
+</tr>
+<tr>
+<td>C-x C-d</td>
+<td>Run browse project directory</td>
+</tr>
+</tbody>
+</table>
+<h2 id="file-related-operation"><a class="header-anchor" href="#file-related-operation"> &gt; </a>File Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC f</th>
+<th>File related operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPC p f</td>
+<td>Open file with projectile or counsel-git</td>
+</tr>
+<tr>
+<td>SPC f f</td>
+<td>Helm-find-file</td>
+</tr>
+<tr>
+<td>C-M-j</td>
+<td>Ivy immediate done</td>
+</tr>
+<tr>
+<td>SPC f L</td>
+<td>Find the file across the Whole Mac System</td>
+</tr>
+<tr>
+<td>SPC f l</td>
+<td>find file literally</td>
+</tr>
+<tr>
+<td>SPC f h</td>
+<td>Open file in hex mode(C-c C-c to exit)</td>
+</tr>
+<tr>
+<td><strong>SPC f o</strong></td>
+<td>Open in default external application</td>
+</tr>
+<tr>
+<td><strong>SPC f E</strong></td>
+<td>sudo edit</td>
+</tr>
+<tr>
+<td><strong>SPC f j</strong></td>
+<td>Jump to dried, remapped to ranger</td>
+</tr>
+<tr>
+<td>SPC f r</td>
+<td>Open recent file</td>
+</tr>
+<tr>
+<td>SPC f R</td>
+<td>Rename current file</td>
+</tr>
+<tr>
+<td>SPC f v</td>
+<td>Add local variable</td>
+</tr>
+<tr>
+<td>SPC f a d</td>
+<td>find the current visited directory with fasd</td>
+</tr>
+<tr>
+<td>SPC f C d/u</td>
+<td>convert file encoding between unix and dos</td>
+</tr>
+<tr>
+<td>SPC f e d</td>
+<td>find the .spacemacs file</td>
+</tr>
+<tr>
+<td>SPC f e i</td>
+<td>file the .emacs init file</td>
+</tr>
+<tr>
+<td>SPC f b</td>
+<td>Show bookmarks</td>
+</tr>
+<tr>
+<td>SPC f s/S</td>
+<td>Save buffers</td>
+</tr>
+<tr>
+<td>SPC f c</td>
+<td>Copy file</td>
+</tr>
+<tr>
+<td>SPC f t</td>
+<td>Open neo tree</td>
+</tr>
+</tbody>
+</table>
+<h2 id="buffer-related-operation"><a class="header-anchor" href="#buffer-related-operation"> &gt; </a>Buffer Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC b</th>
+<th>Buffer related operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SPC TAB</strong></td>
+<td>Switch back and forth</td>
+</tr>
+<tr>
+<td>SPC b .</td>
+<td>buffer micro state (hydra)</td>
+</tr>
+<tr>
+<td>SPC b b</td>
+<td>Switch buffers</td>
+</tr>
+<tr>
+<td>SPC b d</td>
+<td>Kill buffer</td>
+</tr>
+<tr>
+<td>SPC b f</td>
+<td>Reveal in finder</td>
+</tr>
+<tr>
+<td>SPC b B/i</td>
+<td>iBuffer</td>
+</tr>
+<tr>
+<td>SPC b h</td>
+<td>Spacemacs home buffer</td>
+</tr>
+<tr>
+<td>SPC b k</td>
+<td>Kill matching buffers</td>
+</tr>
+<tr>
+<td>SPC b N</td>
+<td>New empty buffer</td>
+</tr>
+<tr>
+<td>SPC b C-d</td>
+<td>Kill other buffers</td>
+</tr>
+<tr>
+<td><strong>SPC b R</strong></td>
+<td>Safe revert buffer</td>
+</tr>
+<tr>
+<td>SPC b s</td>
+<td>Scratch buffer</td>
+</tr>
+<tr>
+<td>SPC b Y</td>
+<td>Yank the whole buffer</td>
+</tr>
+<tr>
+<td>SPC b P</td>
+<td>Paste the whole buffer</td>
+</tr>
+<tr>
+<td>SPC b w</td>
+<td>Write in dried buffer</td>
+</tr>
+<tr>
+<td>SPC b n/p</td>
+<td>Next/Previous buffer</td>
+</tr>
+</tbody>
+</table>
+<h2 id="layout-related-operation"><a class="header-anchor" href="#layout-related-operation"> &gt; </a>Layout Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC l</th>
+<th>Layout related operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPC o l l</td>
+<td>load layout (ztlevi)</td>
+</tr>
+<tr>
+<td>SPC o l s</td>
+<td>save layout (ztlevi)</td>
+</tr>
+<tr>
+<td>SPC l o</td>
+<td>Custom layout</td>
+</tr>
+<tr>
+<td>SPC l L/s</td>
+<td>Load or Save layout</td>
+</tr>
+<tr>
+<td>SPC l l</td>
+<td>Switch between layouts</td>
+</tr>
+<tr>
+<td>SPC l R</td>
+<td>Rename current layout</td>
+</tr>
+<tr>
+<td>SPC l TAB</td>
+<td>Quick switch between layouts</td>
+</tr>
+<tr>
+<td>SPC l ?</td>
+<td>Toggle layout help</td>
+</tr>
+</tbody>
+</table>
+<h2 id="window-related-operation"><a class="header-anchor" href="#window-related-operation"> &gt; </a>Window Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC w</th>
+<th>Window Related Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SPC w .</strong></td>
+<td>Window micro state (cheat sheet)</td>
+</tr>
+<tr>
+<td>SPC w -/s</td>
+<td>Split window below and focus</td>
+</tr>
+<tr>
+<td>SPC w //v</td>
+<td>Split window right and focus</td>
+</tr>
+<tr>
+<td>SPC w m</td>
+<td>Toggle-maximize-buffer</td>
+</tr>
+<tr>
+<td>SPC w 2/3</td>
+<td>Use predefined window layout</td>
+</tr>
+<tr>
+<td>SPC w b</td>
+<td>Switch to mini buffer</td>
+</tr>
+<tr>
+<td>SPC w d</td>
+<td>Delete the current window</td>
+</tr>
+<tr>
+<td>SPC w h/j/k/l</td>
+<td>Move to window</td>
+</tr>
+<tr>
+<td><strong>SPC w m</strong></td>
+<td>Maximize window</td>
+</tr>
+<tr>
+<td>SPC w H/J/K/L</td>
+<td>Move window to position</td>
+</tr>
+<tr>
+<td><strong>SPC w u/U</strong></td>
+<td>Window undo/redo</td>
+</tr>
+<tr>
+<td>SPC w o</td>
+<td>Switch to other frame</td>
+</tr>
+<tr>
+<td>SPC w F</td>
+<td>make a new frame</td>
+</tr>
+<tr>
+<td>M/(SPC w) 1/2/3/4</td>
+<td>Go to window with the window number</td>
+</tr>
+<tr>
+<td>SPC w =</td>
+<td>Balance windows</td>
+</tr>
+<tr>
+<td>SPC w w</td>
+<td>Go to other window one by one</td>
+</tr>
+<tr>
+<td>SPC w W</td>
+<td>Ace windows</td>
+</tr>
+</tbody>
+</table>
+<h2 id="project-related-operation"><a class="header-anchor" href="#project-related-operation"> &gt; </a>Project Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC p</th>
+<th>Project related operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPC p f</td>
+<td>Project files</td>
+</tr>
+<tr>
+<td>SPC p b</td>
+<td>Buffer files</td>
+</tr>
+<tr>
+<td>SPC p p</td>
+<td>Switch to a project</td>
+</tr>
+<tr>
+<td>SPC p l</td>
+<td>Switch to a project and create a layout</td>
+</tr>
+<tr>
+<td>s-p</td>
+<td>Find files in project</td>
+</tr>
+</tbody>
+</table>
+<h2 id="dired-related-operation"><a class="header-anchor" href="#dired-related-operation"> &gt; </a>Dired Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC f j</th>
+<th>Dired Related Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>j</td>
+<td>(dired) navigate down</td>
+</tr>
+<tr>
+<td>k</td>
+<td>(dired) navigate up</td>
+</tr>
+<tr>
+<td>h</td>
+<td>(dired) go up directory</td>
+</tr>
+<tr>
+<td>l</td>
+<td>(dired) find file / enter directory</td>
+</tr>
+<tr>
+<td><strong>m</strong></td>
+<td>Mark files. Use it with <code>C</code> and <code>R</code></td>
+</tr>
+<tr>
+<td><strong>u</strong></td>
+<td>Unmark files. Use it with <code>C</code> and <code>R</code></td>
+</tr>
+<tr>
+<td><strong>t</strong></td>
+<td>Mark all files.</td>
+</tr>
+<tr>
+<td><strong>U</strong></td>
+<td>Unmark all files.</td>
+</tr>
+<tr>
+<td><strong>C</strong></td>
+<td>When you will press C to copy, the other dir in the <strong>split pane</strong> will be default destination.</td>
+</tr>
+<tr>
+<td><strong>R</strong></td>
+<td>Same thing with <code>C</code>. <code>R</code> stands for rename but also does move</td>
+</tr>
+<tr>
+<td>f</td>
+<td>Find file. Can be used to create file.</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Create directory</td>
+</tr>
+<tr>
+<td>o</td>
+<td>Open file in another window</td>
+</tr>
+<tr>
+<td>d</td>
+<td>Mark as delete.</td>
+</tr>
+<tr>
+<td>x</td>
+<td>Take the punge.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ranger-related-operation"><a class="header-anchor" href="#ranger-related-operation"> &gt; </a>Ranger Related Operation</h2>
+<table>
+<thead>
+<tr>
+<th>SPC a</th>
+<th>Ranger Related Operation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-c C-e</td>
+<td>Wdired-change-to-wdired-mode: write in ranger</td>
+</tr>
+<tr>
+<td>C-c C-c</td>
+<td>Commit changes</td>
+</tr>
+<tr>
+<td>C-c Esc</td>
+<td>Abort changes</td>
+</tr>
+<tr>
+<td>SPC a r</td>
+<td>launch ranger</td>
+</tr>
+<tr>
+<td>SPC a d</td>
+<td>deer (minimal ranger window in current directory)</td>
+</tr>
+<tr>
+<td>C-p</td>
+<td>(ranger) toggle ranger in dired buffer</td>
+</tr>
+<tr>
+<td>j</td>
+<td>(ranger) navigate down</td>
+</tr>
+<tr>
+<td>k</td>
+<td>(ranger) navigate up</td>
+</tr>
+<tr>
+<td>h</td>
+<td>(ranger) go up directory</td>
+</tr>
+<tr>
+<td>l</td>
+<td>(ranger) find file / enter directory</td>
+</tr>
+<tr>
+<td>RET</td>
+<td>(ranger) find file / enter directory</td>
+</tr>
+<tr>
+<td>dd/ <strong>da</strong></td>
+<td>(ranger) cut, da to add cut file</td>
+</tr>
+<tr>
+<td>yy/ <strong>ya</strong></td>
+<td>(ranger) copy, ya to add copy file</td>
+</tr>
+<tr>
+<td>pp</td>
+<td>(ranger) paste</td>
+</tr>
+<tr>
+<td>R</td>
+<td>(ranger) rename</td>
+</tr>
+<tr>
+<td>D</td>
+<td>(ranger) delete</td>
+</tr>
+<tr>
+<td><strong>;+</strong></td>
+<td>(ranger) create directory</td>
+</tr>
+<tr>
+<td>f</td>
+<td>(ranger) search for file names, also can create file</td>
+</tr>
+<tr>
+<td>i</td>
+<td>(ranger) show preview of current file</td>
+</tr>
+<tr>
+<td>zi</td>
+<td>(ranger) toggle showing literal / full-text previews</td>
+</tr>
+<tr>
+<td>zh</td>
+<td>(ranger) toggle showing dotfiles</td>
+</tr>
+<tr>
+<td>o</td>
+<td>(ranger) sort options</td>
+</tr>
+<tr>
+<td>H</td>
+<td>(ranger) search through history</td>
+</tr>
+<tr>
+<td>q</td>
+<td>(ranger) quit</td>
+</tr>
+<tr>
+<td>r</td>
+<td>(ranger) revert buffer</td>
+</tr>
+<tr>
+<td>z-</td>
+<td>(ranger) reduce number of parents</td>
+</tr>
+<tr>
+<td>z+</td>
+<td>(ranger) increment number of parents</td>
+</tr>
+<tr>
+<td>v</td>
+<td>(ranger) toggle all marks</td>
+</tr>
+<tr>
+<td>V</td>
+<td>(ranger) visually select lines</td>
+</tr>
+<tr>
+<td>S</td>
+<td>(ranger) enter shell</td>
+</tr>
+<tr>
+<td>C-SPC</td>
+<td>(ranger) mark current file</td>
+</tr>
+<tr>
+<td>;C</td>
+<td>(ranger) copy directory / copy and move directory</td>
+</tr>
+</tbody>
+</table>
+<h2 id="org-mode"><a class="header-anchor" href="#org-mode"> &gt; </a>Org mode</h2>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SPC a o o (C-c a)</td>
+<td>Org agenda</td>
+</tr>
+<tr>
+<td>SPC m s (C-c C-s)</td>
+<td>Schedule</td>
+</tr>
+<tr>
+<td>SPC m d (C-c C-d)</td>
+<td>Deadline</td>
+</tr>
+<tr>
+<td>C-c C-e</td>
+<td>Org Export</td>
+</tr>
+<tr>
+<td>C-c C-c</td>
+<td>Org evaluate block</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Org evaluate block example:</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">#+BEGIN_SRC python :results output</span><br><span class="line">for i in range(10):</span><br><span class="line">  print(i)</span><br><span class="line">#+END_SRC</span><br></pre></td></tr></table></figure>
+<h3 id="cycling"><a class="header-anchor" href="#cycling"> &gt; </a>Cycling</h3>
+<ol>
+<li>Tab: toggle current headline</li>
+<li>S-Tab: globally toggle headlines</li>
+</ol>
+<h3 id="headline-movement"><a class="header-anchor" href="#headline-movement"> &gt; </a>Headline movement</h3>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C-<return></td>
+<td>Insert heading respect current content below</td>
+</tr>
+<tr>
+<td>M-<right>/l</td>
+<td>Demote heading, list item at point or move table column right.</td>
+</tr>
+<tr>
+<td>M-<left>/h</td>
+<td>Promote heading, list item at point or move table column left.</td>
+</tr>
+<tr>
+<td>M-<up>/k</td>
+<td>Move subtree or table row up</td>
+</tr>
+<tr>
+<td>M-<down>/j</td>
+<td>Move subtree or table row down</td>
+</tr>
+</tbody>
+</table>
+<h2 id="js2-mode"><a class="header-anchor" href="#js2-mode"> &gt; </a>JS2 Mode</h2>
+<table>
+<thead>
+<tr>
+<th>Key Bindings</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>js2-refactor commands</strong></td>
+<td>A lot more key bindings could be found <a target="_blank" rel="noopener" href="https://github.com/magnars/js2-refactor.el">here</a></td>
+</tr>
+<tr>
+<td>, r &lt;</td>
+<td>js2r-forward-braf</td>
+</tr>
+<tr>
+<td>, r &gt;</td>
+<td>js2r-forward-slurp</td>
+</tr>
+<tr>
+<td><strong>The following 3 commands using xref-js2</strong></td>
+<td></td>
+</tr>
+<tr>
+<td>M-.</td>
+<td>Jump to definition</td>
+</tr>
+<tr>
+<td>M-,</td>
+<td>Pop back to where M-. was last invoked.</td>
+</tr>
+<tr>
+<td>M-?</td>
+<td>Jump to references</td>
+</tr>
+</tbody>
+</table>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/spacemacsKeybindings/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

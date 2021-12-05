@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="FZF all your projects in terminal"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(https://cdn-media-1.freecodecamp.org/images/1*TnsFDs-DEye722CrQXjv8w.png)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">FZF all your projects in terminal</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2019-02-25</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/coding/">coding</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/terminal/">#terminal</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <p>How you navigate to your projects in terminal? <code>cd</code>? <code>ranger</code>? <code>nnn</code>? t a Well, these are not desinged for navigating
+projects and they really do their jobs but not so efficient.</p>
+<p>Let me introduce the <code>fzf_projects</code>.</p>
+<p>First, you need to install fzf. Simply go through the tutorial here.</p>
+<p>Second, put the following code in your shell configuration file.</p>
+<blockquote>
+<p>Note: <code>project_roots</code> is a list of directories that projects inside within depth 1 will be added as projects
+candidates. <code>developer_root</code> is a directory that project inside within depth 2 will be added.</p>
+</blockquote>
+<span id="more"></span>
+<figure class="highlight sh"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Switch projects</span></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">fzf_projects</span></span>() &#123;</span><br><span class="line">  <span class="comment"># Each root is consist of PATH:scan_depth</span></span><br><span class="line">  project_scans=(<span class="string">&quot;<span class="variable">$&#123;HOME&#125;</span>:1&quot;</span> <span class="string">&quot;<span class="variable">$&#123;HOME&#125;</span>/Dropbox:1&quot;</span> <span class="string">&quot;<span class="variable">$&#123;HOME&#125;</span>/go/src:1&quot;</span> <span class="string">&quot;<span class="variable">$&#123;HOME&#125;</span>/Developer:2&quot;</span>)</span><br><span class="line"></span><br><span class="line">  projects=()</span><br><span class="line">  <span class="built_in">local</span> project scan_depth</span><br><span class="line">  <span class="keyword">for</span> project_scan <span class="keyword">in</span> <span class="variable">$&#123;project_scans[@]&#125;</span>; <span class="keyword">do</span></span><br><span class="line">    IFS=: <span class="built_in">read</span> -r project scan_depth &lt;&lt;&lt;<span class="string">&quot;<span class="variable">$&#123;project_scan&#125;</span>&quot;</span></span><br><span class="line">    <span class="keyword">if</span> [[ -d <span class="variable">$&#123;project&#125;</span> ]]; <span class="keyword">then</span></span><br><span class="line">      <span class="keyword">for</span> dir <span class="keyword">in</span> $(find <span class="variable">$&#123;project&#125;</span> -maxdepth <span class="variable">$&#123;scan_depth&#125;</span> -<span class="built_in">type</span> d); <span class="keyword">do</span></span><br><span class="line">        <span class="keyword">if</span> [[ -d <span class="variable">$&#123;dir&#125;</span>/.git ]]; <span class="keyword">then</span></span><br><span class="line">          projects+=(<span class="variable">$&#123;dir&#125;</span>)</span><br><span class="line">        <span class="keyword">fi</span></span><br><span class="line">      <span class="keyword">done</span></span><br><span class="line">    <span class="keyword">fi</span></span><br><span class="line">  <span class="keyword">done</span></span><br><span class="line"></span><br><span class="line">  <span class="built_in">local</span> IFS=$<span class="string">&#x27;\n&#x27;</span></span><br><span class="line">  selected_project=$(<span class="built_in">echo</span> <span class="string">&quot;<span class="variable">$&#123;projects[*]&#125;</span>&quot;</span> | fzf)</span><br><span class="line"></span><br><span class="line">  <span class="built_in">cd</span> <span class="variable">$&#123;selected_project&#125;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="built_in">alias</span> pp=fzf_projects</span><br></pre></td></tr></table></figure>
+<p>Third, source your shell configuration again or open a new terminal window. Trigger <code>fzf_projects</code> by input <code>pp</code>.</p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/FZF-all-your-projects-in-terminal/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+

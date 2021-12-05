@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <!-- Html Head Tag-->
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="Ting Zhou">
+  <!-- Open Graph Data -->
+  <meta property="og:title" content="Org to Wordpress with org2blog"/>
+  <meta property="og:description" content="" />
+  <meta property="og:site_name" content="Lady luck is smilin&#39;."/>
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="https://ztlevi.github.io"/>
+  
+    <link rel="alternate" href="/atom.xml" title="Lady luck is smilin&#39;." type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+
+  <!-- Site Title -->
+  <title>Lady luck is smilin'.</title>
+
+  <!-- Bootstrap CSS -->
+  
+<link rel="stylesheet" href="/css/bootstrap.min.css">
+
+  
+<link rel="stylesheet" href="/css/font-awesome.min.css">
+
+  <!-- Custom CSS -->
+  
+  
+<link rel="stylesheet" href="/css/style.light.css">
+
+
+  <!-- Google Analytics -->
+  
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+  <body>
+    <!-- Page Header -->
+
+
+<header class="site-header header-background" style="background-image: url(/img/banner.jpg)">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="page-title with-background-image">
+          <p class="title">Org to Wordpress with org2blog</p>
+          <p class="subtitle"></p>
+        </div>
+        <div class="site-menu with-background-image">
+          <ul>
+            
+              <li>
+                <a href="/">
+                  
+                    Home
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  
+                    Archives
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a target="_blank" rel="noopener" href="https://github.com/ztlevi">
+                  
+                    Github
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="https://ztlevi.github.io/Gitbook_Machine_Learning_Questions/">
+                  
+                    ML_Questions
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/about">
+                  
+                    About
+                  
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/nonsense">
+                  
+                    扯淡
+                  
+                </a>
+              </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<article>
+  <div class="container typo">
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+        <div class="post-info text-muted">
+          
+            <!-- Author -->
+            <span class="author info">By Ting Zhou</span>
+          
+          <!-- Date -->
+          <span class="date-time info">On
+            <span class="date">2017-05-25</span>
+            <span class="time">20:13:10</span>
+          </span>
+          
+          <!--  Categories  -->
+            <span class="categories info">Under 
+
+<a href="/categories/emacs/">emacs</a>
+</span>
+          
+        </div>
+        <!-- Tags -->
+        
+          <div class="post-tags text-muted">
+            Tags: 
+
+<a class="tag" href="/tags/emacs/">#emacs</a>
+
+
+          </div>
+        
+        <!-- Post Main Content -->
+        <div class="post-content">
+          <h1 id="publish-with-org2blog-and-solution-to-non-ascii-when-posting-to-wordpress"><a class="header-anchor" href="#publish-with-org2blog-and-solution-to-non-ascii-when-posting-to-wordpress"> &gt; </a>Publish with Org2Blog and Solution to non-ascii when posting to Wordpress</h1>
+<h2 id="install-packages"><a class="header-anchor" href="#install-packages"> &gt; </a>Install packages</h2>
+<p>Install <a target="_blank" rel="noopener" href="https://github.com/punchagan/org2blog">org2blog</a>. I put the package in my own emacs configuration folder. Path
+to org2blog: <strong>~/.spacemacs.d/layers/org2blog/</strong>.</p>
+<p>org2blog depends on</p>
+<span id="more"></span>
+<ol>
+<li>xml-rpc available at Launchpad <a target="_blank" rel="noopener" href="http://launchpad.net/xml-rpc-el">Launchpad</a></li>
+<li>metaweblog.el available <a target="_blank" rel="noopener" href="https://github.com/punchagan/metaweblog">here</a></li>
+</ol>
+<p>To better manage the packages, I just put the two packages above right under the same path to my org2blog.</p>
+<h2 id="configuring-emacs"><a class="header-anchor" href="#configuring-emacs"> &gt; </a>Configuring Emacs</h2>
+<p>Put following code in your emacs configuration file, e.g. <strong>~/.emacs.d/init.el</strong>. Of course, change to your private
+infomation, including my-blog, url, username. You need to put /xmlrpc.php after your url. That’s for XML-RPC server of
+your homepage. It only accepts POST request.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;; Load your own org2blog path by using load-path.</span><br><span class="line">(setq load-path (cons &quot;~/.spacemacs.d/layers/org2blog/&quot; load-path))</span><br><span class="line">(require &#x27;org2blog-autoloads)</span><br><span class="line">(require &#x27;auth-source) ;; or nothing if already in the load-path</span><br><span class="line">(setq org2blog/wp-blog-alist</span><br><span class="line">      &#x27;((&quot;my-blog&quot;</span><br><span class="line">         :url &quot;https://ztlevi.wordpress.com/xmlrpc.php&quot;</span><br><span class="line">         :username &quot;ztlevi&quot;)))</span><br><span class="line">(let (credentials)</span><br><span class="line">  ;; only required if your auth file is not already in the list of auth-sources</span><br><span class="line">  (add-to-list &#x27;auth-sources &quot;~/.netrc&quot;)</span><br><span class="line">  (setq credentials (auth-source-user-and-password &quot;wp-ztlevi&quot;))</span><br><span class="line">  (setq org2blog/wp-blog-alist</span><br><span class="line">        `((&quot;my-blog&quot;</span><br><span class="line">           :url &quot;https://ztlevi.wordpress.com/xmlrpc.php&quot;</span><br><span class="line">           :username ,(car credentials)</span><br><span class="line">           :password ,(cadr credentials)))))</span><br></pre></td></tr></table></figure>
+<p>Your <strong>~/.netrc</strong> file looks like this. Change the username and your<sub>password</sub> to your real ones.</p>
+<p><code>machine wp-ztlevi login username password your_password</code></p>
+<p>wp-ztlevi is the auth<sub>id</sub> to find your private information from the <strong>~/.netrc</strong> file.</p>
+<h2 id="useage"><a class="header-anchor" href="#useage"> &gt; </a>Useage</h2>
+<ol>
+<li><em>M-x org2blog/wp-new-entry</em> : Create a new templete file.</li>
+<li><em>M-x org2blog/wp-login</em> : Login to your wordpress blog.</li>
+<li><em>M-x org2blog/wp-post-buffer</em> : Used to post your org file as draft.</li>
+<li><em>M-x org2blog/wp-post-buffer-and-publish</em> : Publish your org file right away.</li>
+</ol>
+<h2 id="solution-to-non-ascii-on-wordpress"><a class="header-anchor" href="#solution-to-non-ascii-on-wordpress"> &gt; </a>Solution to non-ascii on Wordpress</h2>
+<p>Since Wordpress does not support non-ascii when you post. We need to clear out the non-ascii characters before we post.
+Otherwise it will failed with a structure problem like this.</p>
+<img src="https://ww3.sinaimg.cn/large/006tNc79gy1fdltj04hs4j307z06cq35.jpg" alt="img" title="image title"/>
+So annoying when I first met this problem. I really had no ideas about this.
+<p>/Users/ztlevi/Dropbox/Beautify/OldWallPaper/001.jpg</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">param</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">value</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">boolean</span>&gt;</span>0<span class="tag">&lt;/<span class="name">boolean</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">value</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">param</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>And Here is the <strong>Solution</strong>. Found in a Japanese blog :). <a target="_blank" rel="noopener" href="http://blog.somof.net/?p=1310">http://blog.somof.net/?p=1310</a></p>
+<p>测试是否能上传到 blog :)</p>
+<p>I put some Chinese right here. Well, if you see the line above, that means it succeeds.</p>
+<p>Add the following codes to your emacs configuration and you are good to go.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(advice-add &#x27;url-http-create-request :override</span><br><span class="line">            &#x27;url-http-create-request-debug)</span><br><span class="line">(defun url-http-create-request-debug (&amp;optional ref-url)</span><br><span class="line">  &quot;Create an HTTP request for &lt;code&gt;url-http-target-url&#x27;, referred to by REF-URL.&quot;</span><br><span class="line">  (let* ((extra-headers)</span><br><span class="line">         (request nil)</span><br><span class="line">         (no-cache (cdr-safe (assoc &quot;Pragma&quot; url-http-extra-headers)))</span><br><span class="line">         (using-proxy url-http-proxy)</span><br><span class="line">         (proxy-auth (if (or (cdr-safe (assoc &quot;Proxy-Authorization&quot;</span><br><span class="line">                                              url-http-extra-headers))</span><br><span class="line">                             (not using-proxy))</span><br><span class="line">                         nil</span><br><span class="line">                       (let ((url-basic-auth-storage</span><br><span class="line">                              &#x27;url-http-proxy-basic-auth-storage))</span><br><span class="line">                         (url-get-authentication url-http-proxy nil &#x27;any nil))))</span><br><span class="line">         (real-fname (url-filename url-http-target-url))</span><br><span class="line">         (host (url-http--encode-string (url-host url-http-target-url)))</span><br><span class="line">         (auth (if (cdr-safe (assoc &quot;Authorization&quot; url-http-extra-headers))</span><br><span class="line">                   nil</span><br><span class="line">                 (url-get-authentication (or</span><br><span class="line">                                          (and (boundp &#x27;proxy-info)</span><br><span class="line">                                               proxy-info)</span><br><span class="line">                                          url-http-target-url) nil &#x27;any nil))))</span><br><span class="line">    (if (equal &quot;&quot; real-fname)</span><br><span class="line">        (setq real-fname &quot;/&quot;))</span><br><span class="line">    (setq no-cache (and no-cache (string-match &quot;no-cache&quot; no-cache)))</span><br><span class="line">    (if auth</span><br><span class="line">        (setq auth (concat &quot;Authorization: &quot; auth &quot;\r\n&quot;)))</span><br><span class="line">    (if proxy-auth</span><br><span class="line">        (setq proxy-auth (concat &quot;Proxy-Authorization: &quot; proxy-auth &quot;\r\n&quot;)))</span><br><span class="line"></span><br><span class="line">    ;; Protection against stupid values in the referrer</span><br><span class="line">    (if (and ref-url (stringp ref-url) (or (string= ref-url &quot;file:nil&quot;)</span><br><span class="line">                                           (string= ref-url &quot;&quot;)))</span><br><span class="line">        (setq ref-url nil))</span><br><span class="line"></span><br><span class="line">    ;; We do not want to expose the referrer if the user is paranoid.</span><br><span class="line">    (if (or (memq url-privacy-level &#x27;(low high paranoid))</span><br><span class="line">            (and (listp url-privacy-level)</span><br><span class="line">                 (memq &#x27;lastloc url-privacy-level)))</span><br><span class="line">        (setq ref-url nil))</span><br><span class="line"></span><br><span class="line">    ;; url-http-extra-headers contains an assoc-list of</span><br><span class="line">    ;; header/value pairs that we need to put into the request.</span><br><span class="line">    (setq extra-headers (mapconcat</span><br><span class="line">                         (lambda (x)</span><br><span class="line">                           (concat (car x) &quot;: &quot; (cdr x)))</span><br><span class="line">                         url-http-extra-headers &quot;\r\n&quot;))</span><br><span class="line">    (if (not (equal extra-headers &quot;&quot;))</span><br><span class="line">        (setq extra-headers (concat extra-headers &quot;\r\n&quot;)))</span><br><span class="line"></span><br><span class="line">    ;; This was done with a call to &lt;/code&gt;format&#x27;.  Concatenating parts has</span><br><span class="line">    ;; the advantage of keeping the parts of each header together and</span><br><span class="line">    ;; allows us to elide null lines directly, at the cost of making</span><br><span class="line">    ;; the layout less clear.</span><br><span class="line">    (setq request</span><br><span class="line">          (concat</span><br><span class="line">             ;; The request</span><br><span class="line">             (or url-http-method &quot;GET&quot;) &quot; &quot;</span><br><span class="line">             (url-http--encode-string</span><br><span class="line">              (if using-proxy (url-recreate-url url-http-target-url) real-fname))</span><br><span class="line">             &quot; HTTP/&quot; url-http-version &quot;\r\n&quot;</span><br><span class="line">             ;; Version of MIME we speak</span><br><span class="line">             &quot;MIME-Version: 1.0\r\n&quot;</span><br><span class="line">             ;; (maybe) Try to keep the connection open</span><br><span class="line">             &quot;Connection: &quot; (if (or using-proxy</span><br><span class="line">                                    (not url-http-attempt-keepalives))</span><br><span class="line">                                &quot;close&quot; &quot;keep-alive&quot;) &quot;\r\n&quot;</span><br><span class="line">                                ;; HTTP extensions we support</span><br><span class="line">             (if url-extensions-header</span><br><span class="line">                 (format</span><br><span class="line">                  &quot;Extension: %s\r\n&quot; url-extensions-header))</span><br><span class="line">             ;; Who we want to talk to</span><br><span class="line">             (if (/= (url-port url-http-target-url)</span><br><span class="line">                     (url-scheme-get-property</span><br><span class="line">                      (url-type url-http-target-url) &#x27;default-port))</span><br><span class="line">                 (format</span><br><span class="line">                  &quot;Host: %s:%d\r\n&quot; host (url-port url-http-target-url))</span><br><span class="line">               (format &quot;Host: %s\r\n&quot; host))</span><br><span class="line">             ;; Who its from</span><br><span class="line">             (if url-personal-mail-address</span><br><span class="line">                 (concat</span><br><span class="line">                  &quot;From: &quot; url-personal-mail-address &quot;\r\n&quot;))</span><br><span class="line">             ;; Encodings we understand</span><br><span class="line">             (if (or url-mime-encoding-string</span><br><span class="line">                     ;; MS-Windows loads zlib dynamically, so recheck</span><br><span class="line">                     ;; in case they made it available since</span><br><span class="line">                     ;; initialization in url-vars.el.</span><br><span class="line">                     (and (eq &#x27;system-type &#x27;windows-nt)</span><br><span class="line">                          (fboundp &#x27;zlib-available-p)</span><br><span class="line">                          (zlib-available-p)</span><br><span class="line">                          (setq url-mime-encoding-string &quot;gzip&quot;)))</span><br><span class="line">                 (concat</span><br><span class="line">                  &quot;Accept-encoding: &quot; url-mime-encoding-string &quot;\r\n&quot;))</span><br><span class="line">             (if url-mime-charset-string</span><br><span class="line">                 (concat</span><br><span class="line">                  &quot;Accept-charset: &quot;</span><br><span class="line">                  (url-http--encode-string url-mime-charset-string)</span><br><span class="line">                  &quot;\r\n&quot;))</span><br><span class="line">             ;; Languages we understand</span><br><span class="line">             (if url-mime-language-string</span><br><span class="line">                 (concat</span><br><span class="line">                  &quot;Accept-language: &quot; url-mime-language-string &quot;\r\n&quot;))</span><br><span class="line">             ;; Types we understand</span><br><span class="line">             &quot;Accept: &quot; (or url-mime-accept-string &quot;*/*&quot;) &quot;\r\n&quot;</span><br><span class="line">             ;; User agent</span><br><span class="line">             (url-http-user-agent-string)</span><br><span class="line">             ;; Proxy Authorization</span><br><span class="line">             proxy-auth</span><br><span class="line">             ;; Authorization</span><br><span class="line">             auth</span><br><span class="line">             ;; Cookies</span><br><span class="line">             (when (url-use-cookies url-http-target-url)</span><br><span class="line">               (url-http--encode-string</span><br><span class="line">                (url-cookie-generate-header-lines</span><br><span class="line">                 host real-fname</span><br><span class="line">                 (equal &quot;https&quot; (url-type url-http-target-url)))))</span><br><span class="line">             ;; If-modified-since</span><br><span class="line">             (if (and (not no-cache)</span><br><span class="line">                      (member url-http-method &#x27;(&quot;GET&quot; nil)))</span><br><span class="line">                 (let ((tm (url-is-cached url-http-target-url)))</span><br><span class="line">                   (if tm</span><br><span class="line">                       (concat &quot;If-modified-since: &quot;</span><br><span class="line">                               (url-get-normalized-date tm) &quot;\r\n&quot;))))</span><br><span class="line">             ;; Whence we came</span><br><span class="line">             (if ref-url (concat</span><br><span class="line">                          &quot;Referer: &quot; ref-url &quot;\r\n&quot;))</span><br><span class="line">             extra-headers</span><br><span class="line">             ;; Length of data</span><br><span class="line">             (if url-http-data</span><br><span class="line">                 (concat</span><br><span class="line">                  &quot;Content-length: &quot; (number-to-string</span><br><span class="line">                                      (length url-http-data))</span><br><span class="line">                  &quot;\r\n&quot;))</span><br><span class="line">             ;; End request</span><br><span class="line">             &quot;\r\n&quot;</span><br><span class="line">             ;; Any data</span><br><span class="line">             url-http-data))</span><br><span class="line">    ;; Bug#23750</span><br><span class="line">    ;;(unless (= (string-bytes request)</span><br><span class="line">    ;;           (length request))</span><br><span class="line">    ;;  (message &quot;   text byte %d vs %d length&quot; (string-bytes request) (length request)))</span><br><span class="line">      ;;(message &quot;===============================&quot;)</span><br><span class="line">      ;;(error &quot;Multibyte text in HTTP request: %s&quot; request))</span><br><span class="line">    (url-http-debug &quot;Request is: \n%s&quot; request)</span><br><span class="line">    request))</span><br></pre></td></tr></table></figure>
+<p>BTW, you can add the function <em>occur-non-ascii</em> to your emacs configuration. It will pop lines with non-ascii characters
+in a buffer. Press <strong>e</strong> to edit.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;; occur non ascii, used to check non-ascii in Wordpress</span><br><span class="line">(defun occur-non-ascii ()</span><br><span class="line">  &quot;Find any non-ascii characters in the current buffer.&quot;</span><br><span class="line">  (interactive)</span><br><span class="line">  (push (if (region-active-p)</span><br><span class="line">            (buffer-substring-no-properties</span><br><span class="line">             (region-beginning)</span><br><span class="line">             (region-end))</span><br><span class="line">          (let ((sym (thing-at-point &#x27;symbol)))</span><br><span class="line">            (when (stringp sym)</span><br><span class="line">              (regexp-quote sym))))</span><br><span class="line">        regexp-history)</span><br><span class="line">  (deactivate-mark)</span><br><span class="line">  (occur &quot;[^[:ascii:]]&quot;))</span><br></pre></td></tr></table></figure>
+<p>If the highlight for the matches does not look so clear. Put the following line in your emacs custom setting for faces.
+Change the background and foreground color to whatever you want.</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(custom-set-faces</span><br><span class="line"> &#x27;(match ((t (:background &quot;DeepSkyBlue1&quot; :foreground &quot;gray90&quot; :weight bold))))</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+
+
+
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 col-md-10 col-md-offset-1">
+                <div id="disqus_thread"></div>
+                <p class="copyright text-muted">
+                    &copy; 2017-2019 Ting Zhou
+                </p>
+                <p class="copyright text-muted">
+                    Powered By <a target="_blank" href="https://hexo.io/">Hexo.</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        var disqus_shortname = 'ztlevi';
+        var if_show = true;
+        
+        var disqus_url = 'https://ztlevi.github.io/posts/Org2Blog_Tutorial/';
+        var regex = /ztlevi\.github\.io\/about/
+        if_show = !regex.test(disqus_url);
+        
+        // about me page not showing disqus
+        if (if_show) {
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document,
+                    s = d.createElement('script');
+                s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        }
+    </script>
+    
+
+
+    
+
+
+    <!-- After Footer Scripts -->
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+
+
+<script src="/js/highlight.pack.js"></script>
+
+
+<script src="/js/search.js"></script>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var codeBlocks = Array.prototype.slice.call(document.getElementsByTagName('pre'))
+    codeBlocks.forEach(function(block, index) {
+      hljs.highlightBlock(block);
+    });
+  });
+</script>
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+  </body>
+</html>
+
