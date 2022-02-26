@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2018-07-01</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -150,12 +150,12 @@
 <a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.common-lisp.net/project/flexichain/download/StrandhVilleneuveMoore.pdf">gap buffer</a>
 for large file editing. It’s due to the mode you apply to the file. These modes might freeze your Emacs when editing
 large file or minified files.</p>
-<h2 id="check-minified-files"><a class="header-anchor" href="#check-minified-files"> &gt; </a>Check Minified files</h2>
+<h2 id="Check-Minified-files"><a class="header-anchor" href="#Check-Minified-files"> &gt; </a>Check Minified files</h2>
 <p>So here is a simple trick, I just check the first 30 line of the opened file. If first line is over 1000 in width, then
 it just enable <code>fundamental-mode</code> which works perfectly for these files.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;; if the first line is too long, enable fundamental by default</span><br><span class="line">(defun get-nth-line-length (n)</span><br><span class="line">  &quot;Length of the Nth line.&quot;</span><br><span class="line">  (save-excursion</span><br><span class="line">    (goto-char (point-min))</span><br><span class="line">    (if (zerop (forward-line (1- n)))</span><br><span class="line">        (- (line-end-position)</span><br><span class="line">           (line-beginning-position)))))</span><br><span class="line"></span><br><span class="line">(defun +my/check-minified-file ()</span><br><span class="line">  (and</span><br><span class="line">   (not (member (file-name-extension (buffer-file-name))</span><br><span class="line">                &#x27;(&quot;org&quot; &quot;md&quot; &quot;markdown&quot; &quot;txt&quot; &quot;rtf&quot;)))</span><br><span class="line">   (cl-loop for i from 1 to (min 30 (count-lines (point-min) (point-max)))</span><br><span class="line">            if (&gt; (get-nth-line-length i) 1000)</span><br><span class="line">            return t</span><br><span class="line">            finally return nil)))</span><br><span class="line"></span><br><span class="line">(add-to-list &#x27;magic-mode-alist (cons #&#x27;+my/check-minified-file &#x27;fundamental-mode))</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-<h2 id="check-large-file"><a class="header-anchor" href="#check-large-file"> &gt; </a>Check Large File</h2>
+<h2 id="Check-Large-File"><a class="header-anchor" href="#Check-Large-File"> &gt; </a>Check Large File</h2>
 <p>This piece of code is from spacemacs, we have to set a couple variables. But you could have your own version.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">(setq spacemacs-large-file-modes-list &#x27;(archive-mode tar-mode jka-compr git-commit-mode image-mode</span><br><span class="line">                 doc-view-mode doc-view-mode-maybe ebrowse-tree-mode</span><br><span class="line">                 pdf-view-mode))</span><br><span class="line"></span><br><span class="line">(setq dotspacemacs-large-file-size 1)</span><br><span class="line"></span><br><span class="line">;; check when opening large files - literal file open</span><br><span class="line">(defun spacemacs/check-large-file ()</span><br><span class="line">  (let* ((filename (buffer-file-name))</span><br><span class="line">         (size (nth 7 (file-attributes filename))))</span><br><span class="line">    (when (and</span><br><span class="line">           (not (memq major-mode spacemacs-large-file-modes-list))</span><br><span class="line">           size (&gt; size (* 1024 1024 dotspacemacs-large-file-size))</span><br><span class="line">           (y-or-n-p (format (concat &quot;%s is a large file, open literally to &quot;</span><br><span class="line">                                     &quot;avoid performance issues?&quot;)</span><br><span class="line">                             filename)))</span><br><span class="line">      (setq buffer-read-only t)</span><br><span class="line">      (buffer-disable-undo)</span><br><span class="line">      (fundamental-mode))))</span><br><span class="line"></span><br><span class="line">;; Prompt to open file literally if large file.</span><br><span class="line">(add-hook &#x27;find-file-hook &#x27;spacemacs/check-large-file)</span><br></pre></td></tr></table></figure>
 

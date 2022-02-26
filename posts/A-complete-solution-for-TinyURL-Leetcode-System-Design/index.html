@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-07-13</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -148,12 +148,12 @@
         <div class="post-content">
           <p>Note: The solution is translated from the Segmentfault post over
 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000006140476">here</a>. Thanks for liuqi627.</p>
-<h1 id="question-description"><a class="header-anchor" href="#question-description"> &gt; </a>Question Description</h1>
+<h1 id="Question-Description"><a class="header-anchor" href="#Question-Description"> &gt; </a>Question Description</h1>
 <p>Over <a target="_blank" rel="noopener" href="https://leetcode.com/problems/design-tinyurl/#/description">here</a></p>
-<h1 id="s-scenario"><a class="header-anchor" href="#s-scenario"> &gt; </a>S: Scenario</h1>
+<h1 id="S-Scenario"><a class="header-anchor" href="#S-Scenario"> &gt; </a>S: Scenario</h1>
 <p>Long URL to short URL and reversed.</p>
-<h1 id="n-need-assume-the-system-is-not-massive-if-you-are-not-sure"><a class="header-anchor" href="#n-need-assume-the-system-is-not-massive-if-you-are-not-sure"> &gt; </a>N: Need (Assume the system is not massive if you are not sure)</h1>
-<h2 id="qps-queries-per-second"><a class="header-anchor" href="#qps-queries-per-second"> &gt; </a>QPS (queries per second)</h2>
+<h1 id="N-Need-Assume-the-system-is-not-massive-if-you-are-not-sure"><a class="header-anchor" href="#N-Need-Assume-the-system-is-not-massive-if-you-are-not-sure"> &gt; </a>N: Need (Assume the system is not massive if you are not sure)</h1>
+<h2 id="QPS-queries-per-second"><a class="header-anchor" href="#QPS-queries-per-second"> &gt; </a>QPS (queries per second)</h2>
 <ul>
 <li>Daily User: 100M</li>
 <li>Daily usage per person: (Write) long2short 0.1, (Read) short2long 1</li>
@@ -166,7 +166,7 @@
 <li>Peak QPS: Write 200, Read 2K</li>
 </ul>
 <p>(Thousand level can be handled by a single SSD MySQL Machine)</p>
-<h2 id="storage"><a class="header-anchor" href="#storage"> &gt; </a>Storage</h2>
+<h2 id="Storage"><a class="header-anchor" href="#Storage"> &gt; </a>Storage</h2>
 <ul>
 <li>10M new mappings (long URL to short URL) per day</li>
 <li>assume each mapping takes 100B in average</li>
@@ -175,7 +175,7 @@
 <p>Storage is not the problem for this kind of system. Service like Netflix may have storage issues.</p>
 <p>Through SN analysis, we could have a big picture of the system. In general, this system is not hard
 and could be handled by a single SSD Machine.</p>
-<h1 id="a-api"><a class="header-anchor" href="#a-api"> &gt; </a>A: API</h1>
+<h1 id="A-API"><a class="header-anchor" href="#A-API"> &gt; </a>A: API</h1>
 <p>Only one service: URLService</p>
 <ul>
 <li>Core (Business Logic) Layer:</li>
@@ -191,9 +191,9 @@ and could be handled by a single SSD Machine.</p>
 </ul>
 <p>Request Body: {url=longUrl} e.g. {“longUrl”: “<a target="_blank" rel="noopener" href="http://www.google.com/">http://www.google.com/</a>”} Return OK(200), short_url is
 included in the data</p>
-<h1 id="k-data-access"><a class="header-anchor" href="#k-data-access"> &gt; </a>K: Data Access</h1>
-<h2 id="step-1-pick-a-storage-structure"><a class="header-anchor" href="#step-1-pick-a-storage-structure"> &gt; </a>Step 1: Pick a storage structure</h2>
-<h3 id="sql-vs-nosql"><a class="header-anchor" href="#sql-vs-nosql"> &gt; </a>SQL vs NoSQL?</h3>
+<h1 id="K-Data-Access"><a class="header-anchor" href="#K-Data-Access"> &gt; </a>K: Data Access</h1>
+<h2 id="Step-1-Pick-a-storage-structure"><a class="header-anchor" href="#Step-1-Pick-a-storage-structure"> &gt; </a>Step 1: Pick a storage structure</h2>
+<h3 id="SQL-vs-NoSQL"><a class="header-anchor" href="#SQL-vs-NoSQL"> &gt; </a>SQL vs NoSQL?</h3>
 <ol>
 <li>Does it need to support transactions? NoSQL does not support transaction.</li>
 <li>Do we need rich SQL query? NoSQL does not support as many queries as SQL.</li>
@@ -206,7 +206,7 @@ Memcached’s QPS could reach million level, MondoDB does 10K level, MySQL only 
 <li>How high is the system’s scalability? SQL requires developers write their codes to scale, while
 NoSQL comes with them (sharding, replica).</li>
 </ol>
-<h3 id="answer"><a class="header-anchor" href="#answer"> &gt; </a>Answer:</h3>
+<h3 id="Answer"><a class="header-anchor" href="#Answer"> &gt; </a>Answer:</h3>
 <ol>
 <li>No -&gt; NoSQL</li>
 <li>No -&gt; NoSQL</li>
@@ -215,7 +215,7 @@ NoSQL comes with them (sharding, replica).</li>
 <li>Write 200, Read 2K. Not high. -&gt; SQL</li>
 <li>Not high. -&gt; SQL</li>
 </ol>
-<h3 id="system-algorithm"><a class="header-anchor" href="#system-algorithm"> &gt; </a>System Algorithm</h3>
+<h3 id="System-Algorithm"><a class="header-anchor" href="#System-Algorithm"> &gt; </a>System Algorithm</h3>
 <p>OK, let’s talk about the system algorithm. There are following solutions:</p>
 <ol>
 <li>
@@ -249,27 +249,27 @@ be very low.</p>
 <li>base62 Take short_url as a 62 base notation. 6 bits could represent 62^6=57 billion.</li>
 </ol>
 <p>Each short_url represent a decimal digit. It could be the auto_increment_id in SQL database.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">URLService</span> </span>&#123;</span><br><span class="line">    HashMap&lt;String, Integer&gt; ltos;</span><br><span class="line">    HashMap&lt;Integer, String&gt; stol;</span><br><span class="line">    <span class="keyword">static</span> <span class="keyword">int</span> COUNTER;</span><br><span class="line">    String elements;</span><br><span class="line">    URLService() &#123;</span><br><span class="line">        ltos = <span class="keyword">new</span> HashMap&lt;String, Integer&gt;();</span><br><span class="line">        stol = <span class="keyword">new</span> HashMap&lt;Integer, String&gt;();</span><br><span class="line">        COUNTER = <span class="number">1</span>;</span><br><span class="line">        elements = <span class="string">&quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longToShort</span><span class="params">(String url)</span> </span>&#123;</span><br><span class="line">        String shorturl = base10ToBase62(COUNTER);</span><br><span class="line">        ltos.put(url, COUNTER);</span><br><span class="line">        stol.put(COUNTER, url);</span><br><span class="line">        COUNTER++;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;http://tiny.url/&quot;</span> + shorturl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">shortToLong</span><span class="params">(String url)</span> </span>&#123;</span><br><span class="line">        url = url.substring(<span class="string">&quot;http://tiny.url/&quot;</span>.length());</span><br><span class="line">        <span class="keyword">int</span> n = base62ToBase10(url);</span><br><span class="line">        <span class="keyword">return</span> stol.get(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">base62ToBase10</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> n = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            n = n * <span class="number">62</span> + convert(s.charAt(i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">convert</span><span class="params">(<span class="keyword">char</span> c)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> c - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> c - <span class="string">&#x27;a&#x27;</span> + <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> c - <span class="string">&#x27;A&#x27;</span> + <span class="number">36</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">base10ToBase62</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        StringBuilder sb = <span class="keyword">new</span> StringBuilder();</span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">            sb.insert(<span class="number">0</span>, elements.charAt(n % <span class="number">62</span>));</span><br><span class="line">            n /= <span class="number">62</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (sb.length() != <span class="number">6</span>) &#123;</span><br><span class="line">            sb.insert(<span class="number">0</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h2 id="step-2-database-schema"><a class="header-anchor" href="#step-2-database-schema"> &gt; </a>Step 2: Database Schema</h2>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">URLService</span> &#123;</span><br><span class="line">    HashMap&lt;String, Integer&gt; ltos;</span><br><span class="line">    HashMap&lt;Integer, String&gt; stol;</span><br><span class="line">    <span class="keyword">static</span> <span class="type">int</span> COUNTER;</span><br><span class="line">    String elements;</span><br><span class="line">    URLService() &#123;</span><br><span class="line">        ltos = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;String, Integer&gt;();</span><br><span class="line">        stol = <span class="keyword">new</span> <span class="title class_">HashMap</span>&lt;Integer, String&gt;();</span><br><span class="line">        COUNTER = <span class="number">1</span>;</span><br><span class="line">        elements = <span class="string">&quot;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">longToShort</span><span class="params">(String url)</span> &#123;</span><br><span class="line">        <span class="type">String</span> <span class="variable">shorturl</span> <span class="operator">=</span> base10ToBase62(COUNTER);</span><br><span class="line">        ltos.put(url, COUNTER);</span><br><span class="line">        stol.put(COUNTER, url);</span><br><span class="line">        COUNTER++;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;http://tiny.url/&quot;</span> + shorturl;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">shortToLong</span><span class="params">(String url)</span> &#123;</span><br><span class="line">        url = url.substring(<span class="string">&quot;http://tiny.url/&quot;</span>.length());</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> base62ToBase10(url);</span><br><span class="line">        <span class="keyword">return</span> stol.get(n);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">base62ToBase10</span><span class="params">(String s)</span> &#123;</span><br><span class="line">        <span class="type">int</span> <span class="variable">n</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="type">int</span> <span class="variable">i</span> <span class="operator">=</span> <span class="number">0</span>; i &lt; s.length(); i++) &#123;</span><br><span class="line">            n = n * <span class="number">62</span> + convert(s.charAt(i));</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> n;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">int</span> <span class="title function_">convert</span><span class="params">(<span class="type">char</span> c)</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;0&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;9&#x27;</span>)</span><br><span class="line">            <span class="keyword">return</span> c - <span class="string">&#x27;0&#x27;</span>;</span><br><span class="line">        <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;a&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;z&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> c - <span class="string">&#x27;a&#x27;</span> + <span class="number">10</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span> (c &gt;= <span class="string">&#x27;A&#x27;</span> &amp;&amp; c &lt;= <span class="string">&#x27;Z&#x27;</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> c - <span class="string">&#x27;A&#x27;</span> + <span class="number">36</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> -<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">public</span> String <span class="title function_">base10ToBase62</span><span class="params">(<span class="type">int</span> n)</span> &#123;</span><br><span class="line">        <span class="type">StringBuilder</span> <span class="variable">sb</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">StringBuilder</span>();</span><br><span class="line">        <span class="keyword">while</span> (n != <span class="number">0</span>) &#123;</span><br><span class="line">            sb.insert(<span class="number">0</span>, elements.charAt(n % <span class="number">62</span>));</span><br><span class="line">            n /= <span class="number">62</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">while</span> (sb.length() != <span class="number">6</span>) &#123;</span><br><span class="line">            sb.insert(<span class="number">0</span>, <span class="string">&#x27;0&#x27;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> sb.toString();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Step-2-Database-Schema"><a class="header-anchor" href="#Step-2-Database-Schema"> &gt; </a>Step 2: Database Schema</h2>
 <p>One table (id, long_url). id is the primary key, ordered by long_url</p>
 <p>The basic system architecture:</p>
 <p>Browser &lt;-&gt; Web &lt;-&gt; Core &lt;-&gt; DB</p>
-<h1 id="o-optimize"><a class="header-anchor" href="#o-optimize"> &gt; </a>O: optimize</h1>
-<h2 id="how-to-improve-the-response-speed"><a class="header-anchor" href="#how-to-improve-the-response-speed"> &gt; </a>How to improve the response speed?</h2>
-<h3 id="improve-the-response-speed-between-web-server-and-database"><a class="header-anchor" href="#improve-the-response-speed-between-web-server-and-database"> &gt; </a>Improve the response speed between web server and database</h3>
+<h1 id="O-optimize"><a class="header-anchor" href="#O-optimize"> &gt; </a>O: optimize</h1>
+<h2 id="How-to-improve-the-response-speed"><a class="header-anchor" href="#How-to-improve-the-response-speed"> &gt; </a>How to improve the response speed?</h2>
+<h3 id="Improve-the-response-speed-between-web-server-and-database"><a class="header-anchor" href="#Improve-the-response-speed-between-web-server-and-database"> &gt; </a>Improve the response speed between web server and database</h3>
 <p>Use Memcached to improve response speed. When getting long_url, search in the cache first, then
 database. We could put 90% read request on the cache.</p>
-<h3 id="improve-the-response-speed-between-web-server-and-user-s-browser"><a class="header-anchor" href="#improve-the-response-speed-between-web-server-and-user-s-browser"> &gt; </a>Improve the response speed between web server and user’s browser</h3>
+<h3 id="Improve-the-response-speed-between-web-server-and-user’s-browser"><a class="header-anchor" href="#Improve-the-response-speed-between-web-server-and-user’s-browser"> &gt; </a>Improve the response speed between web server and user’s browser</h3>
 <p>Different locations use different web server and cache server. All the areas share a DB used to
 match the users to the closest web server (through DNS) when they have a miss on the cache.</p>
-<h2 id="what-if-we-need-one-more-mysql-machine"><a class="header-anchor" href="#what-if-we-need-one-more-mysql-machine"> &gt; </a>What if we need one more MySQL machine?</h2>
-<h3 id="issues"><a class="header-anchor" href="#issues"> &gt; </a>Issues:</h3>
+<h2 id="What-if-we-need-one-more-MySQL-machine"><a class="header-anchor" href="#What-if-we-need-one-more-MySQL-machine"> &gt; </a>What if we need one more MySQL machine?</h2>
+<h3 id="Issues"><a class="header-anchor" href="#Issues"> &gt; </a>Issues:</h3>
 <ul>
 <li>running out of cache</li>
 <li>More and more write requests</li>
 <li>More and more cache misses</li>
 </ul>
-<h3 id="solutions"><a class="header-anchor" href="#solutions"> &gt; </a>Solutions:</h3>
+<h3 id="Solutions"><a class="header-anchor" href="#Solutions"> &gt; </a>Solutions:</h3>
 <p><strong>Database Partitioning</strong></p>
 <ol>
 <li>Vertical sharding 2. Horizontal sharding</li>
@@ -289,7 +289,7 @@ machine is responsible for the service in the part of the cycle.</p>
 <p>short_url request -&gt; get the sharding key (first byte of the short_url) -&gt; search in the
 corresponding machine based on sharding key -&gt; return long_url</p>
 <p>Each time we add a new machine, put half of the range of the most used machine to the new machine.</p>
-<h1 id="more-optimization"><a class="header-anchor" href="#more-optimization"> &gt; </a>More Optimization</h1>
+<h1 id="More-Optimization"><a class="header-anchor" href="#More-Optimization"> &gt; </a>More Optimization</h1>
 <p>Put Chinese DB in China, American DB in the United States. Use geographical information as the
 sharding key, e.g. 0 for Chinese websites, 1 for American websites.</p>
 

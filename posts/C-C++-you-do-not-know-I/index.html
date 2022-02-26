@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-05-29</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -149,7 +149,7 @@
           <p>Some basic knowledge of C and C++ in the book<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>. Well, I pick the title “you don’t know”.
 Precisely, it’s something I don’t know while you may already knew years ago. But it just sounds so
 stupid to named after “Java: I don’t know”…</p>
-<h1 id="pointers-an-references"><a class="header-anchor" href="#pointers-an-references"> &gt; </a>Pointers an References</h1>
+<h1 id="Pointers-an-References"><a class="header-anchor" href="#Pointers-an-References"> &gt; </a>Pointers an References</h1>
 <ol>
 <li>A pointer holds the address of a variable and can be used to perform any operation that could be
 directly done on the variable, such as accessing and modifying it.</li>
@@ -160,7 +160,7 @@ its own. Unlike pointers, references cannot be null and cannot be reassigned to 
 memory.</li>
 </ol>
 <span id="more"></span>
-<h1 id="hash-table-vs-stl-map-p423"><a class="header-anchor" href="#hash-table-vs-stl-map-p423"> &gt; </a>Hash Table vs STL Map <p423></h1>
+<h1 id="Hash-Table-vs-STL-Map-p423"><a class="header-anchor" href="#Hash-Table-vs-STL-Map-p423"> &gt; </a>Hash Table vs STL Map <p423></h1>
 <ol>
 <li>Since hash tables use the key to find the index that will store the value, an insert or loopup
 can be done in amortized O(1)</li>
@@ -177,7 +177,7 @@ Because this is an expensive operation, we want to be careful to not do it too o
 </ul>
 </li>
 </ol>
-<h2 id="q-how-is-a-hash-table-implemented"><a class="header-anchor" href="#q-how-is-a-hash-table-implemented"> &gt; </a>Q: How is a hash table implemented?</h2>
+<h2 id="Q-How-is-a-hash-table-implemented"><a class="header-anchor" href="#Q-How-is-a-hash-table-implemented"> &gt; </a>Q: How is a hash table implemented?</h2>
 <p>A: A hash table is traditionally implemented with an array of linked lists, where each node in the
 linked list holds two pieces of data: the value and the original key. When we want to insert a key
 value pair, we map the key to index in the array using a hash function. The value is then inserted
@@ -206,7 +206,7 @@ creating a new hash table and transferring the entries from the old table to the
 Because this is an expensive operation, we want to be careful to not do it too often.</p>
 </li>
 </ol>
-<h1 id="virtual-functions-p424"><a class="header-anchor" href="#virtual-functions-p424"> &gt; </a>Virtual Functions <p424></h1>
+<h1 id="Virtual-Functions-p424"><a class="header-anchor" href="#Virtual-Functions-p424"> &gt; </a>Virtual Functions <p424></h1>
 <ol>
 <li>A virtual function depends on a “vtable” or “Virtual Table”. A vtable is constructed which
 stores addresses of the virtual functions of this class. The compiler also adds a hidden vptr
@@ -215,7 +215,7 @@ variable in all such classes which points to the vtable of that class.</li>
 class stores the address of the function in its parent class.</li>
 <li>The vtable is used to resolved the address of the function when the virtual functions is called.</li>
 </ol>
-<h1 id="shallow-vs-deep-copy-p425"><a class="header-anchor" href="#shallow-vs-deep-copy-p425"> &gt; </a>Shallow vs Deep Copy <p425></h1>
+<h1 id="Shallow-vs-Deep-Copy-p425"><a class="header-anchor" href="#Shallow-vs-Deep-Copy-p425"> &gt; </a>Shallow vs Deep Copy <p425></h1>
 <ol>
 <li>A shallow copy copies all the member values from one object to another. A deep copy does all
 this and also deep copies any pointer objects.</li>
@@ -223,7 +223,7 @@ this and also deep copies any pointer objects.</li>
 <li>In real life, shallow copy is rarely used. Deep copy should be used in most cases, especially
 when the size of the copied structure is small.</li>
 </ol>
-<h1 id="volatile-p426"><a class="header-anchor" href="#volatile-p426"> &gt; </a>Volatile <p426></h1>
+<h1 id="Volatile-p426"><a class="header-anchor" href="#Volatile-p426"> &gt; </a>Volatile <p426></h1>
 <ol>
 <li>
 <p>The key word volatile informs the compiler that the value of variable it it applied to can
@@ -236,7 +236,7 @@ volatile int x
 </code></pre>
 </li>
 </ol>
-<h1 id="virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"><a class="header-anchor" href="#virtual-base-class-why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"> &gt; </a>Virtual Base Class: Why does a destructor in base class need to be declared virtual? <p427></h1>
+<h1 id="Virtual-Base-Class-Why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"><a class="header-anchor" href="#Virtual-Base-Class-Why-does-a-destructor-in-base-class-need-to-be-declared-virtual-p427"> &gt; </a>Virtual Base Class: Why does a destructor in base class need to be declared virtual? <p427></h1>
 <ol>
 <li>
 <p>If destructor were not virtual, then Foo’s destructor would be called, even when p is really of
@@ -250,7 +250,7 @@ Foo * p = new Bar()
 <hr class="footnotes-sep">
 <section class="footnotes">
 <ol class="footnotes-list">
-<li id="fn1"  class="footnote-item"><p>Cracking the Coding Interview, 6th Edition. <a href="#fnref1" class="footnote-backref">↩</a></p>
+<li id="fn1" class="footnote-item"><p>Cracking the Coding Interview, 6th Edition. <a href="#fnref1" class="footnote-backref">↩︎</a></p>
 </li>
 </ol>
 </section>

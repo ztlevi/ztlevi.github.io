@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2020-04-03</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -146,7 +146,7 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="first-time-with-tiling-window-manager"><a class="header-anchor" href="#first-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
+          <h1 id="First-time-with-tiling-window-manager"><a class="header-anchor" href="#First-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
 <p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen
 without anything. While you could something there by forking something’s setup. But it might not
 working for you cuz it’s really easy to break some dependencies on your system.</p>
@@ -156,7 +156,7 @@ the keybinding system is clean.</p>
 <p>I forked <a target="_blank" rel="noopener" href="https://github.com/hlissner">Henrik Lissner</a>’s dotfiles setup last year. So thanks for the
 amazing scripts that manage all the binaries and dependencies across multiple OS.</p>
 <span id="more"></span>
-<h1 id="multi-monitor-support"><a class="header-anchor" href="#multi-monitor-support"> &gt; </a>Multi-monitor support</h1>
+<h1 id="Multi-monitor-support"><a class="header-anchor" href="#Multi-monitor-support"> &gt; </a>Multi-monitor support</h1>
 <p>There are scripts enabled multi-monitors support.</p>
 <ul>
 <li><a target="_blank" rel="noopener" href="https://github.com/ztlevi/Dotfiles/blob/master/desktop/bspwm/bin/bspc-focus">bspc-focus</a>: allow
@@ -166,18 +166,18 @@ you swap windows across monitors</li>
 </ul>
 <p>These scripts basically check if there is any window in the current monitor is on the direction of
 the current window. If not, then it will check the next monitor.</p>
-<h1 id="hdpi-support"><a class="header-anchor" href="#hdpi-support"> &gt; </a>HDPI support</h1>
+<h1 id="HDPI-support"><a class="header-anchor" href="#HDPI-support"> &gt; </a>HDPI support</h1>
 <p>There are many things needs customization to support 4K monitors.</p>
 <p>I’m putting a lot of effort to make HDPI support comes out of box. Basically, I’m using <code>xrandr</code> to
 figure out the connected monitor resolution. Then calculate a <code>SCALE</code> factor based on the
 resolution. Passing that across multiple applications to make HDPI like a built-in feature.</p>
 <p>In <code>.xprofile</code>.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">RESOLUTION=$(xrandr -q | grep primary | grep <span class="string">&#x27; connected&#x27;</span> | cut -d<span class="string">&#x27; &#x27;</span> -f4 | cut -d <span class="string">&#x27;x&#x27;</span> -f1)</span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$RESOLUTION</span> ]; <span class="keyword">then</span> RESOLUTION=1920; <span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">RESOLUTION=$(xrandr -q | grep primary | grep <span class="string">&#x27; connected&#x27;</span> | <span class="built_in">cut</span> -d<span class="string">&#x27; &#x27;</span> -f4 | <span class="built_in">cut</span> -d <span class="string">&#x27;x&#x27;</span> -f1)</span><br><span class="line"><span class="keyword">if</span> [ -z <span class="variable">$RESOLUTION</span> ]; <span class="keyword">then</span> RESOLUTION=1920; <span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>
 <p>Some apps can use system variables in their configuration. For example, <code>polybar</code>.</p>
 <p>In <code>run-polybar.sh</code>:</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MONITOR=$(xrandr -q | grep primary | grep <span class="string">&#x27; connected&#x27;</span> | cut -d<span class="string">&#x27; &#x27;</span> -f1)</span><br><span class="line">MONITORS=($(xrandr -q | grep <span class="string">&#x27; connected&#x27;</span> | cut -d<span class="string">&#x27; &#x27;</span> -f1))</span><br><span class="line">MONITOR=<span class="variable">$&#123;MONITOR:-<span class="variable">$&#123;MONITORS[0]&#125;</span>&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$GDK_SCALE</span>&quot;</span> -eq 2 ]; <span class="keyword">then</span></span><br><span class="line">dpi=160</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">dpi=92</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">killall -q polybar</span><br><span class="line"><span class="keyword">while</span> _is_running polybar; <span class="keyword">do</span> sleep 1; <span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> <span class="string">&quot;<span class="variable">$&#123;0:A:h&#125;</span>/../../bin/inject-xcolors&quot;</span></span><br><span class="line"><span class="built_in">pushd</span> ~ &gt;/dev/null</span><br><span class="line"></span><br><span class="line">env DPI=<span class="variable">$&#123;dpi&#125;</span> MONITOR=<span class="variable">$&#123;MONITOR&#125;</span> bash -c <span class="string">&quot;polybar main &gt;<span class="variable">$XDG_DATA_HOME</span>/polybar.log 2&gt;&amp;1 &amp;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> mon <span class="keyword">in</span> <span class="variable">$&#123;MONITORS[@]/<span class="variable">$&#123;MONITOR&#125;</span>/&#125;</span>; <span class="keyword">do</span></span><br><span class="line">env DPI=<span class="variable">$&#123;dpi&#125;</span> SIDE_MONITOR=<span class="variable">$&#123;mon&#125;</span> bash -c <span class="string">&quot;polybar side &gt;&gt;<span class="variable">$XDG_DATA_HOME</span>/polybar.log 2&gt;&amp;1 &amp;&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">popd</span> &gt;/dev/null</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">MONITOR=$(xrandr -q | grep primary | grep <span class="string">&#x27; connected&#x27;</span> | <span class="built_in">cut</span> -d<span class="string">&#x27; &#x27;</span> -f1)</span><br><span class="line">MONITORS=($(xrandr -q | grep <span class="string">&#x27; connected&#x27;</span> | <span class="built_in">cut</span> -d<span class="string">&#x27; &#x27;</span> -f1))</span><br><span class="line">MONITOR=<span class="variable">$&#123;MONITOR:-<span class="variable">$&#123;MONITORS[0]&#125;</span>&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$GDK_SCALE</span>&quot;</span> -eq 2 ]; <span class="keyword">then</span></span><br><span class="line">dpi=160</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">dpi=92</span><br><span class="line"><span class="keyword">fi</span></span><br><span class="line"></span><br><span class="line">killall -q polybar</span><br><span class="line"><span class="keyword">while</span> _is_running polybar; <span class="keyword">do</span> <span class="built_in">sleep</span> 1; <span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">source</span> <span class="string">&quot;<span class="variable">$&#123;0:A:h&#125;</span>/../../bin/inject-xcolors&quot;</span></span><br><span class="line"><span class="built_in">pushd</span> ~ &gt;/dev/null</span><br><span class="line"></span><br><span class="line"><span class="built_in">env</span> DPI=<span class="variable">$&#123;dpi&#125;</span> MONITOR=<span class="variable">$&#123;MONITOR&#125;</span> bash -c <span class="string">&quot;polybar main &gt;<span class="variable">$XDG_DATA_HOME</span>/polybar.log 2&gt;&amp;1 &amp;&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> mon <span class="keyword">in</span> <span class="variable">$&#123;MONITORS[@]/<span class="variable">$&#123;MONITOR&#125;</span>/&#125;</span>; <span class="keyword">do</span></span><br><span class="line"><span class="built_in">env</span> DPI=<span class="variable">$&#123;dpi&#125;</span> SIDE_MONITOR=<span class="variable">$&#123;mon&#125;</span> bash -c <span class="string">&quot;polybar side &gt;&gt;<span class="variable">$XDG_DATA_HOME</span>/polybar.log 2&gt;&amp;1 &amp;&quot;</span></span><br><span class="line"><span class="keyword">done</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">popd</span> &gt;/dev/null</span><br></pre></td></tr></table></figure>
 <p>In polybar config:</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">[bar/side]</span><br><span class="line">inherit = bar/master</span><br><span class="line">monitor = <span class="variable">$&#123;env:SIDE_MONITOR&#125;</span></span><br><span class="line"></span><br><span class="line">dpi = <span class="variable">$&#123;env:DPI&#125;</span></span><br></pre></td></tr></table></figure>
 </li>
@@ -186,18 +186,18 @@ resolution. Passing that across multiple applications to make HDPI like a built-
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> [ <span class="string">&quot;<span class="variable">$GDK_SCALE</span>&quot;</span> -eq 2 ]; <span class="keyword">then</span></span><br><span class="line">dunst -config <span class="variable">$DOTFILES</span>/desktop/bspwm/config/dunst/dunstrc_4K &amp;</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">dunst -config <span class="variable">$DOTFILES</span>/desktop/bspwm/config/dunst/dunstrc &amp;</span><br><span class="line"><span class="keyword">fi</span></span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h1 id="polybar"><a class="header-anchor" href="#polybar"> &gt; </a>Polybar</h1>
+<h1 id="Polybar"><a class="header-anchor" href="#Polybar"> &gt; </a>Polybar</h1>
 <p>This is a light weight and fully customizable status bar. You could put almost everything there.</p>
 <p>I have a clickable WIFI, sound, and icon workspaces module.</p>
 <p><img src="https://raw.githubusercontent.com/ztlevi/picee_images/master/common/image.soyiqyuc4wi.png" alt="polybar"></p>
 <p>While there are tons of themes on the web. Take a look at
 <a target="_blank" rel="noopener" href="https://github.com/polybar/polybar">here</a>.</p>
-<h1 id="gnome-apps"><a class="header-anchor" href="#gnome-apps"> &gt; </a>Gnome apps</h1>
+<h1 id="Gnome-apps"><a class="header-anchor" href="#Gnome-apps"> &gt; </a>Gnome apps</h1>
 <p>I don’t know what other people typically do to modify settings in tiling window mangers. Because
 they usually don’t ship with setting applications.</p>
 <p>So I would also install Gnome and it’s applications just so I can modify the settings like Bluetooth
 or WIFI.</p>
-<h1 id="summary"><a class="header-anchor" href="#summary"> &gt; </a>Summary</h1>
+<h1 id="Summary"><a class="header-anchor" href="#Summary"> &gt; </a>Summary</h1>
 <p>The reason most people choose tiling window manager is because it’s productive and cool. Talking
 about productivity, there won’t be a huge difference between tiling window manager and normal ones
 if you just use one or two monitors. It will be faster because you don’t need to move your hands to

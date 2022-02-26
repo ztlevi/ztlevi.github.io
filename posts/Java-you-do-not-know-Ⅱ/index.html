@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-06-05</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -146,7 +146,7 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="treemap-hashmap-linkedhashmap-p436"><a class="header-anchor" href="#treemap-hashmap-linkedhashmap-p436"> &gt; </a><em>Treemap</em>, <em>HashMap</em>, <em>LinkedHashMap</em> <P436></h1>
+          <h1 id="Treemap-HashMap-LinkedHashMap-P436"><a class="header-anchor" href="#Treemap-HashMap-LinkedHashMap-P436"> &gt; </a><em>Treemap</em>, <em>HashMap</em>, <em>LinkedHashMap</em> <P436></h1>
 <p>Q: Explain the differences between <em>TreeMap</em>, <em>HashMap</em>, and <em>LinkedHashMap</em>. Provide an example of
 when each one would be best.</p>
 <p>A: The most important distinction between these classes is the time guarantees and the ordering of
@@ -175,7 +175,7 @@ for a “More” function in many applications.</li>
 insertion. This might be useful in a caching situation, when you want to delete the oldest item.</li>
 </ul>
 <p>Generally, unless there is a reason not to, you would use <em>HashMap</em>.</p>
-<h1 id="object-reflection-p437"><a class="header-anchor" href="#object-reflection-p437"> &gt; </a>Object Reflection <P437></h1>
+<h1 id="Object-Reflection-P437"><a class="header-anchor" href="#Object-Reflection-P437"> &gt; </a>Object Reflection <P437></h1>
 <p>Q: Explain what object reflection is in Java and why it is useful?</p>
 <p>A: Object Reflection is a feature in Java that provides a way to get reflective information about
 Java classes and objects, and perform operations such as:</p>
@@ -185,25 +185,25 @@ Java classes and objects, and perform operations such as:</p>
 <li>Getting and setting the object fields directly by getting field reference, regardless of what the
 access modifier is.</li>
 </ol>
-<h1 id="lambda-expression-p438"><a class="header-anchor" href="#lambda-expression-p438"> &gt; </a>Lambda Expression <P438></h1>
+<h1 id="Lambda-Expression-P438"><a class="header-anchor" href="#Lambda-Expression-P438"> &gt; </a>Lambda Expression <P438></h1>
 <p>Q: There is a class <em>Country</em> that has methods <em>getContinent()</em> and <em>getPopulation()</em>. Write a
 function <em>int getPopulation(List<Country> countries, String continent)</em> that computes the total
 population of a given continent, given a list of all countries and the name of a continent.</p>
 <p>A: This question really comes in two parts. First, We need to generate a list of the countries in
 North America. Then, we need to compute their total population.</p>
 <p>Without lambda expression, this is fairly straightforward to do.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getPopulation</span><span class="params">(List&lt;Country&gt; countries, String continent)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> sum = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (Country c : countries) &#123;</span><br><span class="line">        <span class="keyword">if</span> (c.getContinent().equals(continent)) &#123;</span><br><span class="line">            sum += c.getPopulation();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">getPopulation</span><span class="params">(List&lt;Country&gt; countries, String continent)</span> &#123;</span><br><span class="line">    <span class="type">int</span> <span class="variable">sum</span> <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span> (Country c : countries) &#123;</span><br><span class="line">        <span class="keyword">if</span> (c.getContinent().equals(continent)) &#123;</span><br><span class="line">            sum += c.getPopulation();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> sum;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>To implement this with lambda expression, let’s break this up into multiple parts.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getPopulation</span><span class="params">(List&lt;Country&gt; countries, String continent)</span> </span>&#123;</span><br><span class="line">    <span class="comment">/* Filter countries.*/</span></span><br><span class="line">    Stream&lt;Country&gt; northAmerica = countries.stream.filter(</span><br><span class="line">        country -&gt; &#123;<span class="keyword">return</span> country.getContinent().equals(continent);&#125;</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Convert to list of populations.*/</span></span><br><span class="line">    Stream&lt;Integer&gt; populations = northAmerica.map(</span><br><span class="line">        c -&gt; c.getPopulation()</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Sum list.*/</span></span><br><span class="line">    <span class="keyword">int</span> population = populations.reduce(<span class="number">0</span>, (a, b) -&gt; a + b);</span><br><span class="line">    <span class="keyword">return</span> population;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">getPopulation</span><span class="params">(List&lt;Country&gt; countries, String continent)</span> &#123;</span><br><span class="line">    <span class="comment">/* Filter countries.*/</span></span><br><span class="line">    Stream&lt;Country&gt; northAmerica = countries.stream.filter(</span><br><span class="line">        country -&gt; &#123;<span class="keyword">return</span> country.getContinent().equals(continent);&#125;</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Convert to list of populations.*/</span></span><br><span class="line">    Stream&lt;Integer&gt; populations = northAmerica.map(</span><br><span class="line">        c -&gt; c.getPopulation()</span><br><span class="line">    );</span><br><span class="line"></span><br><span class="line">    <span class="comment">/* Sum list.*/</span></span><br><span class="line">    <span class="type">int</span> <span class="variable">population</span> <span class="operator">=</span> populations.reduce(<span class="number">0</span>, (a, b) -&gt; a + b);</span><br><span class="line">    <span class="keyword">return</span> population;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Alternatively, the following code will disregard the countries no within <em>continent</em> according to
 the sum.</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">getPopulation</span><span class="params">(List&lt;Country&gt; countries, String continent)</span> </span>&#123;</span><br><span class="line">    Stream&lt;Integer&gt; populations = countries.stream().map(</span><br><span class="line">        c -&gt; c.getPopulation().equals(continent) ? c.getPopulation() : <span class="number">0</span></span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> populations.reduce(<span class="number">0</span>, (a, b) -&gt; a + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="lambda-random-p439"><a class="header-anchor" href="#lambda-random-p439"> &gt; </a>Lambda Random <P439></h1>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">getPopulation</span><span class="params">(List&lt;Country&gt; countries, String continent)</span> &#123;</span><br><span class="line">    Stream&lt;Integer&gt; populations = countries.stream().map(</span><br><span class="line">        c -&gt; c.getPopulation().equals(continent) ? c.getPopulation() : <span class="number">0</span></span><br><span class="line">        );</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> populations.reduce(<span class="number">0</span>, (a, b) -&gt; a + b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="Lambda-Random-P439"><a class="header-anchor" href="#Lambda-Random-P439"> &gt; </a>Lambda Random <P439></h1>
 <p>Q: Using Lambda expressions, write a function <em>List<Integer> get RandomSubset(List<Integer> list)</em>
 that returns a random subset of arbitrary size. All subsets (including the empty set) should be
 equally likely to be chosen.</p>
 <p>A: To implement this approach using lambda expressions, we can do the following:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function">List&lt;Integer&gt; <span class="title">getRandomSubset</span><span class="params">(List&lt;Integer&gt; list)</span> </span>&#123;</span><br><span class="line">    Random random = <span class="keyword">new</span> Random();</span><br><span class="line">    List&lt;integer&gt; subset = list.stream().filter(</span><br><span class="line">        k -&gt; &#123;<span class="keyword">return</span> random.nextBoolean(); <span class="comment">// Flip coin</span></span><br><span class="line">        &#125;).collect(Collectors.toList());</span><br><span class="line">    <span class="keyword">return</span> subset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">List&lt;Integer&gt; <span class="title function_">getRandomSubset</span><span class="params">(List&lt;Integer&gt; list)</span> &#123;</span><br><span class="line">    <span class="type">Random</span> <span class="variable">random</span> <span class="operator">=</span> <span class="keyword">new</span> <span class="title class_">Random</span>();</span><br><span class="line">    List&lt;integer&gt; subset = list.stream().filter(</span><br><span class="line">        k -&gt; &#123;<span class="keyword">return</span> random.nextBoolean(); <span class="comment">// Flip coin</span></span><br><span class="line">        &#125;).collect(Collectors.toList());</span><br><span class="line">    <span class="keyword">return</span> subset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
         </div>
       </div>

@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -142,7 +142,7 @@
 leverage multiple gpg session at the same especially over ssh.</p>
 <p>Fortunately, I realized there is a built-in feature call GPG forwarding that allows you to authorize
 the server side request in the client side.</p>
-<h2 id="gpg-forwarding"><a class="header-anchor" href="#gpg-forwarding"> &gt; </a>GPG forwarding</h2>
+<h2 id="GPG-forwarding"><a class="header-anchor" href="#GPG-forwarding"> &gt; </a>GPG forwarding</h2>
 <p>The idea is to forward your client sidse GPG socket to your server side, so that every time you
 trigger a GPG authentication in server side, it can pop the GPG authentication GUI (pinentry
 program) in your local machine.</p></div>
@@ -180,7 +180,7 @@ program) in your local machine.</p></div>
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="first-time-with-tiling-window-manager"><a class="header-anchor" href="#first-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
+    <div class="excerpt typo"><h1 id="First-time-with-tiling-window-manager"><a class="header-anchor" href="#First-time-with-tiling-window-manager"> &gt; </a>First time with tiling window manager</h1>
 <p>I have to say BSPWM is not that friendly for the first-time user. It comes with a blank screen
 without anything. While you could something there by forking something’s setup. But it might not
 working for you cuz it’s really easy to break some dependencies on your system.</p>
@@ -388,7 +388,7 @@ solution for this.</p>
 <a href="chrome-extension://gfbliohnnapiefjpjlpjnehglfpaknnc/pages/pdf_viewer.html?r=https://www.common-lisp.net/project/flexichain/download/StrandhVilleneuveMoore.pdf">gap buffer</a>
 for large file editing. It’s due to the mode you apply to the file. These modes might freeze your Emacs when editing
 large file or minified files.</p>
-<h2 id="check-minified-files"><a class="header-anchor" href="#check-minified-files"> &gt; </a>Check Minified files</h2>
+<h2 id="Check-Minified-files"><a class="header-anchor" href="#Check-Minified-files"> &gt; </a>Check Minified files</h2>
 <p>So here is a simple trick, I just check the first 30 line of the opened file. If first line is over 1000 in width, then
 it just enable <code>fundamental-mode</code> which works perfectly for these files.</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">;; if the first line is too long, enable fundamental by default</span><br><span class="line">(defun get-nth-line-length (n)</span><br><span class="line">  &quot;Length of the Nth line.&quot;</span><br><span class="line">  (save-excursion</span><br><span class="line">    (goto-char (point-min))</span><br><span class="line">    (if (zerop (forward-line (1- n)))</span><br><span class="line">        (- (line-end-position)</span><br><span class="line">           (line-beginning-position)))))</span><br><span class="line"></span><br><span class="line">(defun +my/check-minified-file ()</span><br><span class="line">  (and</span><br><span class="line">   (not (member (file-name-extension (buffer-file-name))</span><br><span class="line">                &#x27;(&quot;org&quot; &quot;md&quot; &quot;markdown&quot; &quot;txt&quot; &quot;rtf&quot;)))</span><br><span class="line">   (cl-loop for i from 1 to (min 30 (count-lines (point-min) (point-max)))</span><br><span class="line">            if (&gt; (get-nth-line-length i) 1000)</span><br><span class="line">            return t</span><br><span class="line">            finally return nil)))</span><br><span class="line"></span><br><span class="line">(add-to-list &#x27;magic-mode-alist (cons #&#x27;+my/check-minified-file &#x27;fundamental-mode))</span><br></pre></td></tr></table></figure></div>
@@ -426,7 +426,7 @@ it just enable <code>fundamental-mode</code> which works perfectly for these fil
       </div>
     </div>
     <!-- Post Excerpt -->
-    <div class="excerpt typo"><h1 id="another-spacemacs-configuration-for-jetbrain-ides"><a class="header-anchor" href="#another-spacemacs-configuration-for-jetbrain-ides"> &gt; </a>Another Spacemacs configuration for Jetbrain IDEs</h1>
+    <div class="excerpt typo"><h1 id="Another-Spacemacs-configuration-for-Jetbrain-IDEs"><a class="header-anchor" href="#Another-Spacemacs-configuration-for-Jetbrain-IDEs"> &gt; </a>Another Spacemacs configuration for Jetbrain IDEs</h1>
 <p>Recently, I’m working on a React Native project. I have tried using Emacs to do the coding, but I
 cannot really pick up the whole new stuff without a fancy auto-completion or finding definitions
 since the syntax of React is so different and special. That’s why I pick up Webstorm as a
@@ -473,7 +473,7 @@ are using the sticky key sequences and prefix key for memorization.</p>
     <div class="excerpt typo"><p>This is my 2017 Hackintosh build. I was using GTX 970 before but I just switch to Vega 64 recently.
 And it works out of box!!! That’s the key to the whole build. With Vega GPU, you don’t have to worry
 about tricky bugs any more. We just need to set up a clean build.</p>
-<h1 id="parts-list"><a class="header-anchor" href="#parts-list"> &gt; </a>Parts list</h1>
+<h1 id="Parts-list"><a class="header-anchor" href="#Parts-list"> &gt; </a>Parts list</h1>
 <ul>
 <li>Case:
 <a target="_blank" rel="noopener" href="https://www.amazon.com/gp/product/b01blhp5hs/ref=oh_aui_detailpage_o00_s00?ie=utf8&amp;psc=1">Phanteks Eclipse Series P400 Stell ATX</a></li>
@@ -576,29 +576,35 @@ about tricky bugs any more. We just need to set up a clean build.</p>
 		<h4>Tags</h4>
 		<ul class="tag_box inline list-inline">		
 		
-			<li><a href="/tags/mac/">mac<span>1</span></a></li>
-		
-			<li><a href="/tags/c/">c++<span>1</span></a></li>
+			<li><a href="/tags/java/">java<span>2</span></a></li>
 		
 			<li><a href="/tags/c/">c<span>1</span></a></li>
 		
-			<li><a href="/tags/gpp/">gpp<span>1</span></a></li>
-		
-			<li><a href="/tags/imenu/">imenu<span>1</span></a></li>
-		
 			<li><a href="/tags/pycharm/">pycharm<span>2</span></a></li>
 		
-			<li><a href="/tags/IP-kernel/">IP-kernel<span>1</span></a></li>
+			<li><a href="/tags/mac/">mac<span>1</span></a></li>
 		
-			<li><a href="/tags/emacs/">emacs<span>5</span></a></li>
+			<li><a href="/tags/jetbrain/">jetbrain<span>1</span></a></li>
 		
-			<li><a href="/tags/java/">java<span>2</span></a></li>
+			<li><a href="/tags/terminal/">terminal<span>1</span></a></li>
 		
 			<li><a href="/tags/intellij-idea/">intellij idea<span>2</span></a></li>
 		
-			<li><a href="/tags/vscode/">vscode<span>1</span></a></li>
+			<li><a href="/tags/git/">git<span>2</span></a></li>
+		
+			<li><a href="/tags/hackintosh/">hackintosh<span>2</span></a></li>
+		
+			<li><a href="/tags/nvidia/">nvidia<span>1</span></a></li>
+		
+			<li><a href="/tags/space/">space<span>1</span></a></li>
+		
+			<li><a href="/tags/leetcode/">leetcode<span>1</span></a></li>
+		
+			<li><a href="/tags/coding/">coding<span>9</span></a></li>
 		
 			<li><a href="/tags/swift/">swift<span>1</span></a></li>
+		
+			<li><a href="/tags/gpp/">gpp<span>1</span></a></li>
 		
 			<li><a href="/tags/space-vim/">space-vim<span>1</span></a></li>
 		
@@ -608,13 +614,7 @@ about tricky bugs any more. We just need to set up a clean build.</p>
 		
 			<li><a href="/tags/ssh/">ssh<span>1</span></a></li>
 		
-			<li><a href="/tags/webstorm/">webstorm<span>2</span></a></li>
-		
-			<li><a href="/tags/leetcode/">leetcode<span>1</span></a></li>
-		
-			<li><a href="/tags/coding/">coding<span>9</span></a></li>
-		
-			<li><a href="/tags/nvidia/">nvidia<span>1</span></a></li>
+			<li><a href="/tags/vscode/">vscode<span>1</span></a></li>
 		
 		
 		   <li><a href="/tags">...<span>28</span></a></li>

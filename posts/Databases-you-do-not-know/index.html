@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-07-05</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -146,13 +146,13 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="implicit-and-explicit-join-p169"><a class="header-anchor" href="#implicit-and-explicit-join-p169"> &gt; </a>Implicit and Explicit join p169</h1>
-<h2 id="explicit-join"><a class="header-anchor" href="#explicit-join"> &gt; </a>Explicit Join</h2>
+          <h1 id="Implicit-and-Explicit-join-p169"><a class="header-anchor" href="#Implicit-and-Explicit-join-p169"> &gt; </a>Implicit and Explicit join p169</h1>
+<h2 id="Explicit-Join"><a class="header-anchor" href="#Explicit-Join"> &gt; </a>Explicit Join</h2>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CourseName, TeacherName</span><br><span class="line"><span class="keyword">From</span> Courses <span class="keyword">INNER</span> <span class="keyword">JOIN</span> TEACHERS</span><br><span class="line"><span class="keyword">ON</span> Courses.TeacherID <span class="operator">=</span> Teachers.TeacherID</span><br></pre></td></tr></table></figure>
-<h2 id="implicit-join"><a class="header-anchor" href="#implicit-join"> &gt; </a>Implicit Join</h2>
+<h2 id="Implicit-Join"><a class="header-anchor" href="#Implicit-Join"> &gt; </a>Implicit Join</h2>
 <figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> CourseName, TeacherName</span><br><span class="line"><span class="keyword">FROM</span> Courses, Teachers</span><br><span class="line"><span class="keyword">WHERE</span> Courses.TeacherID <span class="operator">=</span> Teachers.TeacherID</span><br></pre></td></tr></table></figure>
 <span id="more"></span>
-<h1 id="denormalized-vs-normalized-databases-p169"><a class="header-anchor" href="#denormalized-vs-normalized-databases-p169"> &gt; </a>Denormalized vs. Normalized Databases <p169></h1>
+<h1 id="Denormalized-vs-Normalized-Databases-p169"><a class="header-anchor" href="#Denormalized-vs-Normalized-Databases-p169"> &gt; </a>Denormalized vs. Normalized Databases <p169></h1>
 <p>Normalized databases are designed to minimize redundancy, while denormalized databases are designed to optimized read
 time.</p>
 <p>In a traditional normalized database with data like Courses and Teachers, Courses might contain a column called
@@ -161,7 +161,7 @@ etc.) is only stored once in the database. The drawback is that many common quer
 <p>Instead, we can denormalize the database by storing redundant data. For example, if we knew that we would have to repeat
 this query often, we might store the teacher’s name in the Courses table. Denormalization is commonly used to create
 highly scalable systems.</p>
-<h2 id="pros-and-cons"><a class="header-anchor" href="#pros-and-cons"> &gt; </a>Pros and Cons</h2>
+<h2 id="Pros-and-Cons"><a class="header-anchor" href="#Pros-and-Cons"> &gt; </a>Pros and Cons</h2>
 <table>
 <thead>
 <tr>
@@ -188,8 +188,8 @@ highly scalable systems.</p>
 </tr>
 </tbody>
 </table>
-<h1 id="small-database-design-p171"><a class="header-anchor" href="#small-database-design-p171"> &gt; </a>Small Database Design <p171></h1>
-<h2 id="step-1-handle-ambiguity"><a class="header-anchor" href="#step-1-handle-ambiguity"> &gt; </a>Step 1: Handle Ambiguity</h2>
+<h1 id="Small-Database-Design-p171"><a class="header-anchor" href="#Small-Database-Design-p171"> &gt; </a>Small Database Design <p171></h1>
+<h2 id="Step-1-Handle-Ambiguity"><a class="header-anchor" href="#Step-1-Handle-Ambiguity"> &gt; </a>Step 1: Handle Ambiguity</h2>
 <p>Database questions often have some ambiguity, intentionally or unintentionally. Before you proceed with your design, you
 must understand exactly what you need to design.</p>
 <p>Imagine you are asked to design a system to represent an apartment rental agency. You will need to know whether this
@@ -197,13 +197,13 @@ agency has multiple locations or just one. You should also discuss with your int
 example, it would be extremely rare for a person to rent two apartments in the same building. But does that mean you
 shouldn’t be able to handle that? Maybe, maybe not. Some very rare conditions might be best handled through a work
 around (like duplicating the person’s contact information in the database).</p>
-<h2 id="step-2-define-the-core-objects"><a class="header-anchor" href="#step-2-define-the-core-objects"> &gt; </a>Step 2: Define the Core Objects</h2>
+<h2 id="Step-2-Define-the-Core-Objects"><a class="header-anchor" href="#Step-2-Define-the-Core-Objects"> &gt; </a>Step 2: Define the Core Objects</h2>
 <p>Next, we should look at the core objects of our system. Each of these core objects typically translates into a table. In
 this case, our core objects might be Property, Building, Apartment, Tenant and Manager.</p>
-<h2 id="step-3"><a class="header-anchor" href="#step-3"> &gt; </a>Step 3</h2>
+<h2 id="Step-3"><a class="header-anchor" href="#Step-3"> &gt; </a>Step 3</h2>
 <p>Outlining the core objects should give us a good sense of what the tables should be. How do these tables relate to each
 other? Are they many-to-many? One-to-many?</p>
-<h2 id="step-4"><a class="header-anchor" href="#step-4"> &gt; </a>Step 4</h2>
+<h2 id="Step-4"><a class="header-anchor" href="#Step-4"> &gt; </a>Step 4</h2>
 <p>Finally, we fill in the details. Walk through the common actions that will be taken and understand how to store and
 retrieve the relevant data. We’ll need to handle lease terms, moving out, rent payments, etc. Each of these actions
 requires new tables and columns.</p>

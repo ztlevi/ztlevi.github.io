@@ -39,7 +39,7 @@
   <!-- Google Analytics -->
   
 
-<meta name="generator" content="Hexo 5.4.0"></head>
+<meta name="generator" content="Hexo 5.4.1"></head>
 
   <body>
     <!-- Page Header -->
@@ -124,7 +124,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2017-05-25</span>
-            <span class="time">21:50:53</span>
+            <span class="time">03:12:13</span>
           </span>
           
           <!--  Categories  -->
@@ -146,8 +146,8 @@
         
         <!-- Post Main Content -->
         <div class="post-content">
-          <h1 id="publish-with-org2blog-and-solution-to-non-ascii-when-posting-to-wordpress"><a class="header-anchor" href="#publish-with-org2blog-and-solution-to-non-ascii-when-posting-to-wordpress"> &gt; </a>Publish with Org2Blog and Solution to non-ascii when posting to Wordpress</h1>
-<h2 id="install-packages"><a class="header-anchor" href="#install-packages"> &gt; </a>Install packages</h2>
+          <h1 id="Publish-with-Org2Blog-and-Solution-to-non-ascii-when-posting-to-Wordpress"><a class="header-anchor" href="#Publish-with-Org2Blog-and-Solution-to-non-ascii-when-posting-to-Wordpress"> &gt; </a>Publish with Org2Blog and Solution to non-ascii when posting to Wordpress</h1>
+<h2 id="Install-packages"><a class="header-anchor" href="#Install-packages"> &gt; </a>Install packages</h2>
 <p>Install <a target="_blank" rel="noopener" href="https://github.com/punchagan/org2blog">org2blog</a>. I put the package in my own emacs configuration folder. Path
 to org2blog: <strong>~/.spacemacs.d/layers/org2blog/</strong>.</p>
 <p>org2blog depends on</p>
@@ -157,7 +157,7 @@ to org2blog: <strong>~/.spacemacs.d/layers/org2blog/</strong>.</p>
 <li>metaweblog.el available <a target="_blank" rel="noopener" href="https://github.com/punchagan/metaweblog">here</a></li>
 </ol>
 <p>To better manage the packages, I just put the two packages above right under the same path to my org2blog.</p>
-<h2 id="configuring-emacs"><a class="header-anchor" href="#configuring-emacs"> &gt; </a>Configuring Emacs</h2>
+<h2 id="Configuring-Emacs"><a class="header-anchor" href="#Configuring-Emacs"> &gt; </a>Configuring Emacs</h2>
 <p>Put following code in your emacs configuration file, e.g. <strong>~/.emacs.d/init.el</strong>. Of course, change to your private
 infomation, including my-blog, url, username. You need to put /xmlrpc.php after your url. That’s for XML-RPC server of
 your homepage. It only accepts POST request.</p>
@@ -165,14 +165,14 @@ your homepage. It only accepts POST request.</p>
 <p>Your <strong>~/.netrc</strong> file looks like this. Change the username and your<sub>password</sub> to your real ones.</p>
 <p><code>machine wp-ztlevi login username password your_password</code></p>
 <p>wp-ztlevi is the auth<sub>id</sub> to find your private information from the <strong>~/.netrc</strong> file.</p>
-<h2 id="useage"><a class="header-anchor" href="#useage"> &gt; </a>Useage</h2>
+<h2 id="Useage"><a class="header-anchor" href="#Useage"> &gt; </a>Useage</h2>
 <ol>
 <li><em>M-x org2blog/wp-new-entry</em> : Create a new templete file.</li>
 <li><em>M-x org2blog/wp-login</em> : Login to your wordpress blog.</li>
 <li><em>M-x org2blog/wp-post-buffer</em> : Used to post your org file as draft.</li>
 <li><em>M-x org2blog/wp-post-buffer-and-publish</em> : Publish your org file right away.</li>
 </ol>
-<h2 id="solution-to-non-ascii-on-wordpress"><a class="header-anchor" href="#solution-to-non-ascii-on-wordpress"> &gt; </a>Solution to non-ascii on Wordpress</h2>
+<h2 id="Solution-to-non-ascii-on-Wordpress"><a class="header-anchor" href="#Solution-to-non-ascii-on-Wordpress"> &gt; </a>Solution to non-ascii on Wordpress</h2>
 <p>Since Wordpress does not support non-ascii when you post. We need to clear out the non-ascii characters before we post.
 Otherwise it will failed with a structure problem like this.</p>
 <img src="https://ww3.sinaimg.cn/large/006tNc79gy1fdltj04hs4j307z06cq35.jpg" alt="img" title="image title"/>
